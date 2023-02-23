@@ -5,6 +5,16 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkies", "CheapSkies\CheapSkies.csproj", "{B89264AA-C407-4A72-BBF1-B09C5485DF23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkies.Infrastructure", "CheapSkies.Infrastructure\CheapSkies.Infrastructure.csproj", "{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkies.Model", "CheapSkies.Model\CheapSkies.Model.csproj", "{24B7FA0E-E5BC-4BEF-949B-A69B4C327827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkies.View", "CheapSikes.View\CheapSkies.View.csproj", "{C6D6DF03-1F70-4667-A6EB-4256BFE4C8BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkies.Validator", "CheapSkies.Controller\CheapSkies.Validator.csproj", "{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkies.Interfaces", "CheapSkies.Interfaces\CheapSkies.Interfaces.csproj", "{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{B89264AA-C407-4A72-BBF1-B09C5485DF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B89264AA-C407-4A72-BBF1-B09C5485DF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B89264AA-C407-4A72-BBF1-B09C5485DF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B7FA0E-E5BC-4BEF-949B-A69B4C327827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B7FA0E-E5BC-4BEF-949B-A69B4C327827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B7FA0E-E5BC-4BEF-949B-A69B4C327827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B7FA0E-E5BC-4BEF-949B-A69B4C327827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6D6DF03-1F70-4667-A6EB-4256BFE4C8BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6D6DF03-1F70-4667-A6EB-4256BFE4C8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6D6DF03-1F70-4667-A6EB-4256BFE4C8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6D6DF03-1F70-4667-A6EB-4256BFE4C8BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

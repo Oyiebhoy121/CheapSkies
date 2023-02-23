@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CheapSkies.Interfaces\CheapSkies.Interfaces.csproj" />
+    <ProjectReference Include="..\CheapSkies.Model\CheapSkies.Model.csproj" />
+  </ItemGroup>
+
 </Project>

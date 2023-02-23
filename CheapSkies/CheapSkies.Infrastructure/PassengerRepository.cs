@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CheapSkies.Infrastructure
 {
-    internal class Class1
+    public class PassengerRepository : IEnumerable<Flight>
     {
     }
 }

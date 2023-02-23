@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CheapSkies.Validator
 {
-    internal class ReservationValidator
+    public class ReservationValidator : RecordValidator
     {
     }
 }
