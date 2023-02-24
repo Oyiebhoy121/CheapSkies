@@ -1,4 +1,4 @@
-﻿using CheapSkies.Validator;
+﻿using CheapSkies.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,30 +13,39 @@ namespace PassengerValidatorUnitTest
         public void ValidateAgeUnitTest1()
         {
             //Arrange
-            var sut = new PassengerValidator();
-            string date1 = "12/24/2022";
-            string date2 = " 12/24/2022 ";
-            string date3 = "12/24/2094";
-            string date4 = "02/24/2023";
-            string date5 = "02-24-2023";
-            string date6 = "24-05-2023";
-            string date7 = "12-0a-2023";
+            var sut = new Passenger();
+            DateTime dateTime = new DateTime(1999, 7, 8);
+            sut.BirthDate = dateTime;
             //Act
-            bool result1 = sut.ValidateBirthDate(date1);
-            bool result2 = sut.ValidateBirthDate(date2);
-            bool result3 = sut.ValidateBirthDate(date3);
-            bool result4 = sut.ValidateBirthDate(date4);
-            bool result5 = sut.ValidateBirthDate(date5);
-            bool result6 = sut.ValidateBirthDate(date6);
-            bool result7 = sut.ValidateBirthDate(date7);
+
             //Assert
-            Assert.True(result1);
-            Assert.False(result2);
-            Assert.False(result3);
-            Assert.True(result4);
-            Assert.False(result5);
-            Assert.False(result6);
-            Assert.False(result7);
+            Assert.Equal(23, sut.Age);
+        }
+
+        [Fact]
+        public void ValidateAgeUnitTest2()
+        {
+            //Arrange
+            var sut = new Passenger();
+            DateTime dateTime = new DateTime(2023, 2, 25);
+            sut.BirthDate = dateTime;
+            //Act
+
+            //Assert
+            Assert.Equal(0, sut.Age);
+        }
+
+        [Fact]
+        public void ValidateAgeUnitTest3()
+        {
+            //Arrange
+            var sut = new Passenger();
+            DateTime dateTime = new DateTime(2024, 3, 3);
+            //Act
+
+            //Assert
+            var message = Assert.Throws<ArgumentException>(() => sut.BirthDate = dateTime);
+            Assert.Equal("Birth date cannot be in the future", message.Message);
         }
     }
 }

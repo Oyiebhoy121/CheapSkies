@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,21 +9,31 @@ namespace CheapSkies.Model
 {
     public class Passenger
     {
+        private DateTime _birthDate;
         private int _age;
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime BirthDate { get; set; }
-        public int Age
+        public DateTime BirthDate
         {
-            get { return _age; }
-            private set
+            get { return _birthDate; }
+            set 
             {
-                TimeSpan difference = DateTime.Today - BirthDate;
-                _age = (int)(difference.TotalDays / 365.25);
+                if (value > DateTime.Today)
+                {
+                    throw new ArgumentException("Birth date cannot be in the future");
+                } 
+                _birthDate = value;
             }
         }
-
-
-
+        public int Age
+        {
+            get { return CalculateAge(_birthDate); }
+        }
+        private int CalculateAge(DateTime birthDate)
+        {
+            TimeSpan difference = DateTime.Today - birthDate;
+            int age = (int)(difference.TotalDays / 365.25);
+            return age;
+        }
     }
 }

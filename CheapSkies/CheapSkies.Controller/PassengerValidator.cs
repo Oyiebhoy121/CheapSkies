@@ -48,17 +48,6 @@ namespace CheapSkies.Validator
             return false;
         }
     
-        //I'm still not sure about this because I must create an AgeComputer(DateTime BirthDate) for the Passenger
-        public bool ValidateAge(int ageComputed, DateTime birthDate)
-        {
-            TimeSpan timeSpanAge = DateTime.Today - birthDate;
-            int actualAge = (int) (timeSpanAge.TotalDays / 365.25);
-            if(ageComputed == actualAge)
-            {
-                return true;
-            }
-            return false;
-        }
         public bool ValidatePassengerNumber(string passengerNumber)
         {
             bool parse = Int32.TryParse(passengerNumber, out int resultNumber);

@@ -27,11 +27,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reservation Validator Unit 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecordValidatorUnitTest", "ValidateAirlineCodeUnitTest\RecordValidatorUnitTest.csproj", "{AAC238A7-A329-4BCC-B5B0-08C238A9C2E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightValidatorUnitTest", "ValidateTimeFormat\FlightValidatorUnitTest.csproj", "{BB96ABF2-07AE-4616-BEF4-F8A7D706CCFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightValidatorUnitTest", "ValidateTimeFormat\FlightValidatorUnitTest.csproj", "{BB96ABF2-07AE-4616-BEF4-F8A7D706CCFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassengerValidatorUnitTest", "PassengerValidatorUnitTest\PassengerValidatorUnitTest.csproj", "{733F5C2E-F692-448E-B0EB-9F7930A11488}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassengerValidatorUnitTest", "PassengerValidatorUnitTest\PassengerValidatorUnitTest.csproj", "{733F5C2E-F692-448E-B0EB-9F7930A11488}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{ABDB7886-4A5C-4892-8568-E67B356342DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Test for Controllers", "Unit Test for Controllers", "{2DD8D2F8-F1B1-4B4C-9F0E-4B57CCA1A6A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassengerUnitTest", "PassengerUnitTest\PassengerUnitTest.csproj", "{0CC48389-4367-41F3-9355-E9522327D1CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{733F5C2E-F692-448E-B0EB-9F7930A11488}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{733F5C2E-F692-448E-B0EB-9F7930A11488}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{733F5C2E-F692-448E-B0EB-9F7930A11488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC48389-4367-41F3-9355-E9522327D1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC48389-4367-41F3-9355-E9522327D1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC48389-4367-41F3-9355-E9522327D1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC48389-4367-41F3-9355-E9522327D1CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +95,7 @@ Global
 		{AAC238A7-A329-4BCC-B5B0-08C238A9C2E4} = {36DC873B-9DFD-4412-A2E4-13801E9403D4}
 		{BB96ABF2-07AE-4616-BEF4-F8A7D706CCFC} = {50DDA958-225E-441E-A135-8E30B1C242CF}
 		{733F5C2E-F692-448E-B0EB-9F7930A11488} = {81BE7A45-6B05-474C-851F-E947B5B6DF70}
+		{0CC48389-4367-41F3-9355-E9522327D1CF} = {2DD8D2F8-F1B1-4B4C-9F0E-4B57CCA1A6A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36D174F1-F193-4BBB-9D5A-27703C9FFB7F}
