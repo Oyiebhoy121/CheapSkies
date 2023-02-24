@@ -1,6 +1,6 @@
 ﻿using CheapSkies.Validator;
 
-namespace ValidateAirlineCodeUnitTest
+namespace RecordValidatorUnitTest
 {
     public class ValidateFlightNumberUnitTest
     {
@@ -8,14 +8,14 @@ namespace ValidateAirlineCodeUnitTest
         public void ValidateFlightNumberUnitTest1()
         {
             //Arrange
-            var validator = new RecordValidator();
+            var sut = new RecordValidator();
             string flightNumber1 = "125";
             string flightNumber2 = "1";
             string flightNumber3 = "9999";
             //Act
-            bool actual1 = validator.ValidateFlightNumber(flightNumber1);
-            bool actual2 = validator.ValidateFlightNumber(flightNumber2);
-            bool actual3 = validator.ValidateFlightNumber(flightNumber3);
+            bool actual1 = sut.ValidateFlightNumber(flightNumber1);
+            bool actual2 = sut.ValidateFlightNumber(flightNumber2);
+            bool actual3 = sut.ValidateFlightNumber(flightNumber3);
             //Assert
             Assert.True(actual1);
             Assert.True(actual2);
@@ -38,16 +38,16 @@ namespace ValidateAirlineCodeUnitTest
         public void ValidateFlightNumberUnitTest3()
         {
             //Arrange
-            var validator = new RecordValidator();
+            var sut = new RecordValidator();
             string flightNumber1 = "125&";
             string flightNumber2 = "1abc";
             string flightNumber3 = "9999 ";
             string flightNumber4 = "12.5";
             //Act
-            bool actual1 = validator.ValidateFlightNumber(flightNumber1);
-            bool actual2 = validator.ValidateFlightNumber(flightNumber2);
-            bool actual3 = validator.ValidateFlightNumber(flightNumber3);
-            bool actual4 = validator.ValidateFlightNumber(flightNumber4);
+            bool actual1 = sut.ValidateFlightNumber(flightNumber1);
+            bool actual2 = sut.ValidateFlightNumber(flightNumber2);
+            bool actual3 = sut.ValidateFlightNumber(flightNumber3);
+            bool actual4 = sut.ValidateFlightNumber(flightNumber4);
             //Assert
             Assert.False(actual1);
             Assert.False(actual2);

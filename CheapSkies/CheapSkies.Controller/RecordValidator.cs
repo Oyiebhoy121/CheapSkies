@@ -12,8 +12,8 @@ namespace CheapSkies.Validator
         {
             int capitalLetterCount = 0;
             int digitCount = 0;
-            
-            if(!ContainsAnything(airlineCode))
+
+            if (airlineCode.Equals(""))
             {
                 return false;
             }
@@ -66,7 +66,7 @@ namespace CheapSkies.Validator
         {
             int validTotal = 0;
             
-            if (!ContainsAnything(station))
+            if (station.Equals(""))
             {
                 return false;
             }
@@ -89,15 +89,6 @@ namespace CheapSkies.Validator
             return false;
         }
 
-        private bool ContainsAnything(string str)
-        {
-            if(str == "")
-            {
-                return false;
-            }
-            return true;
-        }
-
-     
+       
     }
 }

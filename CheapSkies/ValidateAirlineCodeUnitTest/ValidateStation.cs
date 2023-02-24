@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ValidateAirlineCodeUnitTest
+namespace RecordValidatorUnitTest
 {
     public class ValidateStation
     {
@@ -13,17 +13,17 @@ namespace ValidateAirlineCodeUnitTest
         public void ValidateStationTest1()
         {
             //Arrange
-            var validator = new RecordValidator();
+            var sut = new RecordValidator();
             string station1 = "MNL";
             string station2 = "MNLO";
             string station3 = "LO";
             string station4 = "O";
 
             //Act
-            bool actual1 = validator.ValidateStation(station1);
-            bool actual2 = validator.ValidateStation(station2);
-            bool actual3 = validator.ValidateStation(station3);
-            bool actual4 = validator.ValidateStation(station4);
+            bool actual1 = sut.ValidateStation(station1);
+            bool actual2 = sut.ValidateStation(station2);
+            bool actual3 = sut.ValidateStation(station3);
+            bool actual4 = sut.ValidateStation(station4);
 
             //Assert
             Assert.True(actual1);
@@ -36,11 +36,11 @@ namespace ValidateAirlineCodeUnitTest
         public void ValidateStationTest2()
         {
             //Arrange
-            var validator = new RecordValidator();
+            var sut = new RecordValidator();
             string station1 = "";
    
             //Act
-            bool actual1 = validator.ValidateStation(station1);
+            bool actual1 = sut.ValidateStation(station1);
 
             //Assert
             Assert.False(actual1);
@@ -50,7 +50,7 @@ namespace ValidateAirlineCodeUnitTest
         public void ValidateStationTest3()
         {
             //Arrange
-            var validator = new RecordValidator();
+            var sut = new RecordValidator();
             string station1 = "MNL";
             string station2 = "NRT";
             string station3 = "AB3";
@@ -58,11 +58,11 @@ namespace ValidateAirlineCodeUnitTest
             string station5 = "X23";
 
             //Act
-            bool actual1 = validator.ValidateStation(station1);
-            bool actual2 = validator.ValidateStation(station2);
-            bool actual3 = validator.ValidateStation(station3);
-            bool actual4 = validator.ValidateStation(station4);
-            bool actual5 = validator.ValidateStation(station5);
+            bool actual1 = sut.ValidateStation(station1);
+            bool actual2 = sut.ValidateStation(station2);
+            bool actual3 = sut.ValidateStation(station3);
+            bool actual4 = sut.ValidateStation(station4);
+            bool actual5 = sut.ValidateStation(station5);
 
             //Assert
             Assert.True(actual1);
@@ -76,17 +76,17 @@ namespace ValidateAirlineCodeUnitTest
         public void ValidateStationTest4()
         {
             //Arrange
-            var validator = new RecordValidator();
+            var sut = new RecordValidator();
             string station1 = "M&N";
             string station2 = " RT";
             string station3 = "A  ";
             string station4 = "1BC";
 
             //Act
-            bool actual1 = validator.ValidateStation(station1);
-            bool actual2 = validator.ValidateStation(station2);
-            bool actual3 = validator.ValidateStation(station3);
-            bool actual4 = validator.ValidateStation(station4);
+            bool actual1 = sut.ValidateStation(station1);
+            bool actual2 = sut.ValidateStation(station2);
+            bool actual3 = sut.ValidateStation(station3);
+            bool actual4 = sut.ValidateStation(station4);
 
             //Assert
             Assert.False(actual1);

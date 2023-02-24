@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace CheapSkies.Validator
 {
-    internal class PassengerValidator
+    public class PassengerValidator
     {
+        public bool ValidateName(string name)
+        {
+            char[] charArray = name.ToCharArray();
+
+            if (name.Equals("") || charArray.Length > 20) {
+                return false;
+            }
+
+            foreach (char character in charArray)
+            {
+                if (! (char.IsLetter(character) || character.Equals(' ')) ) 
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

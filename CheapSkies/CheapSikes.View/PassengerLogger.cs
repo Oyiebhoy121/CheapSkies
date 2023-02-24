@@ -11,7 +11,8 @@ namespace CheapSikes.View
     {
         public string InputFirstName()
         {
-            Console.WriteLine("Input Passenger's First Name: ");
+            Console.WriteLine("Input Passenger's First Name");
+            Console.WriteLine("Do not include suffixes");
             string result = Console.ReadLine();
             return result;
         }

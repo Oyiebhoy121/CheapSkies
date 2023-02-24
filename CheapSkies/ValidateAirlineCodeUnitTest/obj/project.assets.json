@@ -6136,9 +6136,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ValidateAirlineCodeUnitTest\\ValidateAirlineCodeUnitTest.csproj",
-      "projectName": "ValidateAirlineCodeUnitTest",
-      "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ValidateAirlineCodeUnitTest\\ValidateAirlineCodeUnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ValidateAirlineCodeUnitTest\\RecordValidatorUnitTest.csproj",
+      "projectName": "RecordValidatorUnitTest",
+      "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ValidateAirlineCodeUnitTest\\RecordValidatorUnitTest.csproj",
       "packagesPath": "C:\\Users\\fgoleta\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ValidateAirlineCodeUnitTest\\obj\\",
       "projectStyle": "PackageReference",
