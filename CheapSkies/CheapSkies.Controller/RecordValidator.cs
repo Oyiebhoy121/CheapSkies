@@ -87,8 +87,6 @@ namespace CheapSkies.Validator
                 return true;
             }
             return false;
-        }
-
-       
+        }  
     }
 }

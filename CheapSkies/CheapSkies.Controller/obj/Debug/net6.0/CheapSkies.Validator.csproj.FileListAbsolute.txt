@@ -10,3 +10,15 @@ C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\n
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\refint\CheapSkies.Validator.dll
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.pdb
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\ref\CheapSkies.Validator.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Validator.deps.json
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Validator.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Validator.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.csproj.AssemblyReference.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.AssemblyInfoInputs.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.AssemblyInfo.cs
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.csproj.CoreCompileInputs.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\refint\CheapSkies.Validator.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Validator.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\ref\CheapSkies.Validator.dll

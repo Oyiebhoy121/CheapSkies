@@ -21,5 +21,23 @@ namespace PassengerValidatorUnitTest
             Assert.True(result2);
             Assert.False(result3);
         }
+
+        [Fact]
+        public void ValidateNameUnitTest2()
+        {
+            //Arrange
+            var sut = new PassengerValidator();
+            string name1 = "Felipe ***";
+            string name2 = "Felipe 123";
+            string name3 = "  Felipe  ";
+            //Act
+            bool result1 = sut.ValidateName(name1);
+            bool result2 = sut.ValidateName(name2);
+            bool result3 = sut.ValidateName(name3);
+            //Assert
+            Assert.False(result1);
+            Assert.False(result2);
+            Assert.False(result3);
+        }
     }
 }

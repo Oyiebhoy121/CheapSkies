@@ -6,8 +6,8 @@ namespace CheapSkies.Controller
     {
         public bool ValidateTimeFormat(string timeInput)
         {
-            string format = @"hh\:mm";
-            bool parse = TimeSpan.TryParseExact(timeInput, format, System.Globalization.CultureInfo.InvariantCulture, out TimeSpan result);
+            string timeSpanFormat = @"hh\:mm";
+            bool parse = TimeSpan.TryParseExact(timeInput, timeSpanFormat, System.Globalization.CultureInfo.InvariantCulture, out TimeSpan result);
 
             if(parse)
             { 

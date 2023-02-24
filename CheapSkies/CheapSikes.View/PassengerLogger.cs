@@ -24,11 +24,18 @@ namespace CheapSikes.View
             return result;
         }
 
-        public string BirthDate()
+        public string InputBirthDate()
         {
             Console.WriteLine("Input Passenger's BirthDate: ");
             string result = Console.ReadLine();
             return result;
         }
+
+        public string NumberOfPassenger()
+        {
+            Console.WriteLine("Input the number of passengers you are booking: ");
+            string result = Console.ReadLine();
+            return result;
+        }  
     }
 }
