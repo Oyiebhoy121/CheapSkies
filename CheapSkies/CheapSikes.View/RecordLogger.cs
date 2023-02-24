@@ -22,7 +22,7 @@ namespace CheapSkies.View
             return result;
         }
 
-        public int InputArrivalStation()
+        public string InputArrivalStation()
         {
             Console.WriteLine("Input Origin Station: ");
             string result = Console.ReadLine();

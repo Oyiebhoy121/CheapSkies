@@ -10,29 +10,94 @@ namespace CheapSkies.Validator
     {
         public bool ValidateAirlineCode(string airlineCode)
         {
-            int letterCount = 0;
+            int capitalLetterCount = 0;
             int digitCount = 0;
-            bool validate = false;
-            char[] charArray = airlineCode.ToCharArray();
-            if(charArray.Length < 2 || charArray.Length> 3)
+            
+            if(!ContainsAnything(airlineCode))
             {
                 return false;
             }
-            foreach(char character in charArray) 
+
+            char[] charArray = airlineCode.ToCharArray();
+
+            foreach (char character in charArray)
             {
-                if(char.IsLetter(character))
+                if (char.IsLetter(character) && char.ToUpper(character) == character)
                 {
-                    letterCount++;
+                    capitalLetterCount++;
                 }
-                if(char.IsDigit(character))
+
+                if (char.IsDigit(character))
                 {
                     digitCount++;
                 }
             }
-            if(letterCount > 0) { }
 
+            int validCount = capitalLetterCount + digitCount; 
 
-            
+            if (charArray.Length > 1 && charArray.Length < 4)
+            {
+                if (capitalLetterCount >= digitCount && validCount == charArray.Length)
+                {
+                    return true;
+                }
+            }
+            return false;    
         }
+
+        public bool ValidateFlightNumber(string flightNumber)
+        {
+            if(flightNumber.Contains(" "))
+            {
+                return false;
+            }
+
+            bool result = Int32.TryParse(flightNumber, out int value);
+
+            if(value >= 1 && value <= 9999 && result)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool ValidateStation(string station)
+        {
+            int validTotal = 0;
+            
+            if (!ContainsAnything(station))
+            {
+                return false;
+            }
+
+            char[] charArray = station.ToCharArray();
+
+            foreach (char character in charArray)
+            {
+                if( (char.IsLetter(character) && char.ToUpper(character) == character)
+                    || char.IsNumber(character) ) 
+                {
+                    validTotal++;
+                }
+            }
+
+            if (char.IsLetter(charArray[0]) && validTotal == 3)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool ContainsAnything(string str)
+        {
+            if(str == "")
+            {
+                return false;
+            }
+            return true;
+        }
+
+     
     }
 }

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CheapSkies.View/1.0.0": {
+        "runtime": {
+          "CheapSkies.View.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CheapSkies.View/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

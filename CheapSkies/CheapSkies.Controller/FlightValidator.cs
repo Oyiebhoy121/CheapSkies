@@ -4,7 +4,7 @@ namespace CheapSkies.Controller
 {
     public class FlightValidator : RecordValidator
     {
-        public bool 
+      
 
     }
 }

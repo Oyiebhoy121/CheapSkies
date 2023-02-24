@@ -1,0 +1,17 @@
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.AssemblyInfo.cs
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Infrastructure.deps.json
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Infrastructure.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Infrastructure.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Interfaces.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Model.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Interfaces.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.csproj.CopyComplete
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\refint\CheapSkies.Infrastructure.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\ref\CheapSkies.Infrastructure.dll

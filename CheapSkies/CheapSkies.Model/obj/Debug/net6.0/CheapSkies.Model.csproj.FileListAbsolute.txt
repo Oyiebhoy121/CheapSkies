@@ -1,0 +1,12 @@
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\bin\Debug\net6.0\CheapSkies.Model.deps.json
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\bin\Debug\net6.0\CheapSkies.Model.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\CheapSkies.Model.csproj.AssemblyReference.cache
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\CheapSkies.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\CheapSkies.Model.AssemblyInfoInputs.cache
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\CheapSkies.Model.AssemblyInfo.cs
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\CheapSkies.Model.csproj.CoreCompileInputs.cache
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\CheapSkies.Model.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\refint\CheapSkies.Model.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Model\obj\Debug\net6.0\ref\CheapSkies.Model.dll
