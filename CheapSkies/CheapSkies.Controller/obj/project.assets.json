@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj",
-      "projectName": "CheapSkies.Validator",
-      "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj",
+      "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj",
+      "projectName": "CheapSkies.Controller",
+      "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj",
       "packagesPath": "C:\\Users\\frgol\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\obj\\",
       "projectStyle": "PackageReference",

@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CheapSkies.Controller\CheapSkies.Validator.csproj" />
+    <ProjectReference Include="..\CheapSkies.Controller\CheapSkies.Controller.csproj" />
   </ItemGroup>
 
 </Project>

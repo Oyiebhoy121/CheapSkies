@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CheapSikes.View
 {
-    internal class ReservationLogger
+    public class ReservationLogger
     {
     }
 }

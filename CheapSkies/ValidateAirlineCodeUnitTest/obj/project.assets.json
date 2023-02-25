@@ -1809,14 +1809,14 @@
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "CheapSkies.Validator/1.0.0": {
+      "CheapSkies.Controller/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/CheapSkies.Validator.dll": {}
+          "bin/placeholder/CheapSkies.Controller.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CheapSkies.Validator.dll": {}
+          "bin/placeholder/CheapSkies.Controller.dll": {}
         }
       }
     }
@@ -6114,15 +6114,15 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "CheapSkies.Validator/1.0.0": {
+    "CheapSkies.Controller/1.0.0": {
       "type": "project",
-      "path": "../CheapSkies.Controller/CheapSkies.Validator.csproj",
-      "msbuildProject": "../CheapSkies.Controller/CheapSkies.Validator.csproj"
+      "path": "../CheapSkies.Controller/CheapSkies.Controller.csproj",
+      "msbuildProject": "../CheapSkies.Controller/CheapSkies.Controller.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CheapSkies.Validator >= 1.0.0",
+      "CheapSkies.Controller >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.2",
@@ -6156,8 +6156,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj": {
-              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj"
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj"
             }
           }
         }

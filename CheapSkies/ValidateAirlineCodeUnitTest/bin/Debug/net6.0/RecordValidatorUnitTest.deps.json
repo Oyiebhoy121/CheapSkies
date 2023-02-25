@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "RecordValidatorUnitTest/1.0.0": {
         "dependencies": {
-          "CheapSkies.Validator": "1.0.0",
+          "CheapSkies.Controller": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.3.2",
           "coverlet.collector": "3.1.2",
           "xunit": "2.4.2",
@@ -1090,9 +1090,9 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
-      "CheapSkies.Validator/1.0.0": {
+      "CheapSkies.Controller/1.0.0": {
         "runtime": {
-          "CheapSkies.Validator.dll": {}
+          "CheapSkies.Controller.dll": {}
         }
       }
     }
@@ -1747,7 +1747,7 @@
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
-    "CheapSkies.Validator/1.0.0": {
+    "CheapSkies.Controller/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

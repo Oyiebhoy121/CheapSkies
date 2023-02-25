@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Model", "CheapSk
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.View", "CheapSikes.View\CheapSkies.View.csproj", "{C6D6DF03-1F70-4667-A6EB-4256BFE4C8BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Validator", "CheapSkies.Controller\CheapSkies.Validator.csproj", "{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Controller", "CheapSkies.Controller\CheapSkies.Controller.csproj", "{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Interfaces", "CheapSkies.Interfaces\CheapSkies.Interfaces.csproj", "{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}"
 EndProject
@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Test for Controllers", "Unit Test for Controllers", "{2DD8D2F8-F1B1-4B4C-9F0E-4B57CCA1A6A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassengerUnitTest", "PassengerUnitTest\PassengerUnitTest.csproj", "{0CC48389-4367-41F3-9355-E9522327D1CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassengerUnitTest", "PassengerUnitTest\PassengerUnitTest.csproj", "{0CC48389-4367-41F3-9355-E9522327D1CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

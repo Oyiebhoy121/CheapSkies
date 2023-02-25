@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dHUaYW7E2YSoGVWkL95k8HR0fk9Zz2dFYQtGz8q4ntqeQTzln0rsCtJjEpZtPWUxbhXg1kOHIAY8pOKcc1BMlQ==",
+  "dgSpecHash": "yBh9asubXURU8MLWeUx25GCcelY2HZ1FIagasvAoFELkt4f4vfuYBHD5+v0vhuzXRH7+/d/ILB3inMEbAiLqYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj",
+  "projectFilePath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

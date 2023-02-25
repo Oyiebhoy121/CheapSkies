@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "CheapSkies.View/1.0.0": {
+        "dependencies": {
+          "CheapSkies.Controller": "1.0.0"
+        },
         "runtime": {
           "CheapSkies.View.dll": {}
+        }
+      },
+      "CheapSkies.Controller/1.0.0": {
+        "runtime": {
+          "CheapSkies.Controller.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CheapSkies.View/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CheapSkies.Controller/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,9 +1,17 @@
-﻿using CheapSkies.View;
+﻿using CheapSkies.Controller;
+using CheapSkies.Validator;
+using CheapSkies.View;
 
 namespace CheapSikes.View
 {
     public class FlightLogger : RecordLogger
     {
+        private FlightValidator _flightValidator;
+        public FlightLogger(FlightValidator flightValidator) : base(flightValidator)
+        {
+            _flightValidator = flightValidator;
+        }
+
         public string InputScheduleTimeOfArrival()
         {
             Console.WriteLine("Input the Schedule Time of Arrival:");

@@ -1,0 +1,12 @@
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Controller.deps.json
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Controller.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Controller.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.csproj.AssemblyReference.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.AssemblyInfoInputs.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.AssemblyInfo.cs
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.csproj.CoreCompileInputs.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\refint\CheapSkies.Controller.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\ref\CheapSkies.Controller.dll

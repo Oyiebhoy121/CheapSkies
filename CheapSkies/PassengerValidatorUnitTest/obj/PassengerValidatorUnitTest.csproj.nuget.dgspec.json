@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
+                "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -59,12 +63,12 @@
         }
       }
     },
-    "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj": {
+    "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj",
-        "projectName": "CheapSkies.Validator",
-        "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj",
+        "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj",
+        "projectName": "CheapSkies.Controller",
+        "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj",
         "packagesPath": "C:\\Users\\frgol\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\obj\\",
         "projectStyle": "PackageReference",
@@ -196,8 +200,8 @@
               "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj": {
                 "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj"
               },
-              "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj": {
-                "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Validator.csproj"
+              "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
+                "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj"
               },
               "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj": {
                 "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj"

@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CheapSikes.View\CheapSkies.View.csproj" />
-    <ProjectReference Include="..\CheapSkies.Controller\CheapSkies.Validator.csproj" />
+    <ProjectReference Include="..\CheapSkies.Controller\CheapSkies.Controller.csproj" />
     <ProjectReference Include="..\CheapSkies.Infrastructure\CheapSkies.Infrastructure.csproj" />
     <ProjectReference Include="..\CheapSkies.Model\CheapSkies.Model.csproj" />
   </ItemGroup>
