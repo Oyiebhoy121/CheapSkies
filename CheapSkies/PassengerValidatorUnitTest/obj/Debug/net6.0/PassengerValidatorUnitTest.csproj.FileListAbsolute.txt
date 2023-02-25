@@ -206,3 +206,5 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Model.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Controller.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Controller.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\ValidatorInterface.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\ValidatorInterface.pdb

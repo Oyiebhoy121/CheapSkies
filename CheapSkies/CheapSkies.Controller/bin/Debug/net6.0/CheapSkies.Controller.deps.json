@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "CheapSkies.Controller/1.0.0": {
+        "dependencies": {
+          "ValidatorInterface": "1.0.0"
+        },
         "runtime": {
           "CheapSkies.Controller.dll": {}
+        }
+      },
+      "ValidatorInterface/1.0.0": {
+        "runtime": {
+          "ValidatorInterface.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CheapSkies.Controller/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ValidatorInterface/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

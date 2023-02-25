@@ -25,3 +25,5 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\obj\Debug\
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\CheapSkies.Controller.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\CheapSkies.Controller.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\obj\Debug\net6.0\CheapSkies.View.csproj.CopyComplete
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\ValidatorInterface.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\ValidatorInterface.pdb

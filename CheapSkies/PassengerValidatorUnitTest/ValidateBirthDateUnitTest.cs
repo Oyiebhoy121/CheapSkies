@@ -9,7 +9,7 @@ namespace PassengerValidatorUnitTest
 {
     public class ValidateBirthDateUnitTest
     {
-        [Fact] //This will fail because I should follow dd/mm/yyyy format
+        [Fact] 
         public void ValidateBirthDateUnitTest1()
         {
             //Arrange
@@ -22,13 +22,13 @@ namespace PassengerValidatorUnitTest
             string date6 = "24-05-2023";
             string date7 = "12-0a-2023";
             //Act
-            bool result1 = sut.ValidateBirthDate(date1);
-            bool result2 = sut.ValidateBirthDate(date2);
-            bool result3 = sut.ValidateBirthDate(date3);
-            bool result4 = sut.ValidateBirthDate(date4);
-            bool result5 = sut.ValidateBirthDate(date5);
-            bool result6 = sut.ValidateBirthDate(date6);
-            bool result7 = sut.ValidateBirthDate(date7);
+            bool result1 = sut.ValidateDate(date1);
+            bool result2 = sut.ValidateDate(date2);
+            bool result3 = sut.ValidateDate(date3);
+            bool result4 = sut.ValidateDate(date4);
+            bool result5 = sut.ValidateDate(date5);
+            bool result6 = sut.ValidateDate(date6);
+            bool result7 = sut.ValidateDate(date7);
             //Assert
             Assert.True(result1);
             Assert.False(result2);

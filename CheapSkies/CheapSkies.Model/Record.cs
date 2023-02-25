@@ -8,13 +8,15 @@ namespace CheapSkies.Model
 {
     public class Record
     {
-        public Record(string airlineCode, int flightNumber, string arrivalStation, string departureStation) 
+        public Record() { }
+        public Record(string airlineCode, int flightNumber, string arrivalStation, string departureStation)
         {
             AirlineCode = airlineCode;
             FlightNumber = flightNumber;
             ArrivalStation = arrivalStation;
             DepartureStation = departureStation;
-        } 
+        }
+
         public string AirlineCode { get; set; }
         public int FlightNumber { get; set; }
         public string ArrivalStation { get; set; }

@@ -58,9 +58,9 @@ namespace CheapSikes.View
 
             do
             {
-                Console.WriteLine("Input Passenger's BirthDate (Format: dd/mm/yyyy): ");
+                Console.WriteLine("Input Passenger's BirthDate (Format: mm/dd/yyyy): ");
                 result = Console.ReadLine();
-                condition = _passengerValidator.ValidateBirthDate(result);
+                condition = _passengerValidator.ValidateDate(result);
 
                 if (condition == false)
                 {
@@ -69,26 +69,10 @@ namespace CheapSikes.View
                 }
             } while (!condition);
 
-            return DateTime.Parse(result);
+
+            return DateTime.ParseExact(result, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture );
         }
 
-        public int InputNumberOfPassenger()
-        {
-            string result;
-            bool condition;
-            do
-            {
-                Console.WriteLine("Input the number of passengers you are booking (1-5 passengers only):  ");
-                result = Console.ReadLine();
-                condition = _passengerValidator.ValidatePassengerNumber(result);
-
-                if (condition == false)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Invalid Input. The input must be an an integer between 1-5");
-                }
-            } while (!condition);
-            return Int32.Parse(result);
-        }  
+        
     }
 }

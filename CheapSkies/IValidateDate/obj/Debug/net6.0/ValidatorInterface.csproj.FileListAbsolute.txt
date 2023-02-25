@@ -1,0 +1,12 @@
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\bin\Debug\net6.0\ValidatorInterface.deps.json
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\bin\Debug\net6.0\ValidatorInterface.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\bin\Debug\net6.0\ValidatorInterface.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ValidatorInterface.csproj.AssemblyReference.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ValidatorInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ValidatorInterface.AssemblyInfoInputs.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ValidatorInterface.AssemblyInfo.cs
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ValidatorInterface.csproj.CoreCompileInputs.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ValidatorInterface.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\refint\ValidatorInterface.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ValidatorInterface.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IValidateDate\obj\Debug\net6.0\ref\ValidatorInterface.dll

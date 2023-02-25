@@ -10,7 +10,15 @@ namespace CheapSkies.Model
     public class Passenger
     {
         private DateTime _birthDate;
-        private int _age;
+
+        public Passenger() { }
+        public Passenger(string firstName, string lastName, DateTime birthDate)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDate = birthDate;
+        }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDate

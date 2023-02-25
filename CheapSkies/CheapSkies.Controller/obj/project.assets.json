@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ValidatorInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ValidatorInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ValidatorInterface.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ValidatorInterface/1.0.0": {
+      "type": "project",
+      "path": "../IValidateDate/ValidatorInterface.csproj",
+      "msbuildProject": "../IValidateDate/ValidatorInterface.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ValidatorInterface >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\frgol\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\ValidatorInterface.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\ValidatorInterface.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

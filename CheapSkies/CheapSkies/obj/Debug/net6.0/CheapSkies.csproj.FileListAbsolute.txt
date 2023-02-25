@@ -50,3 +50,5 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies\obj\Debug\net6.
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies\obj\Debug\net6.0\ref\CheapSkies.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies\bin\Debug\net6.0\CheapSkies.Controller.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies\bin\Debug\net6.0\CheapSkies.Controller.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies\bin\Debug\net6.0\ValidatorInterface.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies\bin\Debug\net6.0\ValidatorInterface.pdb

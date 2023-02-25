@@ -1812,6 +1812,9 @@
       "CheapSkies.Controller/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ValidatorInterface": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CheapSkies.Controller.dll": {}
         },
@@ -1840,6 +1843,16 @@
         },
         "runtime": {
           "bin/placeholder/CheapSkies.View.dll": {}
+        }
+      },
+      "ValidatorInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ValidatorInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ValidatorInterface.dll": {}
         }
       }
     }
@@ -6151,6 +6164,11 @@
       "type": "project",
       "path": "../CheapSikes.View/CheapSkies.View.csproj",
       "msbuildProject": "../CheapSikes.View/CheapSkies.View.csproj"
+    },
+    "ValidatorInterface/1.0.0": {
+      "type": "project",
+      "path": "../IValidateDate/ValidatorInterface.csproj",
+      "msbuildProject": "../IValidateDate/ValidatorInterface.csproj"
     }
   },
   "projectFileDependencyGroups": {

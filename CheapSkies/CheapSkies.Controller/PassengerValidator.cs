@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ValidatorInterface;
 
 namespace CheapSkies.Validator
 {
-    public class PassengerValidator
+    public class PassengerValidator : IValidateDate
     {
         public bool ValidateName(string name)
         {
@@ -31,9 +32,9 @@ namespace CheapSkies.Validator
             return true;
         }
     
-        public bool ValidateBirthDate(string birthDate)
+        public bool ValidateDate(string birthDate)
         {
-            string birthDateFormat = @"dd/MM/yyyy";
+            string birthDateFormat = @"MM/dd/yyyy";
             bool parse = DateTime.TryParseExact(birthDate, birthDateFormat, System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None, out DateTime result);
             
@@ -48,18 +49,6 @@ namespace CheapSkies.Validator
             return false;
         }
     
-        public bool ValidatePassengerNumber(string passengerNumber)
-        {
-            bool parse = Int32.TryParse(passengerNumber, out int resultNumber);
-
-            if(parse)
-            {
-                if(resultNumber > 0 && resultNumber < 6)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+        
     }
 }

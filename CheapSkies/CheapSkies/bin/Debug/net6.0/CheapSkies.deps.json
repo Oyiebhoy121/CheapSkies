@@ -18,6 +18,9 @@
         }
       },
       "CheapSkies.Controller/1.0.0": {
+        "dependencies": {
+          "ValidatorInterface": "1.0.0"
+        },
         "runtime": {
           "CheapSkies.Controller.dll": {}
         }
@@ -47,6 +50,11 @@
         },
         "runtime": {
           "CheapSkies.View.dll": {}
+        }
+      },
+      "ValidatorInterface/1.0.0": {
+        "runtime": {
+          "ValidatorInterface.dll": {}
         }
       }
     }
@@ -78,6 +86,11 @@
       "sha512": ""
     },
     "CheapSkies.View/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ValidatorInterface/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
