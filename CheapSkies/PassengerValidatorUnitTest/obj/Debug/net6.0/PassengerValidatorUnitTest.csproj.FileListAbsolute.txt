@@ -189,8 +189,6 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Validator.dll
-C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Validator.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\obj\Debug\net6.0\PassengerValidatorUnitTest.csproj.AssemblyReference.cache
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\obj\Debug\net6.0\PassengerValidatorUnitTest.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\obj\Debug\net6.0\PassengerValidatorUnitTest.AssemblyInfoInputs.cache
@@ -206,3 +204,5 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.View.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.View.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Controller.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\PassengerValidatorUnitTest\bin\Debug\net6.0\CheapSkies.Controller.pdb

@@ -33,14 +33,14 @@ namespace CheapSkies.Validator
     
         public bool ValidateBirthDate(string birthDate)
         {
-            string birthDateFormat = @"mm/dd/yyyy";
+            string birthDateFormat = @"dd/MM/yyyy";
             bool parse = DateTime.TryParseExact(birthDate, birthDateFormat, System.Globalization.CultureInfo.InvariantCulture,
                 System.Globalization.DateTimeStyles.None, out DateTime result);
             
             if (parse)
             {
                 TimeSpan timeSpan = DateTime.Today - result;
-                if(timeSpan.TotalMilliseconds > 0)
+                if(timeSpan.TotalMilliseconds >= 0)
                 {
                     return true;
                 }

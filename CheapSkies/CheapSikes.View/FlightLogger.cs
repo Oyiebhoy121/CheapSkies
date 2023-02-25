@@ -11,21 +11,35 @@ namespace CheapSikes.View
         {
             _flightValidator = flightValidator;
         }
-
-        public string InputScheduleTimeOfArrival()
+        public TimeSpan GetScheduleTime(int stationTimeNumber)
         {
-            Console.WriteLine("Input the Schedule Time of Arrival:");
-            string result = Console.ReadLine();
-            return result;
+            string result;
+            string arrivalOrDepartureScheduleTime;
+            bool condition;
+            switch (stationTimeNumber)
+            {
+                case 1:
+                    arrivalOrDepartureScheduleTime = "Arrival";
+                    break;
+                case 2:
+                    arrivalOrDepartureScheduleTime = "Departure";
+                    break;
+                default:
+                    throw new ArgumentException("Station Time Number is invalid", nameof(stationTimeNumber));
+            }
+            do
+            {
+                Console.WriteLine($"Input the Schedule Time of {arrivalOrDepartureScheduleTime} (Format: HH:MM): ");
+                result = Console.ReadLine();
+                condition = _flightValidator.ValidateTimeFormat(result);
+
+                if (condition == false)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Invalid Input. The input must only be of the given format");
+                }
+            } while (!condition);
+            return TimeSpan.Parse(result);     
         }
-
-        public string InputScheduleTimeOfDeparture()
-        {
-            Console.WriteLine("Input the Schedule Time of Destination:");
-            string result = Console.ReadLine();
-            return result;
-        }
-
-
     }
 }

@@ -35,7 +35,7 @@ namespace CheapSkies.View
             return result;
         }
 
-        public string GetFlightNumbers()
+        public int GetFlightNumbers()
         {
             string result;
             bool condition;
@@ -51,7 +51,7 @@ namespace CheapSkies.View
                     Console.WriteLine("Invalid Input. The input must be an an integer between 1-9999");
                 }
             }   while (!condition);
-            return result;
+            return Int32.Parse(result);
         }
 
         public string GetStation(int stationNumber)

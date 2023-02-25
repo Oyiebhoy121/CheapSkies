@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "PassengerValidatorUnitTest/1.0.0": {
         "dependencies": {
+          "CheapSkies.Controller": "1.0.0",
           "CheapSkies.Model": "1.0.0",
-          "CheapSkies.Validator": "1.0.0",
           "CheapSkies.View": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.3.2",
           "coverlet.collector": "3.1.2",
@@ -1092,17 +1092,20 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
+      "CheapSkies.Controller/1.0.0": {
+        "runtime": {
+          "CheapSkies.Controller.dll": {}
+        }
+      },
       "CheapSkies.Model/1.0.0": {
         "runtime": {
           "CheapSkies.Model.dll": {}
         }
       },
-      "CheapSkies.Validator/1.0.0": {
-        "runtime": {
-          "CheapSkies.Validator.dll": {}
-        }
-      },
       "CheapSkies.View/1.0.0": {
+        "dependencies": {
+          "CheapSkies.Controller": "1.0.0"
+        },
         "runtime": {
           "CheapSkies.View.dll": {}
         }
@@ -1759,12 +1762,12 @@
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
-    "CheapSkies.Model/1.0.0": {
+    "CheapSkies.Controller/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "CheapSkies.Validator/1.0.0": {
+    "CheapSkies.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

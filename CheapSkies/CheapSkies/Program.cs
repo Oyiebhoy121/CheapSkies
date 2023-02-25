@@ -1,4 +1,6 @@
-﻿using CheapSkies.Model;
+﻿using CheapSikes.View;
+using CheapSkies.Controller;
+using CheapSkies.Model;
 using CheapSkies.Validator;
 using CheapSkies.View;
 
@@ -8,13 +10,23 @@ namespace CheapSkies
     {
         public static void Main(string[] args)
         {
-            RecordValidator recordValidator = new RecordValidator();
-            RecordLogger recordLogger = new RecordLogger(recordValidator);
-            string airlineCode = recordLogger.GetAirlineCode();
-            string flightNumber = recordLogger.GetFlightNumbers();
-            string arrivalStation = recordLogger.GetStation(1);
-            string departureStation = recordLogger.GetStation(2);
-            Console.WriteLine(airlineCode);
+
+            //FlightValidator flightValidator = new FlightValidator();
+            //FlightLogger flightLogger = new FlightLogger(flightValidator);
+            //string airlineCode = flightLogger.GetAirlineCode();
+            //int flightNumber = flightLogger.GetFlightNumbers();
+            //string arrivalStation = flightLogger.GetStation(1);
+            //string departureStation = flightLogger.GetStation(2);
+            //TimeSpan arrivalTime = flightLogger.GetScheduleTime(1);
+            //TimeSpan departureTime = flightLogger.GetScheduleTime(2);
+            
+            PassengerValidator passengerValidator = new PassengerValidator();
+            PassengerLogger passengerLogger = new PassengerLogger(passengerValidator);
+            //string firstName = passengerLogger.InputName(1);
+            //string lastName = passengerLogger.InputName(2);g
+            DateTime birthDay = passengerLogger.InputBirthDate();
+            int numberOfPassengers = passengerLogger.InputNumberOfPassenger();
+
         }
     }
 }
