@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.Controller
+namespace CheapSkies.Controller.Controller
 {
     public class FlightSearcher
     {

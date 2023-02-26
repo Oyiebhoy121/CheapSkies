@@ -1,6 +1,4 @@
-﻿using CheapSkies.Validator;
-
-namespace CheapSkies.Controller
+﻿namespace CheapSkies.Controller.Validators
 {
     public class FlightValidator : RecordValidator
     {
@@ -9,12 +7,12 @@ namespace CheapSkies.Controller
             string timeSpanFormat = @"hh\:mm";
             bool parse = TimeSpan.TryParseExact(timeInput, timeSpanFormat, System.Globalization.CultureInfo.InvariantCulture, out TimeSpan result);
 
-            if(parse)
-            { 
+            if (parse)
+            {
                 return true;
             }
             return false;
         }
-      
+
     }
 }

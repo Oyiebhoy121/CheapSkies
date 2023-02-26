@@ -1,0 +1,5 @@
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IDisplayScreen\obj\Debug\net6.0\ViewInterface.csproj.AssemblyReference.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IDisplayScreen\obj\Debug\net6.0\ViewInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IDisplayScreen\obj\Debug\net6.0\ViewInterface.AssemblyInfoInputs.cache
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IDisplayScreen\obj\Debug\net6.0\ViewInterface.AssemblyInfo.cs
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\IDisplayScreen\obj\Debug\net6.0\ViewInterface.csproj.CoreCompileInputs.cache

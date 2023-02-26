@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IValidateDate\ValidatorInterface.csproj" />
+    <ProjectReference Include="..\CheapSikes.View\CheapSkies.View.csproj" />
+    <ProjectReference Include="..\IValidateDate\Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

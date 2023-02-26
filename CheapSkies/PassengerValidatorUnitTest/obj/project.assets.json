@@ -1813,7 +1813,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ValidatorInterface": "1.0.0"
+          "CheapSkies.View": "1.0.0",
+          "Interfaces": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CheapSkies.Controller.dll": {}
@@ -1836,8 +1837,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "CheapSkies.Controller": "1.0.0",
-          "CheapSkies.Model": "1.0.0"
+          "CheapSkies.Model": "1.0.0",
+          "ViewInterface": "1.0.0"
         },
         "compile": {
           "bin/placeholder/CheapSkies.View.dll": {}
@@ -1846,14 +1847,24 @@
           "bin/placeholder/CheapSkies.View.dll": {}
         }
       },
-      "ValidatorInterface/1.0.0": {
+      "Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/ValidatorInterface.dll": {}
+          "bin/placeholder/Interfaces.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ValidatorInterface.dll": {}
+          "bin/placeholder/Interfaces.dll": {}
+        }
+      },
+      "ViewInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ViewInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ViewInterface.dll": {}
         }
       }
     }
@@ -6166,10 +6177,15 @@
       "path": "../CheapSikes.View/CheapSkies.View.csproj",
       "msbuildProject": "../CheapSikes.View/CheapSkies.View.csproj"
     },
-    "ValidatorInterface/1.0.0": {
+    "Interfaces/1.0.0": {
       "type": "project",
-      "path": "../IValidateDate/ValidatorInterface.csproj",
-      "msbuildProject": "../IValidateDate/ValidatorInterface.csproj"
+      "path": "../IValidateDate/Interfaces.csproj",
+      "msbuildProject": "../IValidateDate/Interfaces.csproj"
+    },
+    "ViewInterface/1.0.0": {
+      "type": "project",
+      "path": "../IDisplayScreen/ViewInterface.csproj",
+      "msbuildProject": "../IDisplayScreen/ViewInterface.csproj"
     }
   },
   "projectFileDependencyGroups": {

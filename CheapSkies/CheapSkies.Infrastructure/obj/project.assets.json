@@ -21,6 +21,16 @@
         "runtime": {
           "bin/placeholder/CheapSkies.Model.dll": {}
         }
+      },
+      "Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfaces.dll": {}
+        }
       }
     }
   },
@@ -34,12 +44,18 @@
       "type": "project",
       "path": "../CheapSkies.Model/CheapSkies.Model.csproj",
       "msbuildProject": "../CheapSkies.Model/CheapSkies.Model.csproj"
+    },
+    "Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../IValidateDate/Interfaces.csproj",
+      "msbuildProject": "../IValidateDate/Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "CheapSkies.Interfaces >= 1.0.0",
-      "CheapSkies.Model >= 1.0.0"
+      "CheapSkies.Model >= 1.0.0",
+      "Interfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -74,6 +90,9 @@
             },
             "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj": {
               "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj"
+            },
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\Interfaces.csproj"
             }
           }
         }

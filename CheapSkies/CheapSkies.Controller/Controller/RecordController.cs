@@ -1,21 +1,20 @@
-﻿using System;
+﻿using CheapSkies.Controller.Validators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CheapSkies.Controller;
-using CheapSkies.Validator;
 
-namespace CheapSkies.View
+namespace CheapSkies.Controller.Controller
 {
-    public class RecordLogger
+    public class RecordController
     {
         protected RecordValidator _recordValidator;
-        public RecordLogger(RecordValidator recordValidator)
+        public RecordController(RecordValidator recordValidator)
         {
             _recordValidator = recordValidator;
         }
-        public string GetAirlineCode() 
+        public string GetAirlineCode()
         {
             string result;
             bool condition;
@@ -27,11 +26,9 @@ namespace CheapSkies.View
 
                 if (condition == false)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Invalid Input. The input must be 2-3 Uppercased Alphanumberic Code. " +
-                        "Numeric Character must only appear once.");
+                    
                 }
-            }   while(!condition);
+            } while (!condition);
             return result;
         }
 
@@ -47,10 +44,9 @@ namespace CheapSkies.View
 
                 if (condition == false)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Invalid Input. The input must be an an integer between 1-9999");
+                    
                 }
-            }   while (!condition);
+            } while (!condition);
             return Int32.Parse(result);
         }
 
@@ -59,17 +55,7 @@ namespace CheapSkies.View
             string result;
             string arrivalOrDepartureStation;
             bool condition;
-            switch (stationNumber)
-            {
-                case 1:
-                    arrivalOrDepartureStation = "Arrival";
-                    break;
-                case 2:
-                    arrivalOrDepartureStation = "Departure";
-                    break;
-                default:
-                    throw new ArgumentException("Station Number is invalid", nameof(stationNumber));
-            }
+       
             do
             {
                 Console.WriteLine($"Input {arrivalOrDepartureStation} Station (e.g. MNL, AB3, NRT): ");
@@ -78,12 +64,11 @@ namespace CheapSkies.View
 
                 if (condition == false)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Invalid Input. The input must be exaclty 3 Uppercased Alphanumberic Code. " +
-                        "Numeric Characters are optional. First character must be a letter");
+                    
                 }
-            }   while (!condition);
+            } while (!condition);
             return result;
         }
     }
+}
 }

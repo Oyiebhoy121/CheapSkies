@@ -1,5 +1,5 @@
 ﻿using CheapSikes.View;
-using CheapSkies.Controller;
+using CheapSkies.Controller.Controller;
 using CheapSkies.Model;
 using CheapSkies.Validator;
 using CheapSkies.View;
@@ -11,12 +11,16 @@ namespace CheapSkies
     {
         public static void Main(string[] args)
         {
+            Screen screen = new Screen();
+            ScreenInputValidator screenInputValidator = new ScreenInputValidator();
+            MainController homeScreenController = new HomeScreenController(screen, screenInputValidator);
 
-            FlightValidator flightValidator = new FlightValidator();
-            FlightLogger flightLogger = new FlightLogger(flightValidator);
-            FlightMaintenanceScreen screen = new FlightMaintenanceScreen(flightLogger);
-            screen.GetFlightMaintenanceScreen();
+            string homeScreenInput;
 
+            do
+            {
+                homeScreenInput = homeScreenController.GetScreenInput(3);
+            }   while (decision == "4");
         }
     }
 }

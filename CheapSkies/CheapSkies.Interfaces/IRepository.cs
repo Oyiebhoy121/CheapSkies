@@ -3,8 +3,8 @@
     public interface IRepository<T>
     {
         public List<T> _data { get; set; } 
-        public void Add(T item);
-        public void Fetch(T item);
+        public void AddData(T item);
+        public List<T> GetData(T item);
 
     }
 }

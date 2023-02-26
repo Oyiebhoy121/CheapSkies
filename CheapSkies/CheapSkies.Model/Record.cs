@@ -17,10 +17,10 @@ namespace CheapSkies.Model
             DepartureStation = departureStation;
         }
 
-        public string AirlineCode { get; }
-        public int FlightNumber { get; }
-        public string ArrivalStation { get; }
-        public string DepartureStation { get; }
+        public string AirlineCode { get; set; }
+        public int FlightNumber { get; set; }
+        public string ArrivalStation { get; set; }
+        public string DepartureStation { get; set; }
         
     }
 }

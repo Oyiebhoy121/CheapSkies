@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.View
+namespace ValidatorInterface 
 {
-    internal class ReservationScreen
+    public interface IDisplayScreen
     {
+        public string DisplayScreenAndGetInput();
     }
 }

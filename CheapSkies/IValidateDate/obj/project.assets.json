@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\ValidatorInterface.csproj",
-      "projectName": "ValidatorInterface",
-      "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\ValidatorInterface.csproj",
+      "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\Interfaces.csproj",
+      "projectName": "Interfaces",
+      "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\Interfaces.csproj",
       "packagesPath": "C:\\Users\\frgol\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\obj\\",
       "projectStyle": "PackageReference",

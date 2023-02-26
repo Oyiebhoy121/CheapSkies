@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.Validator
+namespace CheapSkies.Controller.Validators
 {
     public class RecordValidator
     {
@@ -33,7 +33,7 @@ namespace CheapSkies.Validator
                 }
             }
 
-            int validCount = capitalLetterCount + digitCount; 
+            int validCount = capitalLetterCount + digitCount;
 
             if (charArray.Length > 1 && charArray.Length < 4)
             {
@@ -42,19 +42,19 @@ namespace CheapSkies.Validator
                     return true;
                 }
             }
-            return false;    
+            return false;
         }
 
         public bool ValidateFlightNumber(string flightNumber)
         {
-            if(flightNumber.Contains(" "))
+            if (flightNumber.Contains(" "))
             {
                 return false;
             }
 
-            bool result = Int32.TryParse(flightNumber, out int value);
+            bool result = int.TryParse(flightNumber, out int value);
 
-            if(value >= 1 && value <= 9999 && result)
+            if (value >= 1 && value <= 9999 && result)
             {
                 return true;
             }
@@ -65,7 +65,7 @@ namespace CheapSkies.Validator
         public bool ValidateStation(string station)
         {
             int validTotal = 0;
-            
+
             if (station.Equals(""))
             {
                 return false;
@@ -75,8 +75,8 @@ namespace CheapSkies.Validator
 
             foreach (char character in charArray)
             {
-                if( (char.IsLetter(character) && char.ToUpper(character) == character)
-                    || char.IsNumber(character) ) 
+                if (char.IsLetter(character) && char.ToUpper(character) == character
+                    || char.IsNumber(character))
                 {
                     validTotal++;
                 }
@@ -87,6 +87,6 @@ namespace CheapSkies.Validator
                 return true;
             }
             return false;
-        }  
+        }
     }
 }

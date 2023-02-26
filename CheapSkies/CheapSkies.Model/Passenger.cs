@@ -10,6 +10,7 @@ namespace CheapSkies.Model
     public class Passenger
     {
         private DateTime _birthDate;
+        private int _age;
 
         public Passenger() { }
         public Passenger(string firstName, string lastName, DateTime birthDate)
@@ -19,8 +20,8 @@ namespace CheapSkies.Model
             BirthDate = birthDate;
         }
 
-        public string FirstName { get; }
-        public string LastName { get; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public DateTime BirthDate
         {
             get { return _birthDate; }
@@ -36,6 +37,7 @@ namespace CheapSkies.Model
         public int Age
         {
             get { return CalculateAge(_birthDate); }
+            set { _age = value; }
         }
         private int CalculateAge(DateTime birthDate)
         {
