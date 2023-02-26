@@ -19,8 +19,8 @@ namespace CheapSkies.Model
             BirthDate = birthDate;
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName { get; }
+        public string LastName { get; }
         public DateTime BirthDate
         {
             get { return _birthDate; }

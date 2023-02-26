@@ -21,8 +21,8 @@ namespace CheapSkies.Model
             _listOfPNR = listOfPNR;
         }
 
-        public DateTime FlightDate { get; set; }
-        public int NumberOfPassenger { get; set; }
+        public DateTime FlightDate { get; }
+        public int NumberOfPassenger { get; }
         public string PNR
         {
             get { return GeneratePNR(); }

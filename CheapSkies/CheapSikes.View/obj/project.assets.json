@@ -15,6 +15,16 @@
           "bin/placeholder/CheapSkies.Controller.dll": {}
         }
       },
+      "CheapSkies.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CheapSkies.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Model.dll": {}
+        }
+      },
       "ValidatorInterface/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -33,6 +43,11 @@
       "path": "../CheapSkies.Controller/CheapSkies.Controller.csproj",
       "msbuildProject": "../CheapSkies.Controller/CheapSkies.Controller.csproj"
     },
+    "CheapSkies.Model/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Model/CheapSkies.Model.csproj",
+      "msbuildProject": "../CheapSkies.Model/CheapSkies.Model.csproj"
+    },
     "ValidatorInterface/1.0.0": {
       "type": "project",
       "path": "../IValidateDate/ValidatorInterface.csproj",
@@ -41,7 +56,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CheapSkies.Controller >= 1.0.0"
+      "CheapSkies.Controller >= 1.0.0",
+      "CheapSkies.Model >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -73,6 +89,9 @@
           "projectReferences": {
             "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
               "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj"
+            },
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj"
             }
           }
         }
