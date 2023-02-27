@@ -12,12 +12,12 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class SearchReservationController
     {
-        private UIScreen _uiScreen;
+        private UI _uiScreen;
         private ReservationRepository _reservationRepository;
         private SearchScreen _searchScreen;
         private PassengerRepository _passengerRepository;
 
-        public SearchReservationController(UIScreen uiScreen, ReservationRepository reservationRepository,
+        public SearchReservationController(UI uiScreen, ReservationRepository reservationRepository,
                                             SearchScreen searchScreen, PassengerRepository passengerRepository)
         {
             _uiScreen = uiScreen;

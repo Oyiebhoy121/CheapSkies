@@ -5,21 +5,19 @@ namespace FlightValidatorUnitTest
     public class ValidateTimeFormatUnitTest
     {
         [Fact]
-        public void ValidateTimeFormatTest1()
+        [Theory]
+        [InlineData("00:00")]
+        public void ValidateTimeFormat_WhenTimeIsValid_ReturnsTrue(string validTime)
         {
             //Arrange
             var sut = new FlightValidator();
-            string timeFormat1 = "00:00";
-            string timeFormat2 = "23:59";
-            string timeFormat3 = "12:09";
+            //string timeFormat1 = "00:00";
+            //string timeFormat2 = "23:59";
+            //string timeFormat3 = "12:09";
             //Act
-            bool result1 = sut.ValidateTimeFormat(timeFormat1);
-            bool result2 = sut.ValidateTimeFormat(timeFormat2);
-            bool result3 = sut.ValidateTimeFormat(timeFormat3);
+            bool result = sut.ValidateTimeFormat(validTime);
             //Assert
-            Assert.True(result1);
-            Assert.True(result2);
-            Assert.True(result3);
+            Assert.True(result);
         }
 
         [Fact]

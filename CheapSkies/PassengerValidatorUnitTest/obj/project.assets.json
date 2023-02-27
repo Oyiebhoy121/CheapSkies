@@ -6205,19 +6205,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\frgol\\.nuget\\packages\\": {}
+    "C:\\Users\\fgoleta\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\PassengerValidatorUnitTest\\PassengerValidatorUnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\PassengerValidatorUnitTest\\PassengerValidatorUnitTest.csproj",
       "projectName": "PassengerValidatorUnitTest",
-      "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\PassengerValidatorUnitTest\\PassengerValidatorUnitTest.csproj",
-      "packagesPath": "C:\\Users\\frgol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\PassengerValidatorUnitTest\\obj\\",
+      "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\PassengerValidatorUnitTest\\PassengerValidatorUnitTest.csproj",
+      "packagesPath": "C:\\Users\\fgoleta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\PassengerValidatorUnitTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\frgol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fgoleta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6231,14 +6236,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj": {
-              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj"
+            "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj": {
+              "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj"
             },
-            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
-              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj"
+            "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
+              "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj"
             },
-            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj": {
-              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj"
+            "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj": {
+              "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj"
             }
           }
         }
@@ -6290,7 +6295,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

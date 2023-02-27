@@ -1,4 +1,5 @@
-﻿using CheapSkies.Controller.Validators;
+﻿using CheapSkies.Controller.Controller.FlightMaintenanceScreen;
+using CheapSkies.Controller.Validators;
 using CheapSkies.Infrastructure;
 using CheapSkies.Model.DataModel;
 using CheapSkies.View;
@@ -7,28 +8,62 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 {
     public class SearchFlightController
     {
-        private AddFlightScreen _addFlightScreen;
-        private FlightValidator _flightValidator;
-        private FlightRepository _flightRepository;
-        private UIScreen _uIScreen;
-        private AddFlightController _addFlightController;
-        private ScreenInputValidator _screenInputValidator;
-        private SearchScreen _searchScreen;
-        public SearchFlightController(AddFlightScreen addFlightScreen, FlightValidator flightValidator,
-                                    FlightRepository flightRepository, UIScreen uIScreen, 
-                                    AddFlightController addFlightController, ScreenInputValidator screenInputValidator,
-                                    SearchScreen searchScreen)
+        private readonly string[] menu =
         {
-            _addFlightScreen = addFlightScreen;
-            _flightValidator = flightValidator;
-            _flightRepository = flightRepository;
-            _uIScreen = uIScreen;
-            _addFlightController = addFlightController;
-            _screenInputValidator = screenInputValidator;
-            _searchScreen = searchScreen;
-        }
+            "Search Flight Screen",
+            "Press 1 and enter => Search by Flight Number",
+            "Press 2 and enter => Search by Airline Code",
+            "Press 3 and enter => Search by Origin and Departure Station",
+            "Press 4 and enter => Go Back to Flight Maintenance Screen"
+        };
         public void SearchFlight()
         {
+            UI ui = new UI();
+            DisplayFlightController displayFlightController = new DisplayFlightController();
+            string userInput = "";
+
+            while (userInput != "1" || userInput != "2" || userInput != "3")
+            {
+                ui.Display(menu);
+                userInput = ui.GetInput();
+
+                switch (userInput)
+                {
+                    case "1":
+                        //Search by Flight Number
+                        break;
+                    case "2":
+                        //Search by Airline Code 
+                        break;
+                    case "3":
+                        //Search by Origin and Departure Station
+                        break;
+                    case "4":
+                        return;
+                    default:
+                        break;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             string userInput;
             bool result;
             int userValidatedInput;

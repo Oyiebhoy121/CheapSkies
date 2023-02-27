@@ -70,7 +70,7 @@ namespace CheapSkies.Controller.Validators
             {
                 return false;
             }
-
+            
             char[] charArray = station.ToCharArray();
 
             foreach (char character in charArray)

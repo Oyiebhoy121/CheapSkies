@@ -14,14 +14,14 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
     {
         private CreateReservationScreen _createReservationScreen;
         private ReservationValidator _reservationValidator;
-        private UIScreen _uiScreen;
+        private UI _uiScreen;
         
         private CreateReservationController _createReservationController;
         private SearchReservationController _searchReservationController;
         private SearchScreen _searchScreen;
         private ScreenInputValidator _screenInputValidator;
         public ReservationController(CreateReservationScreen createReservationScreen, ReservationValidator reservationValidator,        
-                                        UIScreen uiScreen, CreateReservationController createReservationController,
+                                        UI uiScreen, CreateReservationController createReservationController,
                                         SearchReservationController searchReservationController, SearchScreen searchScreen,
                                         ScreenInputValidator screenInputValidator)
         {

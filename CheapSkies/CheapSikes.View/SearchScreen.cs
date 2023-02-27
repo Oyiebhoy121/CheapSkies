@@ -7,8 +7,7 @@ namespace CheapSkies.View
     {
         public void ShowFlights(List<FlightBase> listOfFlights)
         {
-            Console.Clear();
-            Console.WriteLine("Showing Flight Results:\n");
+
             Console.WriteLine("Airline Code \t Flight Number \t Departure Station \t Arrival Station \t" +
                 "Schedule Time of Arrival \t Schedule Time of Departure");
             foreach(FlightBase flight in listOfFlights)
