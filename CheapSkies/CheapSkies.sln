@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies", "CheapSkies\CheapSkies.csproj", "{B89264AA-C407-4A72-BBF1-B09C5485DF23}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Infrastructure", "CheapSkies.Infrastructure\CheapSkies.Infrastructure.csproj", "{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Model", "CheapSkies.Model\CheapSkies.Model.csproj", "{24B7FA0E-E5BC-4BEF-949B-A69B4C327827}"
@@ -41,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "IValidateDate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservationValidatorUnitTest", "TestProject1\ReservationValidatorUnitTest.csproj", "{B655DC74-877C-451B-9E19-FFD5548C309E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewInterface", "IDisplayScreen\ViewInterface.csproj", "{907F6AFC-C820-4FD9-B906-65845F738129}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkiesFinal", "CheapSkiesFinal\CheapSkiesFinal.csproj", "{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +47,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B89264AA-C407-4A72-BBF1-B09C5485DF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B89264AA-C407-4A72-BBF1-B09C5485DF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B89264AA-C407-4A72-BBF1-B09C5485DF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B89264AA-C407-4A72-BBF1-B09C5485DF23}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A761CE6B-F259-43B1-AFB3-50F3C3EE52D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -97,10 +91,10 @@ Global
 		{B655DC74-877C-451B-9E19-FFD5548C309E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B655DC74-877C-451B-9E19-FFD5548C309E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B655DC74-877C-451B-9E19-FFD5548C309E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{907F6AFC-C820-4FD9-B906-65845F738129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{907F6AFC-C820-4FD9-B906-65845F738129}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{907F6AFC-C820-4FD9-B906-65845F738129}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{907F6AFC-C820-4FD9-B906-65845F738129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,7 +110,6 @@ Global
 		{0CC48389-4367-41F3-9355-E9522327D1CF} = {2DD8D2F8-F1B1-4B4C-9F0E-4B57CCA1A6A3}
 		{C2B5EF13-4240-4B8D-9246-2D47C9C06C74} = {ABDB7886-4A5C-4892-8568-E67B356342DC}
 		{B655DC74-877C-451B-9E19-FFD5548C309E} = {AB9C4306-19DB-4025-9925-4775A1464BE6}
-		{907F6AFC-C820-4FD9-B906-65845F738129} = {ABDB7886-4A5C-4892-8568-E67B356342DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36D174F1-F193-4BBB-9D5A-27703C9FFB7F}

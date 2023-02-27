@@ -8,23 +8,15 @@
     ".NETCoreApp,Version=v6.0": {
       "CheapSkies.View/1.0.0": {
         "dependencies": {
-          "CheapSkies.Controller": "1.0.0"
+          "CheapSkies.Model": "1.0.0"
         },
         "runtime": {
           "CheapSkies.View.dll": {}
         }
       },
-      "CheapSkies.Controller/1.0.0": {
-        "dependencies": {
-          "ValidatorInterface": "1.0.0"
-        },
+      "CheapSkies.Model/1.0.0": {
         "runtime": {
-          "CheapSkies.Controller.dll": {}
-        }
-      },
-      "ValidatorInterface/1.0.0": {
-        "runtime": {
-          "ValidatorInterface.dll": {}
+          "CheapSkies.Model.dll": {}
         }
       }
     }
@@ -35,12 +27,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CheapSkies.Controller/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ValidatorInterface/1.0.0": {
+    "CheapSkies.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -35,9 +35,10 @@ namespace CheapSkies.Controller.Controller
 
             _flightRepository.SaveFlight(flight);
             _addFlightScreen.DisplaySuccessfullyAddedFlight();
+
         }
 
-        private string GetAirlineCode()
+        public string GetAirlineCode()
         {
             string airlineCode;
             bool parse;
@@ -55,7 +56,7 @@ namespace CheapSkies.Controller.Controller
             return airlineCode;
         }
 
-        private int GetFlightNumber()
+        public int GetFlightNumber()
         {
             string flightNumber;
             bool parse;
@@ -73,7 +74,7 @@ namespace CheapSkies.Controller.Controller
             return Int32.Parse(flightNumber);
         }
 
-        private string GetStation(string arrivalOrDepartureStation)
+        public string GetStation(string arrivalOrDepartureStation)
         {
             string station;
             bool parse;

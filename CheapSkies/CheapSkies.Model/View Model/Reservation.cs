@@ -1,13 +1,8 @@
 ﻿using CheapSkies.Model.DataModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CheapSkies.Model.ViewModel
 {
-    
+
     public class Reservation : ReservationBase
     {
         private List<string> _listOfPNR;

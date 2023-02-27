@@ -1,37 +1,52 @@
-﻿using CheapSkies.Controller.Validators;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CheapSkies.Controller.Controller.Flight_Maintenance_Screen;
+using CheapSkies.Controller.Validators;
+using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller
 {
     public class FlightMaintenanceController
     {
-        private FlightValidator _flightValidator;
-        public FlightMaintenanceController(FlightValidator flightValidator) : base(flightValidator)
+        private AddFlightController _addFlightController;
+        private SearchFlightController _searchFlightController;
+        private UIScreen _uiScreen;
+        private ScreenInputValidator _screenInputValidator;
+
+        public FlightMaintenanceController(AddFlightController addFlightController, SearchFlightController searchFlightController,
+                                            UIScreen uIScreen, ScreenInputValidator screenInputValidator)
         {
-            _flightValidator = flightValidator;
+            _addFlightController = addFlightController;
+            _searchFlightController = searchFlightController;
+            _uiScreen = uIScreen;
+            _screenInputValidator = screenInputValidator;
         }
-        public TimeSpan GetScheduleTime(int stationTimeNumber)
+
+        public void ShowFlightMaintenanceScreen()
         {
-            string result;
-            string arrivalOrDepartureScheduleTime;
-            bool condition;
-      
+            string userInput;
+            bool result;
+
             do
             {
-                result = Console.ReadLine();
-                condition = _flightValidator.ValidateTimeFormat(result);
-
-                if (condition == false)
+                userInput = _uiScreen.DisplayFlightMaintenanceScreenAndGetInput();
+                result = _screenInputValidator.ValidateInput(userInput, 3);
+                if (!result)
                 {
-                    Console.Clear();
-                    
+                    _uiScreen.DisplayInvalidScreenInpuMessage(max:"3");
                 }
-            } while (!condition);
-            return TimeSpan.Parse(result);
+            } while (!result);
+
+            switch(userInput)
+            {
+                case "1":
+                    _addFlightController.AddFlight();
+                    break;
+                case "2":
+                    _searchFlightController.SearchFlight();
+                    break;
+                case "3":
+                    //HomeScreen();
+                    break;
+            }
         }
     }
 }

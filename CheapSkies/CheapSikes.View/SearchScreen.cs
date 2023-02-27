@@ -53,5 +53,31 @@ namespace CheapSkies.View
                                     $"{passenger.Age}\t");
             }
         }
+        public void DisplaySuccessfullyShowFlights()
+        {
+            Console.Clear();
+            Console.WriteLine("Flights shown above.");
+            Console.WriteLine("Press any key to go back Home");
+            Console.Read();
+        }
+
+        public void DisplayFlightSearchesByFlightNumber(int flightNumber)
+        {
+            Console.Clear();
+            Console.WriteLine($"Showing Flights via FligthNumber {flightNumber}");
+        }
+
+        public void DisplayFlightSearchesByAirLineCode(string airlineCode)
+        {
+            Console.Clear();
+            Console.WriteLine($"Showing Flights via FligthNumber {airlineCode}");
+        }
+
+        public void DisplayFlightSearchesByStations(string arrivalStation, string departureStation)
+        {
+            Console.Clear();
+            Console.WriteLine($"Showing Flights via Market Pair Stations " +
+                                $"{arrivalStation}-{departureStation}:");
+        }
     }
 }

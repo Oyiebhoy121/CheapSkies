@@ -50,10 +50,10 @@ namespace CheapSkies.Controller.Controller
             return Int32.Parse(result);
         }
 
-        public string GetStation(int stationNumber)
+        public string GetStation(string station)
         {
             string result;
-            string arrivalOrDepartureStation;
+            string arrivalOrDepartureStation = station;
             bool condition;
        
             do
@@ -71,4 +71,4 @@ namespace CheapSkies.Controller.Controller
         }
     }
 }
-}
+

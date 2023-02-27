@@ -8,15 +8,46 @@
     ".NETCoreApp,Version=v6.0": {
       "CheapSkies.Controller/1.0.0": {
         "dependencies": {
-          "ValidatorInterface": "1.0.0"
+          "CheapSkies.Infrastructure": "1.0.0",
+          "CheapSkies.Model": "1.0.0",
+          "CheapSkies.View": "1.0.0",
+          "Interfaces": "1.0.0"
         },
         "runtime": {
           "CheapSkies.Controller.dll": {}
         }
       },
-      "ValidatorInterface/1.0.0": {
+      "CheapSkies.Infrastructure/1.0.0": {
+        "dependencies": {
+          "CheapSkies.Interfaces": "1.0.0",
+          "CheapSkies.Model": "1.0.0",
+          "Interfaces": "1.0.0"
+        },
         "runtime": {
-          "ValidatorInterface.dll": {}
+          "CheapSkies.Infrastructure.dll": {}
+        }
+      },
+      "CheapSkies.Interfaces/1.0.0": {
+        "runtime": {
+          "CheapSkies.Interfaces.dll": {}
+        }
+      },
+      "CheapSkies.Model/1.0.0": {
+        "runtime": {
+          "CheapSkies.Model.dll": {}
+        }
+      },
+      "CheapSkies.View/1.0.0": {
+        "dependencies": {
+          "CheapSkies.Model": "1.0.0"
+        },
+        "runtime": {
+          "CheapSkies.View.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "runtime": {
+          "Interfaces.dll": {}
         }
       }
     }
@@ -27,7 +58,27 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ValidatorInterface/1.0.0": {
+    "CheapSkies.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CheapSkies.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CheapSkies.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CheapSkies.View/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

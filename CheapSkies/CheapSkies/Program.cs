@@ -11,16 +11,7 @@ namespace CheapSkies
     {
         public static void Main(string[] args)
         {
-            Screen screen = new Screen();
-            ScreenInputValidator screenInputValidator = new ScreenInputValidator();
-            MainController homeScreenController = new HomeScreenController(screen, screenInputValidator);
 
-            string homeScreenInput;
-
-            do
-            {
-                homeScreenInput = homeScreenController.GetScreenInput(3);
-            }   while (decision == "4");
         }
     }
 }

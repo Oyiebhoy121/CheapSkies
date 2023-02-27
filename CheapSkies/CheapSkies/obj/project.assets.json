@@ -7,6 +7,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "CheapSkies.Infrastructure": "1.0.0",
+          "CheapSkies.Model": "1.0.0",
           "CheapSkies.View": "1.0.0",
           "Interfaces": "1.0.0"
         },

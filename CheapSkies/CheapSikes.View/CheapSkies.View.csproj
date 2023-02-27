@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CheapSkies.Model\CheapSkies.Model.csproj" />
-    <ProjectReference Include="..\IDisplayScreen\ViewInterface.csproj" />
   </ItemGroup>
 
 </Project>

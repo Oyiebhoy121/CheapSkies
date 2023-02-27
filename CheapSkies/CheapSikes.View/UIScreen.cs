@@ -36,6 +36,12 @@
             return decision;
         }
 
+        public void DisplayInvalidScreenInpuMessage(string max)
+        {
+            Console.Clear();
+            Console.WriteLine($"Invalid Input. Choose from 1 to {max} only");
+        }
+
         public string DisplayReservationScreenAndGetInput()
         {
             Console.Clear();

@@ -10,6 +10,14 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\refint\CheapSkies.Controller.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\ref\CheapSkies.Controller.dll
-C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\ValidatorInterface.dll
-C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\ValidatorInterface.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\obj\Debug\net6.0\CheapSkies.Controller.csproj.CopyComplete
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Infrastructure.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Interfaces.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Model.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.View.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\Interfaces.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.View.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Infrastructure.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\Interfaces.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Controller\bin\Debug\net6.0\CheapSkies.Interfaces.pdb

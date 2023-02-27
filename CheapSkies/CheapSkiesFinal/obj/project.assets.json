@@ -1,0 +1,188 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "CheapSkies.Controller/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CheapSkies.Infrastructure": "1.0.0",
+          "CheapSkies.Model": "1.0.0",
+          "CheapSkies.View": "1.0.0",
+          "Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CheapSkies.Controller.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Controller.dll": {}
+        }
+      },
+      "CheapSkies.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CheapSkies.Interfaces": "1.0.0",
+          "CheapSkies.Model": "1.0.0",
+          "Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CheapSkies.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Infrastructure.dll": {}
+        }
+      },
+      "CheapSkies.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CheapSkies.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Interfaces.dll": {}
+        }
+      },
+      "CheapSkies.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CheapSkies.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Model.dll": {}
+        }
+      },
+      "CheapSkies.View/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CheapSkies.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CheapSkies.View.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.View.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interfaces.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CheapSkies.Controller/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Controller/CheapSkies.Controller.csproj",
+      "msbuildProject": "../CheapSkies.Controller/CheapSkies.Controller.csproj"
+    },
+    "CheapSkies.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Infrastructure/CheapSkies.Infrastructure.csproj",
+      "msbuildProject": "../CheapSkies.Infrastructure/CheapSkies.Infrastructure.csproj"
+    },
+    "CheapSkies.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Interfaces/CheapSkies.Interfaces.csproj",
+      "msbuildProject": "../CheapSkies.Interfaces/CheapSkies.Interfaces.csproj"
+    },
+    "CheapSkies.Model/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Model/CheapSkies.Model.csproj",
+      "msbuildProject": "../CheapSkies.Model/CheapSkies.Model.csproj"
+    },
+    "CheapSkies.View/1.0.0": {
+      "type": "project",
+      "path": "../CheapSikes.View/CheapSkies.View.csproj",
+      "msbuildProject": "../CheapSikes.View/CheapSkies.View.csproj"
+    },
+    "Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../IValidateDate/Interfaces.csproj",
+      "msbuildProject": "../IValidateDate/Interfaces.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "CheapSkies.Controller >= 1.0.0",
+      "CheapSkies.Infrastructure >= 1.0.0",
+      "CheapSkies.View >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\frgol\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkiesFinal\\CheapSkiesFinal.csproj",
+      "projectName": "CheapSkiesFinal",
+      "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkiesFinal\\CheapSkiesFinal.csproj",
+      "packagesPath": "C:\\Users\\frgol\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkiesFinal\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\frgol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj"
+            },
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Controller\\CheapSkies.Controller.csproj"
+            },
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\CheapSkies.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\CheapSkies.Infrastructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
