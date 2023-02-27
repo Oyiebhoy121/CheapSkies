@@ -5,13 +5,13 @@ using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller
 {
-    public class AddFlightController
+    public class AddFlightController : RecordController
     {
         private AddFlightScreen _addFlightScreen;
         private FlightValidator _flightValidator;
         private FlightRepository _flightRepository;
         public AddFlightController(AddFlightScreen addFlightScreen, FlightValidator flightValidator,
-                                    FlightRepository flightRepository)
+                                    FlightRepository flightRepository) 
         { 
             _addFlightScreen = addFlightScreen;
             _flightValidator = flightValidator;
@@ -36,55 +36,6 @@ namespace CheapSkies.Controller.Controller
             _flightRepository.SaveFlight(flight);
             _addFlightScreen.DisplaySuccessfullyAddedFlight();
 
-        }
-
-        public string GetAirlineCode()
-        {
-            string airlineCode;
-            bool parse;
-
-            do
-            {
-                airlineCode = _addFlightScreen.AskForAirlineCodeAndGetInput();
-                parse = _flightValidator.ValidateAirlineCode(airlineCode);
-                if(parse == false)
-                {
-                    _addFlightScreen.DisplayInvalidAirlineCodeMessage();
-                }
-            } while (!parse);
-
-            return airlineCode;
-        }
-
-        public int GetFlightNumber()
-        {
-            string flightNumber;
-            bool parse;
-
-            do
-            {
-                flightNumber = _addFlightScreen.AskForFlightNumberAndGetInput();
-                parse = _flightValidator.ValidateFlightNumber(flightNumber);
-                if (parse == false)
-                {
-                    _addFlightScreen.DisplayInvalidFlightNumberMessage();
-                }
-            } while (!parse);
-
-            return Int32.Parse(flightNumber);
-        }
-
-        public string GetStation(string arrivalOrDepartureStation)
-        {
-            string station;
-            bool parse;
-
-            do
-            {
-                station = _addFlightScreen.AskForStationAndGetInput(arrivalOrDepartureStation);
-                parse = _flightValidator.ValidateStation(station);
-            } while (!parse);
-            return station;
         }
 
         private TimeSpan GetScheduleTime(string arrivalOrDepartureScheduleTime)

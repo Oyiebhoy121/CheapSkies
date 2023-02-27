@@ -2,8 +2,10 @@
 using CheapSkies.Controller.Controller;
 using CheapSkies.Controller.Controller.Flight_Maintenance_Screen;
 using CheapSkies.Controller.Controller.Home_Screen;
+using CheapSkies.Controller.Controller.Reservation_Screen;
 using CheapSkies.Controller.Validators;
 using CheapSkies.Infrastructure;
+using CheapSkies.Validator;
 using CheapSkies.View;
 
 namespace CheapSkiesFinal
@@ -29,8 +31,26 @@ namespace CheapSkiesFinal
             var flightMaintenanceController = new FlightMaintenanceController(addFlightController, searchFlightController, uiScreen,
                                                                                 screenInputValidator);
 
+            var createReservationScreen = new CreateReservationScreen();
+            var reservationValidator = new ReservationValidator();
+            var reservationRepository = new ReservationRepository();
+            var addPassengerScreen = new AddPassengerScreen();
+            var passengerValidator = new PassengerValidator();  
+            var passengerRepository = new PassengerRepository();
+            var addPassengerController = new AddPassengerController(addPassengerScreen, passengerValidator, passengerRepository);
+
+            var createReservationController = new CreateReservationController(createReservationScreen, reservationValidator, 
+                                                                                reservationRepository, addPassengerController);
+
+            var searchReservationController = new SearchReservationController(uiScreen, reservationRepository,searchScreen,
+                                                                                passengerRepository);
+
+            var reservationController = new ReservationController(createReservationScreen, reservationValidator, uiScreen,
+                                                                    createReservationController, searchReservationController,
+                                                                    searchScreen, screenInputValidator);
+
             var homeScreenController = new HomeScreenController(addFlightController, searchFlightController, uiScreen, screenInputValidator, 
-                                                                    flightMaintenanceController);
+                                                                    flightMaintenanceController, reservationController);
 
             //Putting Fields
             int result = 0;

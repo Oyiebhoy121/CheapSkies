@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "CheapSkies.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CheapSkies.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CheapSkies.Model/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Model/CheapSkies.Model.csproj",
+      "msbuildProject": "../CheapSkies.Model/CheapSkies.Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "CheapSkies.Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\frgol\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Model\\CheapSkies.Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

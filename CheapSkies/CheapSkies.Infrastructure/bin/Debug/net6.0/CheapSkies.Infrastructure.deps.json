@@ -8,17 +8,11 @@
     ".NETCoreApp,Version=v6.0": {
       "CheapSkies.Infrastructure/1.0.0": {
         "dependencies": {
-          "CheapSkies.Interfaces": "1.0.0",
           "CheapSkies.Model": "1.0.0",
           "Interfaces": "1.0.0"
         },
         "runtime": {
           "CheapSkies.Infrastructure.dll": {}
-        }
-      },
-      "CheapSkies.Interfaces/1.0.0": {
-        "runtime": {
-          "CheapSkies.Interfaces.dll": {}
         }
       },
       "CheapSkies.Model/1.0.0": {
@@ -35,11 +29,6 @@
   },
   "libraries": {
     "CheapSkies.Infrastructure/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CheapSkies.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

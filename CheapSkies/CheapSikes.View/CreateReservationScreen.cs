@@ -1,6 +1,6 @@
 ﻿namespace CheapSkies.View
 {
-    public class AddReservationScreen : GeneralRecordScreen
+    public class CreateReservationScreen : GeneralRecordScreen
     {
         public string AskForFlightDateAndGetInput()
         {
@@ -26,6 +26,21 @@
             Console.Clear();
             Console.WriteLine("Invalid Input. Please select a number from 1 to 5 only");
         }
+
+        public void DisplayCreateReservationMessage()
+        {
+            Console.Clear();
+            Console.WriteLine("Creating Reservation\n");
+        }
+
+        public void DisplaySuccessfullyCreatedReservation()
+        {
+            Console.WriteLine("Successfully Created a Reservation\n");
+            Console.WriteLine("Press any key to go back Home");
+            Console.Read();
+        }
+
+
 
     }
 }

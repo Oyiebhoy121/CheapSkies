@@ -2,11 +2,6 @@
 {
     public class AddFlightScreen : GeneralRecordScreen
     {
-        public string AskForFlightNumbereAndGetInput()
-        {
-            throw new NotImplementedException();
-        }
-
         public string AskForScheduleTimeAndGetInput(string arrivalOrDepartureScheduleTime)
         {
             Console.WriteLine("Input the Schedule Time of {arrivalOrDepartureScheduleTime} (Format: HH:MM): ");

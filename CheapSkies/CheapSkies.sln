@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.View", "CheapSik
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Controller", "CheapSkies.Controller\CheapSkies.Controller.csproj", "{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkies.Interfaces", "CheapSkies.Interfaces\CheapSkies.Interfaces.csproj", "{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Test for Validators", "Unit Test for Validators", "{6EFCF10E-1BD2-4D23-9F7E-9C0AA18D1EC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Record Validator Unit Tests", "Record Validator Unit Tests", "{36DC873B-9DFD-4412-A2E4-13801E9403D4}"
@@ -39,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "IValidateDate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservationValidatorUnitTest", "TestProject1\ReservationValidatorUnitTest.csproj", "{B655DC74-877C-451B-9E19-FFD5548C309E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheapSkiesFinal", "CheapSkiesFinal\CheapSkiesFinal.csproj", "{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkiesFinal", "CheapSkiesFinal\CheapSkiesFinal.csproj", "{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,10 +61,6 @@ Global
 		{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DBB4B8A-E4F2-4351-9E8D-5F63CEDFB8A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DE9A112-19F7-4E7F-AB23-E4634DA30F29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AAC238A7-A329-4BCC-B5B0-08C238A9C2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AAC238A7-A329-4BCC-B5B0-08C238A9C2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAC238A7-A329-4BCC-B5B0-08C238A9C2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU

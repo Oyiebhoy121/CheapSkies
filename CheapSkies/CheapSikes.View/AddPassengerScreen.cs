@@ -38,8 +38,12 @@
         {
             Console.Clear();
             Console.WriteLine("Passengers added Successfully!");
-            Console.WriteLine("Press any key to go back Home");
-            Console.Read();
+        }
+
+        public void DisplayAddPassengerMessage()
+        {
+            Console.Clear();
+            Console.WriteLine("Adding Passengers\n");
         }
              
       

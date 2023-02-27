@@ -22,7 +22,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "CheapSkies.Interfaces": "1.0.0",
           "CheapSkies.Model": "1.0.0",
           "Interfaces": "1.0.0"
         },
@@ -31,16 +30,6 @@
         },
         "runtime": {
           "bin/placeholder/CheapSkies.Infrastructure.dll": {}
-        }
-      },
-      "CheapSkies.Interfaces/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/CheapSkies.Interfaces.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CheapSkies.Interfaces.dll": {}
         }
       },
       "CheapSkies.Model/1.0.0": {
@@ -88,11 +77,6 @@
       "type": "project",
       "path": "../CheapSkies.Infrastructure/CheapSkies.Infrastructure.csproj",
       "msbuildProject": "../CheapSkies.Infrastructure/CheapSkies.Infrastructure.csproj"
-    },
-    "CheapSkies.Interfaces/1.0.0": {
-      "type": "project",
-      "path": "../CheapSkies.Interfaces/CheapSkies.Interfaces.csproj",
-      "msbuildProject": "../CheapSkies.Interfaces/CheapSkies.Interfaces.csproj"
     },
     "CheapSkies.Model/1.0.0": {
       "type": "project",

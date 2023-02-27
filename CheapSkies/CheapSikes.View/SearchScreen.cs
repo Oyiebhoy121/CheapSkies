@@ -23,8 +23,7 @@ namespace CheapSkies.View
         }
 
         public void ShowReservations(List<ReservationBase> listOfReservations)
-        {
-            Console.Clear();
+        {   
             Console.WriteLine("Showing Reservation Results:\n");
             Console.WriteLine("PNR \t Airline Code \t Flight Number \t Departure Station \t Arrival Station \t" +
                 "Flight Date \t Number Of Passengers");
@@ -36,13 +35,12 @@ namespace CheapSkies.View
                                     $"{reservation.ArrivalStation}\t" +
                                     $"{reservation.DepartureStation}\t" +
                                     $"{reservation.FlightDate}\t" +
-                                    $"{reservation.NumberOfPassenger}\t");
+                                    $"{reservation.NumberOfPassenger}\t\n\n");
             }
         }
 
         public void ShowPassengers(List<PassengerBase> listOfPassengers)
         {
-            Console.Clear();
             Console.WriteLine("Showing Passenger Results:\n");
             Console.WriteLine("First Nmae \t Last Name \t Birth Date \t Age");
             foreach (PassengerBase passenger in listOfPassengers)
@@ -78,6 +76,30 @@ namespace CheapSkies.View
             Console.Clear();
             Console.WriteLine($"Showing Flights via Market Pair Stations " +
                                 $"{arrivalStation}-{departureStation}:");
+        }
+
+        public void DisplayAllReservations()
+        {
+            Console.Clear();
+            Console.WriteLine("Showing all reservations in the system");
+        }
+        public void DisplayReservationsByPNR(string pnr)
+        {
+            Console.Clear();
+            Console.WriteLine($"Showing all reservations based on PNR {pnr}");
+        }
+
+        public void DisplayPassengersByPNR(string pnr)
+        {
+            Console.Clear();
+            Console.WriteLine($"Showing all passsengers based on PNR {pnr}");
+        }
+
+        public string AskForPNRAndGetInput()
+        {
+            Console.WriteLine("Input the 6 Character PNR");
+            string input = Console.ReadLine();
+            return input;
         }
     }
 }

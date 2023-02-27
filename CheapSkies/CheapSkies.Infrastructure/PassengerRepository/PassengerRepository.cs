@@ -1,5 +1,4 @@
-﻿using CheapSkies.Interfaces;
-using CheapSkies.Model.DataModel;
+﻿using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 using Interfaces;
 using System;

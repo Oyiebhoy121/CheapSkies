@@ -1,4 +1,5 @@
 ﻿using CheapSkies.Controller.Controller.Flight_Maintenance_Screen;
+using CheapSkies.Controller.Controller.Reservation_Screen;
 using CheapSkies.Controller.Validators;
 using CheapSkies.Infrastructure;
 using CheapSkies.View;
@@ -17,15 +18,19 @@ namespace CheapSkies.Controller.Controller.Home_Screen
         private UIScreen _uiScreen;
         private ScreenInputValidator _screenInputValidator;
         private FlightMaintenanceController _flightMaintenanceController;
+        private ReservationController _reservationController;
+
         public HomeScreenController(AddFlightController addFlightController, SearchFlightController searchFlightController,
                                         UIScreen uiScreen, ScreenInputValidator screenInputValidator,
-                                        FlightMaintenanceController flightMaintenanceController)
+                                        FlightMaintenanceController flightMaintenanceController,
+                                        ReservationController reservationController)
         {
             _addFlightController = addFlightController;
             _searchFlightController = searchFlightController;
             _uiScreen = uiScreen;
             _screenInputValidator = screenInputValidator;
             _flightMaintenanceController = flightMaintenanceController;
+            _reservationController = reservationController;
         }
 
         public int DisplayHomeScreen()
@@ -48,7 +53,7 @@ namespace CheapSkies.Controller.Controller.Home_Screen
                     _flightMaintenanceController.ShowFlightMaintenanceScreen();
                     break;
                 case "2":
-                    //Show Reservation Screen
+                    _reservationController.ShowReservationScreen();
                     break;
                 case "3":
                     return 1;

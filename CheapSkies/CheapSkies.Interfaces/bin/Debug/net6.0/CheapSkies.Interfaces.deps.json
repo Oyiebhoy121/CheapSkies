@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "CheapSkies.Interfaces/1.0.0": {
+        "dependencies": {
+          "CheapSkies.Model": "1.0.0"
+        },
         "runtime": {
           "CheapSkies.Interfaces.dll": {}
+        }
+      },
+      "CheapSkies.Model/1.0.0": {
+        "runtime": {
+          "CheapSkies.Model.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CheapSkies.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CheapSkies.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

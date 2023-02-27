@@ -1,4 +1,5 @@
 ﻿using CheapSkies.Controller.Validators;
+using CheapSkies.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,65 +10,62 @@ namespace CheapSkies.Controller.Controller
 {
     public class RecordController
     {
-        protected RecordValidator _recordValidator;
-        public RecordController(RecordValidator recordValidator)
+        private GeneralRecordScreen _generalRecordScreen;
+        private RecordValidator _recordValidator;
+
+        public RecordController() { }
+        public RecordController(GeneralRecordScreen generalRecordScreen, RecordValidator recordValidator)
         {
+            _generalRecordScreen = generalRecordScreen;
             _recordValidator = recordValidator;
         }
         public string GetAirlineCode()
         {
-            string result;
-            bool condition;
+            string airlineCode;
+            bool parse;
+
             do
             {
-                Console.WriteLine("Input the Airline Code (e.g. 5J, TAM, A4C): ");
-                result = Console.ReadLine();
-                condition = _recordValidator.ValidateAirlineCode(result);
-
-                if (condition == false)
+                airlineCode = _generalRecordScreen.AskForAirlineCodeAndGetInput();
+                parse = _recordValidator.ValidateAirlineCode(airlineCode);
+                if (parse == false)
                 {
-                    
+                    _generalRecordScreen.DisplayInvalidAirlineCodeMessage();
                 }
-            } while (!condition);
-            return result;
+            } while (!parse);
+
+            return airlineCode;
         }
 
-        public int GetFlightNumbers()
+        public int GetFlightNumber()
         {
-            string result;
-            bool condition;
+            string flightNumber;
+            bool parse;
+
             do
             {
-                Console.WriteLine("Input Flight Number (e.g. 1, 124, 9999): ");
-                result = Console.ReadLine();
-                condition = _recordValidator.ValidateFlightNumber(result);
-
-                if (condition == false)
+                flightNumber = _generalRecordScreen.AskForFlightNumberAndGetInput();
+                parse = _recordValidator.ValidateFlightNumber(flightNumber);
+                if (parse == false)
                 {
-                    
+                    _generalRecordScreen.DisplayInvalidFlightNumberMessage();
                 }
-            } while (!condition);
-            return Int32.Parse(result);
+            } while (!parse);
+
+            return Int32.Parse(flightNumber);
         }
 
-        public string GetStation(string station)
+        public string GetStation(string arrivalOrDepartureStation)
         {
-            string result;
-            string arrivalOrDepartureStation = station;
-            bool condition;
-       
+            string station;
+            bool parse;
+
             do
             {
-                Console.WriteLine($"Input {arrivalOrDepartureStation} Station (e.g. MNL, AB3, NRT): ");
-                result = Console.ReadLine();
-                condition = _recordValidator.ValidateStation(result);
-
-                if (condition == false)
-                {
-                    
-                }
-            } while (!condition);
-            return result;
+                station = _generalRecordScreen.AskForStationAndGetInput(arrivalOrDepartureStation);
+                parse = _recordValidator.ValidateStation(station);
+            } while (!parse);
+            return station;
         }
     }
 }

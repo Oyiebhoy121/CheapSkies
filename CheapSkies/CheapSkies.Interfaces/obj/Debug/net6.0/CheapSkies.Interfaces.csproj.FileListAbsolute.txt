@@ -22,3 +22,6 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Interfaces\obj\
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Interfaces\obj\Debug\net6.0\refint\CheapSkies.Interfaces.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Interfaces\obj\Debug\net6.0\CheapSkies.Interfaces.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Interfaces\obj\Debug\net6.0\ref\CheapSkies.Interfaces.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Interfaces\bin\Debug\net6.0\CheapSkies.Model.dll
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Interfaces\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Interfaces\obj\Debug\net6.0\CheapSkies.Interfaces.csproj.CopyComplete

@@ -15,8 +15,8 @@ namespace CheapSkies.Infrastructure
 
         public void SaveReservation(Reservation reservation)
         {
-            string reservationProperties = String.Join(", ", reservation.AirlineCode, reservation.FlightNumber, 
-                                                    reservation.ArrivalStation, reservation.DepartureStation, 
+            string reservationProperties = String.Join(", ", reservation.AirlineCode, reservation.FlightNumber,
+                                                    reservation.ArrivalStation, reservation.DepartureStation,
                                                     reservation.FlightDate, reservation.NumberOfPassenger,
                                                     reservation.PNR);
 
@@ -57,6 +57,13 @@ namespace CheapSkies.Infrastructure
             List<ReservationBase> listOfReservations = GetReservationData();
 
             return listOfReservations.Where(reservation => reservation.PNR == PNR).ToList();
+        }
+
+        public List<string> GetPNR()
+        {
+            List<ReservationBase> listOfReservations = GetReservationData();
+
+            return listOfReservations.Select(reservation => reservation.PNR).ToList();
         }
     }
 }

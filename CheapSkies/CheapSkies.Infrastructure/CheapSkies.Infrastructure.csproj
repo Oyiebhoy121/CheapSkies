@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CheapSkies.Interfaces\CheapSkies.Interfaces.csproj" />
     <ProjectReference Include="..\CheapSkies.Model\CheapSkies.Model.csproj" />
     <ProjectReference Include="..\IValidateDate\Interfaces.csproj" />
   </ItemGroup>

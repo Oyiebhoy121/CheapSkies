@@ -18,9 +18,7 @@ C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Deb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Infrastructure.deps.json
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Infrastructure.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Infrastructure.pdb
-C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Interfaces.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Model.dll
-C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Interfaces.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\CheapSkies.Model.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\CheapSkies.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
