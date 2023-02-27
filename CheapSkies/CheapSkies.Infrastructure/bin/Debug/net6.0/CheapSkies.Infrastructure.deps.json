@@ -9,7 +9,8 @@
       "CheapSkies.Infrastructure/1.0.0": {
         "dependencies": {
           "CheapSkies.Interfaces": "1.0.0",
-          "CheapSkies.Model": "1.0.0"
+          "CheapSkies.Model": "1.0.0",
+          "Interfaces": "1.0.0"
         },
         "runtime": {
           "CheapSkies.Infrastructure.dll": {}
@@ -23,6 +24,11 @@
       "CheapSkies.Model/1.0.0": {
         "runtime": {
           "CheapSkies.Model.dll": {}
+        }
+      },
+      "Interfaces/1.0.0": {
+        "runtime": {
+          "Interfaces.dll": {}
         }
       }
     }
@@ -39,6 +45,11 @@
       "sha512": ""
     },
     "CheapSkies.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

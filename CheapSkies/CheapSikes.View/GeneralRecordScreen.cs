@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CheapSkies.View
+﻿namespace CheapSkies.View
 {
     public class GeneralRecordScreen
     {
-        public string AskForAirlineCodeMessageAndGetInput()
+        public string AskForAirlineCodeAndGetInput()
         {
             Console.WriteLine("Input the Airline Code (e.g. 5J, TAM, A4C): ");
             string input = Console.ReadLine();
@@ -22,7 +16,7 @@ namespace CheapSkies.View
                 "Numeric Character must only appear once.");
         }
 
-        public string AskForFlightNumberMessageAndGetInput()
+        public string AskForFlightNumberAndGetInput()
         {
             Console.WriteLine("Input Flight Number (e.g. 1, 124, 9999): ");
             string input = Console.ReadLine();
@@ -35,14 +29,14 @@ namespace CheapSkies.View
             Console.WriteLine("Invalid Input. The input must be an an integer between 1-9999");
         }
 
-        public string AskForStationMessageAndGetInput(string arrivalOrDepartureStation)
+        public string AskForStationAndGetInput(string arrivalOrDepartureStation)
         {
             Console.WriteLine($"Input {arrivalOrDepartureStation} Station (e.g. MNL, AB3, NRT): ");
             string input = Console.ReadLine();
             return input;
         }
 
-        public void DisplayInvalidStation()
+        public void DisplayInvalidStationMessage()
         {
             Console.Clear();
             Console.WriteLine("Invalid Input. The input must be exaclty 3 Uppercased Alphanumberic Code. " +

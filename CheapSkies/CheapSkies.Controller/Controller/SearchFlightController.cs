@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.View
+namespace CheapSkies.Controller.Controller
 {
-    public class DisplayFlightScreen
+    public class SearchFlightController
     {
 
     }

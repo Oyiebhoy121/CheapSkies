@@ -1,23 +1,58 @@
-﻿using CheapSkies.Model;
+﻿using CheapSkies.Interfaces;
+using CheapSkies.Model.DataModel;
+using CheapSkies.Model.ViewModel;
+using Interfaces;
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CheapSkies.Infrastructure
 {
-    public class PassengerRepository : IEnumerable<Flight>
+    public class PassengerRepository
     {
-        public IEnumerator<Flight> GetEnumerator()
+        private string _filePath =
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\PassengerRepository\\PassengerRepository.txt";
+
+        public void SavePassenger(Passenger passenger)
         {
-            throw new NotImplementedException();
+            string passengerProperties = String.Join(", ", passenger.PNR, passenger.FirstName, passenger.LastName,
+                                                    passenger.BirthDate, passenger.Age);
+
+            using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+            {
+                streamWriter.Write(passengerProperties);
+            }
+        }
+        public List<PassengerBase> GetPassengerData(string PNR) //Get Passenger Data via PNR
+        {
+            List<PassengerBase> listOfPassengers = GetPassengerData();
+
+            return listOfPassengers.Where(passenger => passenger.PNR == PNR).ToList();
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        private List<PassengerBase> GetPassengerData() //Get All Passenger Data
         {
-            throw new NotImplementedException();
+            List<PassengerBase> listOfPassengers = new List<PassengerBase>();
+
+            using (StreamReader streamReader = new StreamReader(_filePath))
+            {
+                string textLines;
+                while ((textLines = streamReader.ReadLine()) != null)
+                {
+                    string[] passengerProperties = textLines.Split(", ");
+                    PassengerBase passenger = new PassengerBase()
+                    {
+                        PNR = passengerProperties[0],
+                        FirstName = passengerProperties[1],
+                        LastName = passengerProperties[2],
+                        BirthDate = DateTime.Parse(passengerProperties[3]),
+                        Age = Int32.Parse(passengerProperties[4])
+                    };
+                    listOfPassengers.Add(passenger);
+                }
+            }
+            return listOfPassengers;
         }
+        
     }
 }

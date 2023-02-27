@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "CheapSkies.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "CheapSkies.Interfaces": "1.0.0",
+          "CheapSkies.Model": "1.0.0",
+          "Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CheapSkies.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Infrastructure.dll": {}
+        }
+      },
+      "CheapSkies.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CheapSkies.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CheapSkies.Interfaces.dll": {}
+        }
+      },
       "CheapSkies.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -49,6 +74,16 @@
     }
   },
   "libraries": {
+    "CheapSkies.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Infrastructure/CheapSkies.Infrastructure.csproj",
+      "msbuildProject": "../CheapSkies.Infrastructure/CheapSkies.Infrastructure.csproj"
+    },
+    "CheapSkies.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../CheapSkies.Interfaces/CheapSkies.Interfaces.csproj",
+      "msbuildProject": "../CheapSkies.Interfaces/CheapSkies.Interfaces.csproj"
+    },
     "CheapSkies.Model/1.0.0": {
       "type": "project",
       "path": "../CheapSkies.Model/CheapSkies.Model.csproj",
@@ -72,6 +107,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CheapSkies.Infrastructure >= 1.0.0",
       "CheapSkies.View >= 1.0.0",
       "Interfaces >= 1.0.0"
     ]
@@ -105,6 +141,9 @@
           "projectReferences": {
             "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj": {
               "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSikes.View\\CheapSkies.View.csproj"
+            },
+            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\CheapSkies.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\CheapSkies.Infrastructure.csproj"
             },
             "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\Interfaces.csproj": {
               "projectPath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\IValidateDate\\Interfaces.csproj"

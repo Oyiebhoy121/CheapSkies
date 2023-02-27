@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CheapSkies.View
+﻿namespace CheapSkies.View
 {
     public class AddReservationScreen : GeneralRecordScreen
     {
@@ -15,7 +9,7 @@ namespace CheapSkies.View
             return input;
         }
 
-        public void DisplayInvalidFlightDate()
+        public void DisplayInvalidFlightDateMessage()
         {
             Console.WriteLine("Invalid Input. Follow the given format. Make sure that the date is not a past date");
         }
@@ -27,10 +21,10 @@ namespace CheapSkies.View
             return input;
         }
 
-        public void DisplayInvalidNumberOfPassengers()
+        public void DisplayInvalidNumberOfPassengersMessage()
         {
             Console.Clear();
-            Console.WriteLine("Invalid Input. Please select a number from 1 to 5 only")
+            Console.WriteLine("Invalid Input. Please select a number from 1 to 5 only");
         }
 
     }

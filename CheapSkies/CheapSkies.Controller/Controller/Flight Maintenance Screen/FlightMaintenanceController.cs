@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CheapSkies.Controller.Controller
 {
-    public class FlightController
+    public class FlightMaintenanceController
     {
         private FlightValidator _flightValidator;
-        public FlightLogger(FlightValidator flightValidator) : base(flightValidator)
+        public FlightMaintenanceController(FlightValidator flightValidator) : base(flightValidator)
         {
             _flightValidator = flightValidator;
         }
@@ -22,7 +22,6 @@ namespace CheapSkies.Controller.Controller
       
             do
             {
-
                 result = Console.ReadLine();
                 condition = _flightValidator.ValidateTimeFormat(result);
 

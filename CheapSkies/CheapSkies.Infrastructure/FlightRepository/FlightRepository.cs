@@ -1,5 +1,6 @@
 ﻿using CheapSkies.Interfaces;
-using CheapSkies.Model;
+using CheapSkies.Model.DataModel;
+using CheapSkies.Model.ViewModel;
 using Interfaces;
 using System;
 using System.IO;
@@ -23,9 +24,9 @@ namespace CheapSkies.Infrastructure
             }
         }
 
-        public List<Flight> GetFlightData() //Get All Flight Data
+        public List<FlightBase> GetFlightData() //Get All Flight Data
         {
-            List<Flight> listOfFlights = new List<Flight>();
+            List<FlightBase> listOfFlights = new List<FlightBase>();
 
             using (StreamReader streamReader = new StreamReader(_filePath))
             {
@@ -33,7 +34,7 @@ namespace CheapSkies.Infrastructure
                 while ((textLines = streamReader.ReadLine()) != null)
                 {
                     string[] flightProperties = textLines.Split(", ");
-                    Flight flight = new Flight()
+                    FlightBase flight = new FlightBase()
                     {
                         AirlineCode = flightProperties[0],
                         FlightNumber = Int32.Parse(flightProperties[1]),
@@ -48,23 +49,23 @@ namespace CheapSkies.Infrastructure
             return listOfFlights;
         }
 
-        public List<Flight> GetFlightData(int flightNumber) //Get Flight Data via Flight Number
+        public List<FlightBase> GetFlightData(int flightNumber) //Get Flight Data via Flight Number
         {
-            List<Flight> listOfFlight = GetFlightData();
+            List<FlightBase> listOfFlight = GetFlightData();
   
             return listOfFlight.Where(flight => flight.FlightNumber == flightNumber).ToList();
         }
 
-        public List<Flight> GetFlightData(string airlineCode) //Get Flight Data via Airline Code
+        public List<FlightBase> GetFlightData(string airlineCode) //Get Flight Data via Airline Code
         {
-            List<Flight> listOfFlight = GetFlightData();
+            List<FlightBase> listOfFlight = GetFlightData();
 
             return listOfFlight.Where(flight => flight.AirlineCode == airlineCode).ToList();
         }
 
-        public List<Flight> GetFlightData(string arrivalStation, string departureStation) //Get Flight Data via Stations
+        public List<FlightBase> GetFlightData(string arrivalStation, string departureStation) //Get Flight Data via Stations
         {
-            List<Flight> listOfFlight = GetFlightData();
+            List<FlightBase> listOfFlight = GetFlightData();
 
             return listOfFlight.Where(flight => flight.ArrivalStation == arrivalStation
                                                     && flight.DepartureStation == departureStation).ToList();

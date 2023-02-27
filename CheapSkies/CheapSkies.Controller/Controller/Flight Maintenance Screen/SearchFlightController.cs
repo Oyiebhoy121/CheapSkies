@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.Controller.Controller
+namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 {
-    public class FlightSearcher
+    public class SearchFlightController
     {
 
     }
