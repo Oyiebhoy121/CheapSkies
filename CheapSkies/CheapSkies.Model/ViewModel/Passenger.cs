@@ -11,7 +11,7 @@ namespace CheapSkies.Model.ViewModel
         public string FirstName { get; }
         public string LastName { get; }
         public DateOnly BirthDate { get; }
-        public int Age { get; }
+        public int Age => _age;
 
         public Passenger() { }
         public Passenger(string pnr, string firstName, string lastName, DateOnly birthDate)
@@ -20,8 +20,7 @@ namespace CheapSkies.Model.ViewModel
             FirstName = firstName;
             LastName = lastName;
             BirthDate = birthDate;
-            _age = CalculateAge(BirthDate);
-            Age = _age;
+            _age = CalculateAge(birthDate);
         }
         private int CalculateAge(DateOnly birthDate)
         {

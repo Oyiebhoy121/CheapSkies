@@ -18,15 +18,14 @@ namespace CheapSkies.Model.ViewModel
             FlightDate = flightDate;
             NumberOfPassenger = numberOfPassenger;
             _listOfPNR = listOfPNR;
-            _pnr = GeneratePNR();
-            PNR = _pnr;
+            _pnr = GeneratePNR(listOfPNR);
         }
 
         public DateOnly FlightDate { get;  }
         public int NumberOfPassenger { get; }
-        public string PNR { get; }
+        public string PNR => _pnr;
         //Unit Test still needed for this.
-        private string GeneratePNR()
+        private string GeneratePNR(List<string> listOfPNR)
         {
             Random random = new Random();
             int probability;
@@ -54,7 +53,7 @@ namespace CheapSkies.Model.ViewModel
                         }
                     }
                 }
-            } while (_listOfPNR.Contains(pnr));
+            } while (listOfPNR.Contains(pnr));
             return pnr;
         }
     }

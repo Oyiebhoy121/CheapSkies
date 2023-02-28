@@ -24,7 +24,7 @@ namespace CheapSkies.Infrastructure
             }
             catch
             {
-                throw new ArgumentException("File Path not found. Change it first.");
+                Console.WriteLine("Failed to save the passengers because Saving File Path is not found. Change it first.");
             }
         }
 
@@ -44,7 +44,7 @@ namespace CheapSkies.Infrastructure
                 }
                 catch
                 {
-                    throw new ArgumentException("File Path not found. Change it first.");
+                    Console.WriteLine("Failed to save the passengers because Saving File Path is not found. Change it first.");
                 }
             }
         }
@@ -78,13 +78,13 @@ namespace CheapSkies.Infrastructure
                         };
                         listOfPassengers.Add(passenger);
                     }
-                }
-                return listOfPassengers;
+                }   
             }
             catch
             {
-                throw new ArgumentException("File Path not found. Change it first.");
+                Console.WriteLine("Failed to read the passenger data because Saving File Path is not found. Change it first.");
             }
+            return listOfPassengers;
         }
     }
 }

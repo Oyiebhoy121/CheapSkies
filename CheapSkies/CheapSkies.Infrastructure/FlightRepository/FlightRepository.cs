@@ -24,7 +24,7 @@ namespace CheapSkies.Infrastructure
             }
             catch
             {
-                throw new ArgumentException("File Path not found. Change it first.");
+                Console.WriteLine("Failed to save the flight because Saving File Path is not found. Change it first.");
             }
         }
         public List<FlightBase> GetFlightData() //Get All Flight Data
@@ -51,13 +51,12 @@ namespace CheapSkies.Infrastructure
                         listOfFlights.Add(flight);
                     }
                 }
-                return listOfFlights;
             }
             catch
             {
-                throw new ArgumentException("File Path not found. Change it first.");
+                Console.WriteLine("Failed to read the flights because File Path is not found. Change it first.");
             }
-            
+            return listOfFlights;
         }
 
         public List<FlightBase> GetFlightData(int flightNumber) //Get Flight Data via Flight Number

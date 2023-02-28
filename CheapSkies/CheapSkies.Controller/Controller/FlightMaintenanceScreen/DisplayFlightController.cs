@@ -25,7 +25,7 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
             "\nInvalid Input"
         };
 
-        public void DisplayFlightbyFlightNumber()       //Abstract this to a more general function
+        public void DisplayFlightbyFlightNumber()    
         {
             _ui.Clear();
             _ui.Display(menu[0]);
@@ -37,6 +37,7 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
             if (!condition)
             {
                 _ui.Display(menu[12]);
+                _ui.ExitScreen();
                 return;
             }
 
@@ -106,7 +107,7 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
             ShowFlights(listOfFlights);
             _ui.ExitScreen();
         }
-        private void ShowFlights(List<FlightBase> listOfFlights)    //Candidate for Interface IShowList
+        private void ShowFlights(List<FlightBase> listOfFlights)    //Candidate for Abstraction using Interface IShowList
         {
 
             _ui.Display("Airline Code \t Flight Number \t Arrival Station \t Departure Station \t Schedule Time of Arrival \t Schedule Time of Departure");

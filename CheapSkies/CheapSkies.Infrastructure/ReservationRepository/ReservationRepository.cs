@@ -1,10 +1,5 @@
 ﻿using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CheapSkies.Infrastructure
 {
@@ -25,7 +20,7 @@ namespace CheapSkies.Infrastructure
             }
             catch
             {
-                throw new ArgumentException("File Path not found. Change it first.");
+                Console.WriteLine("Failed to save the reservation data because File Path not found. Change it first.");
             }            
         }
 
@@ -53,13 +48,13 @@ namespace CheapSkies.Infrastructure
                         };
                         listOfReservations.Add(reservation);
                     }
-                }
-                return listOfReservations;
+                }  
             }
             catch
             {
-                throw new ArgumentException("File Path not found. Change it first.");
+                Console.WriteLine("Failed to save the reservation data because File Path not found. Change it first.");
             }
+            return listOfReservations;
         }
 
         public List<ReservationBase> GetReservationData(string PNR) //Get Reservation Data via PNR

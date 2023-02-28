@@ -68,7 +68,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
                 return;
             }
             //Saving the Reservation to Reservation Repository
-            reservationRepository.SaveReservation(reservation);
+            reservationRepository.SaveReservation(reservation); 
             _ui.Display(menu[13]);
             _ui.Display(menu[14]);
             _ui.ExitScreen();
