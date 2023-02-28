@@ -1,4 +1,8 @@
-﻿namespace CheapSkies.Controller.Validators
+﻿using CheapSkies.Infrastructure;
+using CheapSkies.Model.DataModel;
+using CheapSkies.Model.ViewModel;
+
+namespace CheapSkies.Controller.Validators
 {
     public class FlightValidator : RecordValidator
     {
@@ -14,5 +18,23 @@
             return false;
         }
 
+        public bool ValidateIfInputIsDuplicate(Flight flight)
+        {
+            FlightRepository flightRepository = new FlightRepository();
+            List<FlightBase> listOfFlights = new List<FlightBase>();
+            listOfFlights = flightRepository.GetFlightData();
+
+            List<FlightBase> listOfDuplicateFlights = new List<FlightBase>();
+            listOfDuplicateFlights = listOfFlights.Where(f => f.AirlineCode == flight.AirlineCode &&
+                                                            f.FlightNumber == flight.FlightNumber &&
+                                                            f.ArrivalStation == flight.ArrivalStation &&
+                                                        f.DepartureStation == flight.DepartureStation).ToList();
+
+            if(listOfDuplicateFlights.Count == 0)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

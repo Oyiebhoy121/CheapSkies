@@ -9,43 +9,55 @@ namespace CheapSkies.Infrastructure
 {
     public class FlightRepository 
     {
-        private string _filePath =
-            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\FlightRepository\\FlightRepository.txt";
+        private string _filePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\FlightRepository\\FlightRepository.txt";
 
         public void SaveFlight(Flight flight)
         {
-            string flightProperties = String.Join(", ", flight.AirlineCode, flight.FlightNumber, flight.ArrivalStation,
-                                                    flight.DepartureStation, flight.ScheduleTimeOfArrival, flight.ScheduleTimeOfDeparture);
+            string flightProperties = String.Join(", ", flight.AirlineCode, flight.FlightNumber, flight.ArrivalStation, flight.DepartureStation, flight.ScheduleTimeOfArrival, flight.ScheduleTimeOfDeparture);
             
-            using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+            try
             {
-                streamWriter.Write(flightProperties);
+                using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+                {
+                    streamWriter.WriteLine(flightProperties);
+                }
+            }
+            catch
+            {
+                throw new ArgumentException("File Path not found. Change it first.");
             }
         }
-
         public List<FlightBase> GetFlightData() //Get All Flight Data
         {
             List<FlightBase> listOfFlights = new List<FlightBase>();
 
-            using (StreamReader streamReader = new StreamReader(_filePath))
+            try
             {
-                string textLines;
-                while ((textLines = streamReader.ReadLine()) != null)
+                using (StreamReader streamReader = new StreamReader(_filePath))       
                 {
-                    string[] flightProperties = textLines.Split(", ");
-                    FlightBase flight = new FlightBase()
+                    string textLines;
+                    while ((textLines = streamReader.ReadLine()) != null)
                     {
-                        AirlineCode = flightProperties[0],
-                        FlightNumber = Int32.Parse(flightProperties[1]),
-                        ArrivalStation = flightProperties[2],
-                        DepartureStation = flightProperties[3],
-                        ScheduleTimeOfArrival = TimeSpan.Parse(flightProperties[4]),
-                        ScheduleTimeOfDeparture = TimeSpan.Parse(flightProperties[5])
-                    };
-                    listOfFlights.Add(flight);
+                        string[] flightProperties = textLines.Split(", ");
+                        FlightBase flight = new FlightBase()
+                        {
+                            AirlineCode = flightProperties[0],
+                            FlightNumber = Int32.Parse(flightProperties[1]),
+                            ArrivalStation = flightProperties[2],
+                            DepartureStation = flightProperties[3],
+                            ScheduleTimeOfArrival = flightProperties[4],
+                            ScheduleTimeOfDeparture = flightProperties[5]
+                        };
+                        listOfFlights.Add(flight);
+                    }
                 }
+                return listOfFlights;
             }
-            return listOfFlights;
+            catch
+            {
+                throw new ArgumentException("File Path not found. Change it first.");
+            }
+            
         }
 
         public List<FlightBase> GetFlightData(int flightNumber) //Get Flight Data via Flight Number

@@ -1,18 +1,11 @@
-﻿using CheapSkies.Controller.Controller.Flight_Maintenance_Screen;
-using CheapSkies.Controller.Controller.Reservation_Screen;
-using CheapSkies.Controller.Validators;
-using CheapSkies.Infrastructure;
+﻿using CheapSkies.Controller.Controller.Reservation_Screen;
 using CheapSkies.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CheapSkies.Controller.Controller.Home_Screen
 {
-    public class HomeScreenController
+    public class HomeScreenController : IHomeScreenController
     {
+        private UI _ui = new UI();
+
         private readonly string[] menu = 
         {
             "Welcome to CheapSkies! What do you want to do?",
@@ -21,30 +14,32 @@ namespace CheapSkies.Controller.Controller.Home_Screen
             "Press 3 and Enter => Exit CheapSkies\n"
         };
 
-        private void Initialize()
+        private readonly IFlightMaintenanceController _flightMaintenanceController;
+        private readonly IReservationController _reservationController;
+
+        public HomeScreenController(IFlightMaintenanceController flightMaintenanceController, IReservationController reservationController)
         {
-            UI ui = new UI();
-            //FlightMaintenanceController flightMaintenanceController = new FlightMaintenanceController();
-            //SearchFlightController searchFlightController = new SearchFlightController();
+            _flightMaintenanceController = flightMaintenanceController;
+            _reservationController = reservationController;
         }
 
         public void DisplayHomeScreen()
         {
-            UI ui = new UI();
             string userInput = "";
 
             while (userInput != "3")
             {
-                ui.Display(menu);
-                userInput = ui.GetInput();
+                _ui.Clear();
+                _ui.Display(menu);
+                userInput = _ui.GetInput();
 
                 switch (userInput)
                 {
                     case "1":
-                        //flightMaintenanceController
+                        _flightMaintenanceController.DisplayFlightMaintenanceScreen();
                         break;
                     case "2":
-                        //searchFlightController
+                        _reservationController.DisplayReservationScreen();
                         break;
                     case "3":
                         return;

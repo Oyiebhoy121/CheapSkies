@@ -8,7 +8,7 @@ namespace CheapSkies.Model.DataModel
 {
     public class ReservationBase : RecordBase
     { 
-        public DateTime FlightDate { get; set; }
+        public DateOnly FlightDate { get; set; }
         public int NumberOfPassenger { get; set; }
         public string PNR { get; set; }
      

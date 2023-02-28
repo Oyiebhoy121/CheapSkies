@@ -9,19 +9,46 @@ namespace CheapSkies.Infrastructure
 {
     public class PassengerRepository
     {
-        private string _filePath =
-            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\PassengerRepository\\PassengerRepository.txt";
+        private string _filePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\PassengerRepository\\PassengerRepository.txt";
 
         public void SavePassenger(Passenger passenger)
         {
-            string passengerProperties = String.Join(", ", passenger.PNR, passenger.FirstName, passenger.LastName,
-                                                    passenger.BirthDate, passenger.Age);
+            string passengerProperties = String.Join(", ", passenger.PNR, passenger.FirstName, passenger.LastName, passenger.BirthDate, passenger.Age);
 
-            using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+            try
             {
-                streamWriter.Write(passengerProperties);
+                using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+                {
+                    streamWriter.WriteLine(passengerProperties);
+                }
+            }
+            catch
+            {
+                throw new ArgumentException("File Path not found. Change it first.");
             }
         }
+
+        public void SavePassenger(List<Passenger> listOfPassengers)
+        {
+            string passengerProperties = "";
+            foreach(Passenger passenger in listOfPassengers)
+            {
+                passengerProperties = String.Join(", ", passenger.PNR, passenger.FirstName, passenger.LastName, passenger.BirthDate, passenger.Age);
+
+                try
+                {
+                    using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+                    {
+                        streamWriter.WriteLine(passengerProperties);
+                    }
+                }
+                catch
+                {
+                    throw new ArgumentException("File Path not found. Change it first.");
+                }
+            }
+        }
+
         public List<PassengerBase> GetPassengerData(string PNR) //Get Passenger Data via PNR
         {
             List<PassengerBase> listOfPassengers = GetPassengerData();
@@ -33,25 +60,31 @@ namespace CheapSkies.Infrastructure
         {
             List<PassengerBase> listOfPassengers = new List<PassengerBase>();
 
-            using (StreamReader streamReader = new StreamReader(_filePath))
+            try
             {
-                string textLines;
-                while ((textLines = streamReader.ReadLine()) != null)
+                using (StreamReader streamReader = new StreamReader(_filePath))             
                 {
-                    string[] passengerProperties = textLines.Split(", ");
-                    PassengerBase passenger = new PassengerBase()
+                    string textLines;
+                    while ((textLines = streamReader.ReadLine()) != null)
                     {
-                        PNR = passengerProperties[0],
-                        FirstName = passengerProperties[1],
-                        LastName = passengerProperties[2],
-                        BirthDate = DateTime.Parse(passengerProperties[3]),
-                        Age = Int32.Parse(passengerProperties[4])
-                    };
-                    listOfPassengers.Add(passenger);
+                        string[] passengerProperties = textLines.Split(", ");
+                        PassengerBase passenger = new PassengerBase()
+                        {
+                            PNR = passengerProperties[0],
+                            FirstName = passengerProperties[1],
+                            LastName = passengerProperties[2],
+                            BirthDate = DateOnly.Parse(passengerProperties[3]),
+                            Age = Int32.Parse(passengerProperties[4])
+                        };
+                        listOfPassengers.Add(passenger);
+                    }
                 }
+                return listOfPassengers;
             }
-            return listOfPassengers;
+            catch
+            {
+                throw new ArgumentException("File Path not found. Change it first.");
+            }
         }
-        
     }
 }

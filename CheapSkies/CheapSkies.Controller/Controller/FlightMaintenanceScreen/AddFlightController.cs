@@ -2,13 +2,12 @@
 using CheapSkies.Infrastructure;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View;
-using System.ComponentModel.Design;
-using System.Dynamic;
 
 namespace CheapSkies.Controller.Controller
 {
     public class AddFlightController 
     {
+        private UI _ui = new UI();
         private readonly string[] menu =
         {
             "Adding Flight",
@@ -25,14 +24,13 @@ namespace CheapSkies.Controller.Controller
             "\nInput Schedule Time of Departure (Format hh:mm)",
             "\nInvalid Input. The input must only be of the given format",
             "\nFlight added Successfully!",
-            "\nPress any key to go back Home"
+            "\nFlight added Successfully!"
         };
 
         public void AddFlight()
         {
-            UI ui = new UI();
-            ui.Clear();
-            ui.Display(menu[0]);
+            _ui.Clear();
+            _ui.Display(menu[0]);
 
             //Obtain and Validate Flight Model Properties
             FlightValidator flightValidator = new FlightValidator();
@@ -40,40 +38,44 @@ namespace CheapSkies.Controller.Controller
             string rawFlightNumber = GetFlightInput(menu[3], menu[4], flightValidator.ValidateFlightNumber);
             string arrivalStation = GetFlightInput(menu[5], menu[6], flightValidator.ValidateStation);
             string departureStation = GetFlightInput(menu[7], menu[8], flightValidator.ValidateStation);
-            string rawScheduleTimeOfArrival = GetFlightInput(menu[9], menu[10], flightValidator.ValidateTimeFormat);
-            string rawScheduleTimeOfDeparture = GetFlightInput(menu[11], menu[12], flightValidator.ValidateTimeFormat);
+            string scheduleTimeOfArrival = GetFlightInput(menu[9], menu[10], flightValidator.ValidateTimeFormat);
+            string scheduleTimeOfDeparture = GetFlightInput(menu[11], menu[12], flightValidator.ValidateTimeFormat);
 
             //Obtain Proper Data Type of Flight Model Properties
             int flightNumber = Int32.Parse(rawFlightNumber);
-            TimeSpan scheduleTimeOfArrival = TimeSpan.Parse(rawScheduleTimeOfArrival);
-            TimeSpan scheduleTimeOfDeparture = TimeSpan.Parse(rawScheduleTimeOfArrival);
+     
 
             //Populating the Flight Model Properties
-            Flight flight = new Flight(airlineCode, flightNumber, arrivalStation, departureStation,
-                                        scheduleTimeOfArrival, scheduleTimeOfDeparture);
+            Flight flight = new Flight(airlineCode, flightNumber, arrivalStation, departureStation, scheduleTimeOfArrival, scheduleTimeOfDeparture);
+
+
+            if (flightValidator.ValidateIfInputIsDuplicate(flight))
+            {
+                _ui.Display(menu[13]);
+                _ui.ExitScreen();
+                return;
+            }
 
             //Saving the Flight to Flight Repository
             FlightRepository flightRepository = new FlightRepository();
             flightRepository.SaveFlight(flight);
-            ui.Display(menu[13]);
-            ui.Display(menu[14]);
+            _ui.Display(menu[13]);
+            _ui.ExitScreen();
         }
 
-        private string GetFlightInput(string message1, string message2, Func<string, bool> validator)
+        private string GetFlightInput(string message1, string message2, Func<string, bool> validator) //Candidate for Interface 
         {
             bool parse = false;
             string userInput = "";
 
-            UI ui = new UI();
-
             while(!parse)
             {
-                ui.Display(message1);
-                userInput = ui.GetInput();
+                _ui.Display(message1);
+                userInput = _ui.GetInput();
                 parse = validator(userInput);
                 if(!parse)
                 {
-                    ui.Display(message2);
+                    _ui.Display(message2);
                 }
             }
             return userInput;

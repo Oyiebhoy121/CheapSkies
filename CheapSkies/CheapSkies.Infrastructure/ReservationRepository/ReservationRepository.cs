@@ -10,46 +10,56 @@ namespace CheapSkies.Infrastructure
 {
     public class ReservationRepository
     {
-        private string _filePath =
-            "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\ReservationRepository\\ReservationRepository.txt";
+        private string _filePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\ReservationRepository\\ReservationRepository.txt";
 
         public void SaveReservation(Reservation reservation)
         {
-            string reservationProperties = String.Join(", ", reservation.AirlineCode, reservation.FlightNumber,
-                                                    reservation.ArrivalStation, reservation.DepartureStation,
-                                                    reservation.FlightDate, reservation.NumberOfPassenger,
+            string reservationProperties = String.Join(", ", reservation.AirlineCode, reservation.FlightNumber, reservation.ArrivalStation, reservation.DepartureStation, reservation.FlightDate, reservation.NumberOfPassenger,
                                                     reservation.PNR);
-
-            using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+            try
             {
-                streamWriter.Write(reservationProperties);
+                using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+                { 
+                    streamWriter.WriteLine(reservationProperties);
+                }
             }
+            catch
+            {
+                throw new ArgumentException("File Path not found. Change it first.");
+            }            
         }
 
         public List<ReservationBase> GetReservationData() //Get All Flight Data
         {
             List<ReservationBase> listOfReservations = new List<ReservationBase>();
 
-            using (StreamReader streamReader = new StreamReader(_filePath))
+            try
             {
-                string textLines;
-                while ((textLines = streamReader.ReadLine()) != null)
+                using (StreamReader streamReader = new StreamReader(_filePath))
                 {
-                    string[] reservationProperties = textLines.Split(", ");
-                    ReservationBase reservation = new ReservationBase()
+                    string textLines;
+                    while ((textLines = streamReader.ReadLine()) != null)
                     {
-                        AirlineCode = reservationProperties[0],
-                        FlightNumber = Int32.Parse(reservationProperties[1]),
-                        ArrivalStation = reservationProperties[2],
-                        DepartureStation = reservationProperties[3],
-                        FlightDate = DateTime.Parse(reservationProperties[4]),
-                        NumberOfPassenger = Int32.Parse(reservationProperties[5]),
-                        PNR = reservationProperties[6]
-                    };
-                    listOfReservations.Add(reservation);
+                        string[] reservationProperties = textLines.Split(", ");
+                        ReservationBase reservation = new ReservationBase()
+                        {
+                            AirlineCode = reservationProperties[0],
+                            FlightNumber = Int32.Parse(reservationProperties[1]),
+                            ArrivalStation = reservationProperties[2],
+                            DepartureStation = reservationProperties[3],
+                            FlightDate = DateOnly.Parse(reservationProperties[4]),
+                            NumberOfPassenger = Int32.Parse(reservationProperties[5]),
+                            PNR = reservationProperties[6]
+                        };
+                        listOfReservations.Add(reservation);
+                    }
                 }
+                return listOfReservations;
             }
-            return listOfReservations;
+            catch
+            {
+                throw new ArgumentException("File Path not found. Change it first.");
+            }
         }
 
         public List<ReservationBase> GetReservationData(string PNR) //Get Reservation Data via PNR
@@ -59,7 +69,7 @@ namespace CheapSkies.Infrastructure
             return listOfReservations.Where(reservation => reservation.PNR == PNR).ToList();
         }
 
-        public List<string> GetPNR()
+        public List<string> GetPNRData()
         {
             List<ReservationBase> listOfReservations = GetReservationData();
 

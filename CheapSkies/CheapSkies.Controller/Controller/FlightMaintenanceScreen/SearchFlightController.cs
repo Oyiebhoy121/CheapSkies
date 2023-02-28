@@ -1,13 +1,11 @@
 ﻿using CheapSkies.Controller.Controller.FlightMaintenanceScreen;
-using CheapSkies.Controller.Validators;
-using CheapSkies.Infrastructure;
-using CheapSkies.Model.DataModel;
 using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 {
     public class SearchFlightController
     {
+        private UI _ui = new UI();
         private readonly string[] menu =
         {
             "Search Flight Screen",
@@ -18,119 +16,33 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
         };
         public void SearchFlight()
         {
-            UI ui = new UI();
             DisplayFlightController displayFlightController = new DisplayFlightController();
+            
             string userInput = "";
 
             while (userInput != "1" || userInput != "2" || userInput != "3")
             {
-                ui.Display(menu);
-                userInput = ui.GetInput();
+                _ui.Clear();
+                _ui.Display(menu);
+                userInput = _ui.GetInput();
 
                 switch (userInput)
-                {
+                { 
                     case "1":
-                        //Search by Flight Number
-                        break;
+                        displayFlightController.DisplayFlightbyFlightNumber();
+                        return; 
                     case "2":
-                        //Search by Airline Code 
-                        break;
+                        displayFlightController.DisplayFlightByAirlineCode();
+                        return;
                     case "3":
-                        //Search by Origin and Departure Station
-                        break;
+                        displayFlightController.DisplayFlightByStations();
+                        return;
                     case "4":
                         return;
                     default:
                         break;
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            string userInput;
-            bool result;
-            int userValidatedInput;
-            do
-            {
-                userInput = _uIScreen.DisplaySearchFlightScreenAndGetInput();
-                result = _screenInputValidator.ValidateInput(userInput, 4);
-                if(!result)
-                {
-                    _uIScreen.DisplayInvalidScreenInpuMessage("4");
-                }
-            } while (! result);
-
-            
-            List<FlightBase> flights = new List<FlightBase>();
-            switch (userInput)
-            {
-                case "1":
-                    ShowFlightsbyFlightNumber();
-                    Console.WriteLine("Press any key to go Back to Home Screen");
-                    Console.ReadLine();
-                    break;
-                case "2":
-                    ShowFlightsByAirlineCode();
-                    Console.WriteLine("Press any key to go Back to Home Screen");
-                    Console.ReadLine();
-                    break;
-                case "3":
-                    ShowFlightsByStations();
-                    Console.WriteLine("Press any key to go Back to Home Screen");
-                    Console.ReadLine();
-                    break;
-                case "4":
-                    break;
-            }
         } 
-
-        private void ShowFlightsbyFlightNumber()
-        {
-            List<FlightBase> listOfFlight = new List<FlightBase>();
-            int flightNumber = _addFlightController.GetFlightNumber();
-            listOfFlight = _flightRepository.GetFlightData(flightNumber);
-
-            _searchScreen.DisplayFlightSearchesByFlightNumber(flightNumber);
-            _searchScreen.ShowFlights(listOfFlight);
-
-        }
-
-        private void ShowFlightsByAirlineCode()
-        {
-            List<FlightBase> listOfFlight = new List<FlightBase>();
-            string airlineCode = _addFlightController.GetAirlineCode();
-            listOfFlight = _flightRepository.GetFlightData(airlineCode);
-
-            _searchScreen.DisplayFlightSearchesByAirLineCode(airlineCode);
-            _searchScreen.ShowFlights(listOfFlight);
-        }
-
-        private void ShowFlightsByStations()
-        {
-            List<FlightBase> listOfFlight = new List<FlightBase>();
-            string arrivalStation = _addFlightController.GetStation("Arrival");
-            string departureStation = _addFlightController.GetStation("Departure");
-            listOfFlight = _flightRepository.GetFlightData(arrivalStation, departureStation);
-
-            _searchScreen.DisplayFlightSearchesByStations(arrivalStation, departureStation);
-            _searchScreen.ShowFlights(listOfFlight);
-        }
     }
 }

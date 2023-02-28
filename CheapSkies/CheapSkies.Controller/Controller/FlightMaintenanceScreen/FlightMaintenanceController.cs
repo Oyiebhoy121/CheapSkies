@@ -1,11 +1,12 @@
 ﻿using CheapSkies.Controller.Controller.Flight_Maintenance_Screen;
-using CheapSkies.Controller.Validators;
 using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller
 {
-    public class FlightMaintenanceController
+    public class FlightMaintenanceController : IFlightMaintenanceController
     {
+        private UI _ui = new UI();
+
         private readonly string[] menu =
         {
             "Flight Maintenance Screen",
@@ -16,23 +17,24 @@ namespace CheapSkies.Controller.Controller
 
         public void DisplayFlightMaintenanceScreen()
         {
-            UI ui = new UI();
             AddFlightController addFlightController = new AddFlightController();
+            SearchFlightController searchFlightController = new SearchFlightController();
             string userInput = "";
 
             while(userInput != "1" || userInput != "2" || userInput != "3")
             {
-                ui.Display(menu);
-                userInput = ui.GetInput();
+                _ui.Clear();
+                _ui.Display(menu);
+                userInput = _ui.GetInput();
 
                 switch(userInput)
                 {
                     case "1":
                         addFlightController.AddFlight();
-                        break;
+                        return;
                     case "2":
-                        //SearchFlight
-                        break;
+                        searchFlightController.SearchFlight();
+                        return;
                     case "3":
                         return;
                     default:

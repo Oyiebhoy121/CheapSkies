@@ -1,4 +1,6 @@
 using CheapSkies.Model;
+using CheapSkies.Model.DataModel;
+using CheapSkies.Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +15,8 @@ namespace PassengerUnitTest
         public void ValidateAgeUnitTest1()
         {
             //Arrange
-            var sut = new Passenger();
-            DateTime dateTime = new DateTime(1999, 7, 8);
+            var sut = new PassengerBase();
+            DateOnly dateTime = new DateOnly(1999, 7, 8);
             sut.BirthDate = dateTime;
             //Act
 
@@ -26,8 +28,8 @@ namespace PassengerUnitTest
         public void ValidateAgeUnitTest2()
         {
             //Arrange
-            var sut = new Passenger();
-            DateTime dateTime = new DateTime(2023, 2, 25);
+            var sut = new PassengerBase();
+            DateOnly dateTime = new DateOnly(2023, 2, 25);
             sut.BirthDate = dateTime;
             //Act
 
@@ -39,8 +41,8 @@ namespace PassengerUnitTest
         public void ValidateAgeUnitTest3()
         {
             //Arrange
-            var sut = new Passenger();
-            DateTime dateTime = new DateTime(2024, 3, 3);
+            var sut = new PassengerBase();
+            DateOnly dateTime = new DateOnly(2024, 3, 3);
             //Act
 
             //Assert

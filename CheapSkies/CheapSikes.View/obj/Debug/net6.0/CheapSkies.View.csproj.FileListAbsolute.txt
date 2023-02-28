@@ -25,3 +25,6 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\obj\Debug\
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\obj\Debug\net6.0\CheapSkies.View.csproj.CopyComplete
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\CheapSkies.Model.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\CheapSkies.Model.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSikes.View\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSikes.View\obj\Debug\net6.0\CheapSkies.View.csproj.CopyComplete

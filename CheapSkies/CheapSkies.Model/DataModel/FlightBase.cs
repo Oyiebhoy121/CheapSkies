@@ -8,7 +8,7 @@ namespace CheapSkies.Model.DataModel
 { 
     public class FlightBase : RecordBase
     {
-        public TimeSpan ScheduleTimeOfArrival { get; set; }
-        public TimeSpan ScheduleTimeOfDeparture { get; set; }
+        public string ScheduleTimeOfArrival { get; set; }
+        public string ScheduleTimeOfDeparture { get; set; }
     }
 }

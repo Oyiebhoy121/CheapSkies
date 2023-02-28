@@ -6,10 +6,10 @@ namespace CheapSkies.Model.ViewModel
     public class Reservation : ReservationBase
     {
         private List<string> _listOfPNR;
+        private readonly string _pnr;
 
         public Reservation() { }
-        public Reservation(string airlineCode, int flightNumber, string arrivalStation, string departureStation,
-            DateTime flightDate, int numberOfPassenger, List<string> listOfPNR)
+        public Reservation(string airlineCode, int flightNumber, string arrivalStation, string departureStation, DateOnly flightDate, int numberOfPassenger, List<string> listOfPNR)
         {
             AirlineCode = airlineCode;
             FlightNumber = flightNumber;
@@ -18,11 +18,13 @@ namespace CheapSkies.Model.ViewModel
             FlightDate = flightDate;
             NumberOfPassenger = numberOfPassenger;
             _listOfPNR = listOfPNR;
+            _pnr = GeneratePNR();
+            PNR = _pnr;
         }
 
-        public DateTime FlightDate { get; set; }
-        public int NumberOfPassenger { get; set; }
-        public string PNR => GeneratePNR();
+        public DateOnly FlightDate { get;  }
+        public int NumberOfPassenger { get; }
+        public string PNR { get; }
         //Unit Test still needed for this.
         private string GeneratePNR()
         {

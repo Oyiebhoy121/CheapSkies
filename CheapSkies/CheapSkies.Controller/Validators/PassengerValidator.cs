@@ -36,12 +36,12 @@ namespace CheapSkies.Controller.Validators
         public bool ValidateDate(string birthDate)
         {
             string birthDateFormat = @"MM/dd/yyyy";
-            bool parse = DateTime.TryParseExact(birthDate, birthDateFormat, System.Globalization.CultureInfo.InvariantCulture,
-                System.Globalization.DateTimeStyles.None, out DateTime result);
+            bool parse = DateOnly.TryParseExact(birthDate, birthDateFormat, System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.None, out DateOnly result);
 
             if (parse)
             {
-                TimeSpan timeSpan = DateTime.Today - result;
+                TimeSpan timeSpan = DateTime.Today - DateTime.Parse(birthDate);
                 if (timeSpan.TotalMilliseconds >= 0)
                 {
                     return true;

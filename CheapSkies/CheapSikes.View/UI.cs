@@ -1,7 +1,13 @@
-﻿namespace CheapSkies.View
+﻿using System.Security.Cryptography;
+
+namespace CheapSkies.View
 {
     public class UI 
     {
+        public void Clear()
+        {
+            Console.Clear();
+        }
         public void Display(string[] message)
         {
             foreach(string m in message)
@@ -9,16 +15,30 @@
                 Console.WriteLine(m);
             }
         }
-
         public void Display(string message)
         {
             Console.WriteLine(message);
         }
 
-        public void Clear()
+        public void Display(string message, int number)
         {
-            Console.Clear();
+            Console.WriteLine(message + number);
         }
+        public void Display(string message, string input)
+        {
+            Console.WriteLine(message + input);
+        }
+        public void Display(string message, string input1, string input2)
+        {
+            Console.WriteLine(message + input1 + "-" + input2);
+        }
+
+        public void ExitScreen()
+        {
+            Console.WriteLine("\n\nPress anything to go back Home");
+            Console.Read();
+        }
+
 
         public string GetInput()
         {
@@ -26,14 +46,7 @@
             return userInput;
         }
 
-      
-        public string DisplaySearchFlightScreenAndGetInput()
-        {
-            Console.Clear();
-            
-            string decision = Console.ReadLine();
-            return decision;
-        }
+    
 
         public string DisplayReservationScreenAndGetInput()
         {

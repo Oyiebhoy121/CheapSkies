@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "elDkIJuTip8KEYWUd9D5zlYzrKc6XRKtSJiN06Tck/yeb28+tskl/8e23DSwPF5kWZMxjlUfA2AM86ZrS7+swg==",
+  "dgSpecHash": "gGQeJfdGMDS6TXhHc8w2aYapVer97tH4v06DjUYY36+PsHGUt6V4t+3SPp7wWRnzYVohRLqTf4q7Xb70WsjE+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkiesFinal\\CheapSkiesFinal.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\fgoleta\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\fgoleta\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
