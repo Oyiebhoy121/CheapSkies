@@ -1,11 +1,11 @@
-﻿using CheapSkies.Controller.Controller.Reservation_Screen;
+﻿using CheapSkies.Controller.Controller.Interface.HomeScreen.Interface;
+using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
+using CheapSkies.Controller.Controller.Reservation_Screen;
 using CheapSkies.View;
 namespace CheapSkies.Controller.Controller.Home_Screen
 {
     public class HomeScreenController : IHomeScreenController
     {
-        private UI _ui = new UI();
-
         private readonly string[] menu = 
         {
             "Welcome to CheapSkies! What do you want to do?",
@@ -13,21 +13,23 @@ namespace CheapSkies.Controller.Controller.Home_Screen
             "Press 2 and Enter => Go to Reservation Screen",
             "Press 3 and Enter => Exit CheapSkies\n"
         };
-
         private readonly IFlightMaintenanceController _flightMaintenanceController;
         private readonly IReservationController _reservationController;
+        private readonly IUI _ui;
 
-        public HomeScreenController(IFlightMaintenanceController flightMaintenanceController, IReservationController reservationController)
+        public HomeScreenController(IFlightMaintenanceController flightMaintenanceController, IReservationController reservationController, 
+                                        IUI ui)
         {
             _flightMaintenanceController = flightMaintenanceController;
             _reservationController = reservationController;
+            _ui = ui;
         }
 
         public void DisplayHomeScreen()
         {
             string userInput = "";
 
-            while (userInput != "3")
+            while (userInput != "3") 
             {
                 _ui.Clear();
                 _ui.Display(menu);

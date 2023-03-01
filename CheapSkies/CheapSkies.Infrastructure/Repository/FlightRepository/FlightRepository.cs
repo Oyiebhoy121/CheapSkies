@@ -1,20 +1,21 @@
-﻿using CheapSkies.Model.DataModel;
+﻿using CheapSkies.Infrastructure.RepositoryInterface.FlightRepository.Interface;
+using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 using Interfaces;
 using System;
 using System.IO;
 using System.Linq;
 
-namespace CheapSkies.Infrastructure
+namespace CheapSkies.Infrastructure.Repositories.FlightRepository
 {
-    public class FlightRepository 
+    public class FlightRepository : IFlightRepository
     {
         private string _filePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\FlightRepository\\FlightRepository.txt";
 
         public void SaveFlight(Flight flight)
         {
-            string flightProperties = String.Join(", ", flight.AirlineCode, flight.FlightNumber, flight.ArrivalStation, flight.DepartureStation, flight.ScheduleTimeOfArrival, flight.ScheduleTimeOfDeparture);
-            
+            string flightProperties = string.Join(", ", flight.AirlineCode, flight.FlightNumber, flight.ArrivalStation, flight.DepartureStation, flight.ScheduleTimeOfArrival, flight.ScheduleTimeOfDeparture);
+
             try
             {
                 using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
@@ -33,7 +34,7 @@ namespace CheapSkies.Infrastructure
 
             try
             {
-                using (StreamReader streamReader = new StreamReader(_filePath))       
+                using (StreamReader streamReader = new StreamReader(_filePath))
                 {
                     string textLines;
                     while ((textLines = streamReader.ReadLine()) != null)
@@ -42,7 +43,7 @@ namespace CheapSkies.Infrastructure
                         FlightBase flight = new FlightBase()
                         {
                             AirlineCode = flightProperties[0],
-                            FlightNumber = Int32.Parse(flightProperties[1]),
+                            FlightNumber = int.Parse(flightProperties[1]),
                             ArrivalStation = flightProperties[2],
                             DepartureStation = flightProperties[3],
                             ScheduleTimeOfArrival = flightProperties[4],
@@ -58,21 +59,18 @@ namespace CheapSkies.Infrastructure
             }
             return listOfFlights;
         }
-
         public List<FlightBase> GetFlightData(int flightNumber) //Get Flight Data via Flight Number
         {
             List<FlightBase> listOfFlight = GetFlightData();
-  
+
             return listOfFlight.Where(flight => flight.FlightNumber == flightNumber).ToList();
         }
-
         public List<FlightBase> GetFlightData(string airlineCode) //Get Flight Data via Airline Code
         {
             List<FlightBase> listOfFlight = GetFlightData();
 
             return listOfFlight.Where(flight => flight.AirlineCode == airlineCode).ToList();
         }
-
         public List<FlightBase> GetFlightData(string arrivalStation, string departureStation) //Get Flight Data via Stations
         {
             List<FlightBase> listOfFlight = GetFlightData();

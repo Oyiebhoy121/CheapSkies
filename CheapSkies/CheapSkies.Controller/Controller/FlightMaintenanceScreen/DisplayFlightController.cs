@@ -1,11 +1,12 @@
-﻿using CheapSkies.Infrastructure;
+﻿using CheapSkies.Controller.Controller.FlightMaintenancScreen.Interface;
+using CheapSkies.Infrastructure;
 using CheapSkies.Model.DataModel;
 using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
 {
 
-    public class DisplayFlightController
+    public class DisplayFlightController : IDisplayFlightController
     {
         private UI _ui = new UI();
         private readonly string[] menu =

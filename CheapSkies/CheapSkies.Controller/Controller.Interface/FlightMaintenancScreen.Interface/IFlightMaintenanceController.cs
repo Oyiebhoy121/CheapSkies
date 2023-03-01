@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.Controller.Controller
+namespace CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface
 {
     public interface IFlightMaintenanceController
     {

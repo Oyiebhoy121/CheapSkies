@@ -1,10 +1,11 @@
-﻿using CheapSkies.Infrastructure;
+﻿using CheapSkies.Controller.ReservationScreen.Interface;
+using CheapSkies.Infrastructure;
 using CheapSkies.Model.DataModel;
 using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
-    public class SearchReservationController
+    public class SearchReservationController : ISearchReservationController
     {
         private UI _ui = new UI();
         private ReservationRepository _reservationRepository = new ReservationRepository();

@@ -1,11 +1,12 @@
-﻿using CheapSkies.Infrastructure;
+﻿using CheapSkies.Controller.ReservationScreen.Interface;
+using CheapSkies.Infrastructure;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.Validator;
 using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
-    public class CreateReservationController 
+    public class CreateReservationController : ICreateReservationController
     {
         private UI _ui = new UI();
         private readonly string[] menu =

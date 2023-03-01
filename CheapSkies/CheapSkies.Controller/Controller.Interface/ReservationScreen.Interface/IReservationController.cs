@@ -1,4 +1,4 @@
-﻿namespace CheapSkies.Controller.Controller
+﻿namespace CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface
 {
     public interface IReservationController
     {

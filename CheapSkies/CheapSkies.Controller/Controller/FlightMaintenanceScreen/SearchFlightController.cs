@@ -1,9 +1,10 @@
 ﻿using CheapSkies.Controller.Controller.FlightMaintenanceScreen;
+using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
 using CheapSkies.View;
 
 namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 {
-    public class SearchFlightController
+    public class SearchFlightController : ISearchFlightController
     {
         private UI _ui = new UI();
         private readonly string[] menu =

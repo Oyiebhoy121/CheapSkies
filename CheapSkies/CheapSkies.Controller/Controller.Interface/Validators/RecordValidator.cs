@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.Controller.Validators
+namespace CheapSkies.Controller.Controller.Interface.Validators
 {
     public class RecordValidator
     {
@@ -70,7 +70,7 @@ namespace CheapSkies.Controller.Validators
             {
                 return false;
             }
-            
+
             char[] charArray = station.ToCharArray();
 
             foreach (char character in charArray)

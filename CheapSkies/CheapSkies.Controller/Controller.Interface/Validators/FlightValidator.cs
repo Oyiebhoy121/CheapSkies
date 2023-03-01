@@ -2,7 +2,7 @@
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 
-namespace CheapSkies.Controller.Validators
+namespace CheapSkies.Controller.Controller.Interface.Validators
 {
     public class FlightValidator : RecordValidator
     {
@@ -30,7 +30,7 @@ namespace CheapSkies.Controller.Validators
                                                             f.ArrivalStation == flight.ArrivalStation &&
                                                         f.DepartureStation == flight.DepartureStation).ToList();
 
-            if(listOfDuplicateFlights.Count == 0)
+            if (listOfDuplicateFlights.Count == 0)
             {
                 return false;
             }

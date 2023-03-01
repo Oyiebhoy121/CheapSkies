@@ -1,11 +1,13 @@
-﻿using CheapSkies.Controller.Validators;
+﻿using CheapSkies.Controller.Controller.FlightMaintenancScreen.Interface;
+using CheapSkies.Controller.Validators;
 using CheapSkies.Infrastructure;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View;
+using Interfaces;
 
 namespace CheapSkies.Controller.Controller
 {
-    public class AddFlightController 
+    public class AddFlightController : IAddFlightController //IGetValidatedInput
     {
         private UI _ui = new UI();
         private readonly string[] menu =
@@ -34,12 +36,12 @@ namespace CheapSkies.Controller.Controller
 
             //Obtain and Validate Flight Model Properties
             FlightValidator flightValidator = new FlightValidator();
-            string airlineCode = GetFlightInput(menu[1], menu[2], flightValidator.ValidateAirlineCode);
-            string rawFlightNumber = GetFlightInput(menu[3], menu[4], flightValidator.ValidateFlightNumber);
-            string arrivalStation = GetFlightInput(menu[5], menu[6], flightValidator.ValidateStation);
-            string departureStation = GetFlightInput(menu[7], menu[8], flightValidator.ValidateStation);
-            string scheduleTimeOfArrival = GetFlightInput(menu[9], menu[10], flightValidator.ValidateTimeFormat);
-            string scheduleTimeOfDeparture = GetFlightInput(menu[11], menu[12], flightValidator.ValidateTimeFormat);
+            string airlineCode = GetValidatInput(menu[1], menu[2], flightValidator.ValidateAirlineCode);
+            string rawFlightNumber = GetValidatInput(menu[3], menu[4], flightValidator.ValidateFlightNumber);
+            string arrivalStation = GetValidatInput(menu[5], menu[6], flightValidator.ValidateStation);
+            string departureStation = GetValidatInput(menu[7], menu[8], flightValidator.ValidateStation);
+            string scheduleTimeOfArrival = GetValidatInput(menu[9], menu[10], flightValidator.ValidateTimeFormat);
+            string scheduleTimeOfDeparture = GetValidatInput(menu[11], menu[12], flightValidator.ValidateTimeFormat);
 
             //Obtain Proper Data Type of Flight Model Properties
             int flightNumber = Int32.Parse(rawFlightNumber);
@@ -62,8 +64,7 @@ namespace CheapSkies.Controller.Controller
             _ui.Display(menu[13]);
             _ui.ExitScreen();
         }
-
-        private string GetFlightInput(string message1, string message2, Func<string, bool> validator) //Candidate for Interface 
+        private string GetValidatInput(string message1, string message2, Func<string, bool> validator)
         {
             bool parse = false;
             string userInput = "";

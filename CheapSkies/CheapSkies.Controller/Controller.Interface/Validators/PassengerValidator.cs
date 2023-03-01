@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ValidatorInterface;
 
-namespace CheapSkies.Controller.Validators
+namespace CheapSkies.Controller.Controller.Interface.Validators
 {
     public class PassengerValidator : IValidateDate
     {

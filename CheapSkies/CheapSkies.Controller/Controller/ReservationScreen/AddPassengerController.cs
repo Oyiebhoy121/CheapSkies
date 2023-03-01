@@ -1,4 +1,5 @@
-﻿using CheapSkies.Controller.Validators;
+﻿using CheapSkies.Controller.ReservationScreen.Interface;
+using CheapSkies.Controller.Validators;
 using CheapSkies.Infrastructure;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View;
@@ -7,7 +8,7 @@ using System.Xml.Linq;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
-    public class AddPassengerController
+    public class AddPassengerController : IAddPassengerController
     {
         private readonly string[] menu =
         {
@@ -95,7 +96,6 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             _ui.ExitScreen();
             return 1;
         }
-
         private string GetPassengerInput(string message1, string message2, Func<string, bool> validator) //Candidate for Interface 
         {
             bool parse = false;

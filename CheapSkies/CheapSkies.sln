@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightValidatorUnitTest", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassengerValidatorUnitTest", "PassengerValidatorUnitTest\PassengerValidatorUnitTest.csproj", "{733F5C2E-F692-448E-B0EB-9F7930A11488}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{ABDB7886-4A5C-4892-8568-E67B356342DC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeneralInterfaces", "GeneralInterfaces", "{ABDB7886-4A5C-4892-8568-E67B356342DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Test for Controllers", "Unit Test for Controllers", "{2DD8D2F8-F1B1-4B4C-9F0E-4B57CCA1A6A3}"
 EndProject

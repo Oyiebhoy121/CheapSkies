@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CheapSkies.Controller.Validators;
 using CheapSkies.Infrastructure;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 using ValidatorInterface;
 
-namespace CheapSkies.Validator
+namespace CheapSkies.Controller.Controller.Interface.Validators
 {
     public class ReservationValidator : RecordValidator, IValidateDate
     {
@@ -32,7 +31,7 @@ namespace CheapSkies.Validator
 
         public bool ValidateNumberOfPassengers(string passengerNumber)
         {
-            bool parse = Int32.TryParse(passengerNumber, out int resultNumber);
+            bool parse = int.TryParse(passengerNumber, out int resultNumber);
 
             if (parse)
             {
@@ -54,7 +53,7 @@ namespace CheapSkies.Validator
                                                                                     flight.ArrivalStation == reservation.ArrivalStation &&
                                                                                     flight.DepartureStation == reservation.DepartureStation)
                                                                 .ToList();
-            if(listOfFlights.Count > 0)
+            if (listOfFlights.Count > 0)
             {
                 return true;
             }

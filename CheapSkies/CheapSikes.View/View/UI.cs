@@ -1,8 +1,10 @@
-﻿using System.Security.Cryptography;
+﻿using CheapSkies.Model.DataModel;
+using CheapSkies.Model.ViewModel;
+using System.Security.Cryptography;
 
-namespace CheapSkies.View
+namespace CheapSkies.View.View
 {
-    public class UI 
+    public class UI : IUI
     {
         public void Clear()
         {
@@ -10,7 +12,7 @@ namespace CheapSkies.View
         }
         public void Display(string[] message)
         {
-            foreach(string m in message)
+            foreach (string m in message)
             {
                 Console.WriteLine(m);
             }
@@ -19,7 +21,6 @@ namespace CheapSkies.View
         {
             Console.WriteLine(message);
         }
-
         public void Display(string message, int number)
         {
             Console.WriteLine(message + number);
@@ -32,22 +33,16 @@ namespace CheapSkies.View
         {
             Console.WriteLine(message + input1 + "-" + input2);
         }
-
         public void ExitScreen()
         {
             Console.WriteLine("\n\nPress anything to go back Home");
             Console.Read();
         }
-
-
         public string GetInput()
         {
             string userInput = Console.ReadLine();
             return userInput;
         }
-
-    
-
         public string DisplayReservationScreenAndGetInput()
         {
             Console.Clear();
@@ -58,6 +53,36 @@ namespace CheapSkies.View
             Console.WriteLine("Press 4 and enter => Go Back to Flight Maintenance Screen");
             string decision = Console.ReadLine();
             return decision;
+        }
+
+        public void Display(Flight flight)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Display(FlightBase flightbase)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Display(Reservation reservation)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Display(ReservationBase reservationBase)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Display(Passenger passenger)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Display(PassengerBase passengerBase)
+        {
+            throw new NotImplementedException();
         }
     }
 }
