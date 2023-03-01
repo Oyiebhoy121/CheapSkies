@@ -1,6 +1,6 @@
 ﻿using CheapSkies.Controller.Controller.FlightMaintenanceScreen;
 using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
-using CheapSkies.View;
+using CheapSkies.View.View;
 
 namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 {

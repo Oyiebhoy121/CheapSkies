@@ -1,8 +1,8 @@
-﻿using CheapSkies.Controller.Controller.FlightMaintenancScreen.Interface;
-using CheapSkies.Controller.Validators;
-using CheapSkies.Infrastructure;
+﻿using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
+using CheapSkies.Controller.Controller.Interface.Validators;
+using CheapSkies.Infrastructure.Repositories.FlightRepository;
 using CheapSkies.Model.ViewModel;
-using CheapSkies.View;
+using CheapSkies.View.View;
 using Interfaces;
 
 namespace CheapSkies.Controller.Controller

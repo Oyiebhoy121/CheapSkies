@@ -22,7 +22,7 @@ namespace CheapSkies.View.View.Interface
         void Display(ReservationBase reservationBase);
         void Display(Passenger passenger);
         void Display(PassengerBase passengerBase);
-        void ExitScreen();;
+        void ExitScreen();
         string GetInput();
         string DisplayReservationScreenAndGetInput();
     }

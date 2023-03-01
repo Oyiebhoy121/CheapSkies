@@ -1,7 +1,7 @@
-﻿using CheapSkies.Controller.Controller.FlightMaintenancScreen.Interface;
-using CheapSkies.Infrastructure;
+﻿using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
+using CheapSkies.Infrastructure.Repositories.FlightRepository;
 using CheapSkies.Model.DataModel;
-using CheapSkies.View;
+using CheapSkies.View.View;
 
 namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
 {

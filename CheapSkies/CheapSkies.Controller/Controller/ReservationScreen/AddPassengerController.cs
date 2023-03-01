@@ -1,8 +1,8 @@
-﻿using CheapSkies.Controller.ReservationScreen.Interface;
-using CheapSkies.Controller.Validators;
-using CheapSkies.Infrastructure;
+﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
+using CheapSkies.Controller.Controller.Interface.Validators;
+using CheapSkies.Infrastructure.Repositories.PassengerRepository;
 using CheapSkies.Model.ViewModel;
-using CheapSkies.View;
+using CheapSkies.View.View;
 using System.Collections.Generic;
 using System.Xml.Linq;
 

@@ -1,5 +1,6 @@
-﻿using CheapSkies.Controller.ReservationScreen.Interface;
-using CheapSkies.View;
+﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
+using CheapSkies.View.View;
+
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class ReservationController : IReservationController

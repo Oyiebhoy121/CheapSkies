@@ -6,7 +6,8 @@ using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interfac
 using CheapSkies.Controller.Controller.Interface.HomeScreen.Interface;
 using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
 using CheapSkies.Controller.Controller.Reservation_Screen;
-using CheapSkies.View;
+using CheapSkies.View.View;
+using CheapSkies.View.View.Interface;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CheapSkiesFinal
@@ -22,8 +23,6 @@ namespace CheapSkiesFinal
 
             homeScreenController.DisplayHomeScreen();
 
-            //var homeScreenController = new HomeScreenController();
-            //homeScreenController.DisplayHomeScreen();
         }
 
         public static void ConfigureServices(IServiceCollection services)

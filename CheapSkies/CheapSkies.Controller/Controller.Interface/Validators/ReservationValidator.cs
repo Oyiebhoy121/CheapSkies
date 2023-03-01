@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CheapSkies.Infrastructure;
+using CheapSkies.Infrastructure.Repositories.FlightRepository;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 using ValidatorInterface;

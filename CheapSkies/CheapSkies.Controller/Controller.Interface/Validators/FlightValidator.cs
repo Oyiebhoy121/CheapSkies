@@ -1,4 +1,4 @@
-﻿using CheapSkies.Infrastructure;
+﻿using CheapSkies.Infrastructure.Repositories.FlightRepository;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 
