@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CheapSkies.Controller.Validators.Interface;
-using CheapSkies.Infrastructure.Repositories.FlightRepository;
+﻿using CheapSkies.Controller.Validators.Interface;
 using CheapSkies.Infrastructure.RepositoryInterface.FlightRepository.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
-using ValidatorInterface;
 
 namespace CheapSkies.Controller.Validators
 {

@@ -1,5 +1,4 @@
 ﻿using CheapSkies.Controller.Validators.Interface;
-using CheapSkies.Infrastructure.Repositories.FlightRepository;
 using CheapSkies.Infrastructure.RepositoryInterface.FlightRepository.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;

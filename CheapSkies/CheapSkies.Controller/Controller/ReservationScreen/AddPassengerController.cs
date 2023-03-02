@@ -1,6 +1,6 @@
 ﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
 using CheapSkies.Controller.Validators.Interface;
-using CheapSkies.Infrastructure.RepositoryInterface.PassengerRepository.Interface;
+using CheapSkies.Infrastructure.Repository.Interface.PassengerRepository.Interface;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View.View.Interface;
 
@@ -52,7 +52,6 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             List<Passenger> listOfPassengers = new List<Passenger>();
             string firstName;
             string lastName;
-            string name;
             string rawBirthDate;
             DateOnly birthDate = new DateOnly();
 

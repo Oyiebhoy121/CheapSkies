@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.Infrastructure.RepositoryInterface.PassengerRepository.Interface
+namespace CheapSkies.Infrastructure.Repository.Interface.PassengerRepository.Interface
 {
     public interface IPassengerRepository
     {

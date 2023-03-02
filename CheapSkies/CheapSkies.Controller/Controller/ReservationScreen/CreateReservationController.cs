@@ -1,10 +1,7 @@
 ﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
-using CheapSkies.Controller.Validators;
 using CheapSkies.Controller.Validators.Interface;
-using CheapSkies.Infrastructure.Repositories.ReservationRepository;
-using CheapSkies.Infrastructure.RepositoryInterface.ReservationRepository.Interface;
+using CheapSkies.Infrastructure.Repository.Interface.ReservationRepository.Interface;
 using CheapSkies.Model.ViewModel;
-using CheapSkies.View.View;
 using CheapSkies.View.View.Interface;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen

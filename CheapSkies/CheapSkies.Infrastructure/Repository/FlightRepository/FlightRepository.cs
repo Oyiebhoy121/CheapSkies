@@ -2,7 +2,7 @@
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 
-namespace CheapSkies.Infrastructure.Repositories.FlightRepository
+namespace CheapSkies.Infrastructure.Repository.FlightRepository
 {
     public class FlightRepository : IFlightRepository
     {
@@ -25,7 +25,7 @@ namespace CheapSkies.Infrastructure.Repositories.FlightRepository
                     streamWriter.WriteLine(flightProperties);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.Write(ex.Message);
                 Console.WriteLine("Failed to save the flight because Saving File Path is not found. Change it first.");
@@ -110,11 +110,11 @@ namespace CheapSkies.Infrastructure.Repositories.FlightRepository
         /// <param name="arrivalStation">Inputted Arrival Station Code by the user as a Search Key</param>
         /// <param name="departureStation">Inputted Departure Station Code by the user as a Search Key</param>
         /// <returns>List of All the Flights in the Flight Repository that matches with both the Arrival and Departure Station parameter</returns>
-        public List<FlightBase> GetFlightData(string arrivalStation, string departureStation) 
+        public List<FlightBase> GetFlightData(string arrivalStation, string departureStation)
         {
             List<FlightBase> listOfFlight = GetFlightData();
 
-            return listOfFlight.Where(flight => flight.ArrivalStation == arrivalStation && 
+            return listOfFlight.Where(flight => flight.ArrivalStation == arrivalStation &&
                 flight.DepartureStation == departureStation).ToList();
         }
     }

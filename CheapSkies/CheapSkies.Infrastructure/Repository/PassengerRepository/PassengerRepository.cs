@@ -1,4 +1,4 @@
-﻿using CheapSkies.Infrastructure.RepositoryInterface.PassengerRepository.Interface;
+﻿using CheapSkies.Infrastructure.Repository.Interface.PassengerRepository.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 

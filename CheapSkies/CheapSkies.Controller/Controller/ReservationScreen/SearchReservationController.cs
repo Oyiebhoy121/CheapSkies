@@ -1,6 +1,6 @@
 ﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
-using CheapSkies.Infrastructure.RepositoryInterface.PassengerRepository.Interface;
-using CheapSkies.Infrastructure.RepositoryInterface.ReservationRepository.Interface;
+using CheapSkies.Infrastructure.Repository.Interface.PassengerRepository.Interface;
+using CheapSkies.Infrastructure.Repository.Interface.ReservationRepository.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.View.View.Interface;
 
@@ -88,6 +88,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             string pnr = _userInterface.GetInput();
 
             listOfReservations = _reservationRepository.GetReservationData(pnr);
+
             if (listOfReservations.Count == 0)
             {
                 _userInterface.Display(menu[6], pnr);

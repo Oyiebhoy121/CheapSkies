@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M2VIQ4/CfxrIHAkCmCaOV7yQGpAxbmSUNughOLzD/YxUpwQbwHY4nA/FGLxk3pVStHitZ2KBOoeQ32E/TCZ7xw==",
+  "dgSpecHash": "YnquSzdYSIzt5nkXdAnb+FaQcyJEEGDBHPo0w3WpKk2oHFxefykF8zQ6zvnSoBcImBifMXR4pd+F1DxIB7UGDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ControllerTests\\ControllerTests.csproj",
+  "projectFilePath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ControllerTests\\UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fgoleta\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\fgoleta\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",

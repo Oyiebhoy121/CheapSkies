@@ -1,8 +1,8 @@
-﻿using CheapSkies.Infrastructure.RepositoryInterface.ReservationRepository.Interface;
+﻿using CheapSkies.Infrastructure.Repository.Interface.ReservationRepository.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 
-namespace CheapSkies.Infrastructure.Repositories.ReservationRepository
+namespace CheapSkies.Infrastructure.Repository.ReservationRepository
 {
     public class ReservationRepository : IReservationRepository
     {
@@ -82,7 +82,7 @@ namespace CheapSkies.Infrastructure.Repositories.ReservationRepository
         /// </summary>
         /// <param name="PNR">Inputted Passenger Name Record search key by the user</param>
         /// <returns>List of All the Reservations in the ReservationRepository that matches with the inputted PNR</returns>
-        public List<ReservationBase> GetReservationData(string PNR) 
+        public List<ReservationBase> GetReservationData(string PNR)
         {
             List<ReservationBase> listOfReservations = GetReservationData();
 

@@ -1,7 +1,6 @@
 ﻿using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
 using CheapSkies.Controller.Validators;
 using CheapSkies.Controller.Validators.Interface;
-using CheapSkies.Infrastructure.Repositories.FlightRepository;
 using CheapSkies.Infrastructure.RepositoryInterface.FlightRepository.Interface;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View.View;

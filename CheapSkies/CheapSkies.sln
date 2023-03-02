@@ -35,14 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservationValidatorUnitTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheapSkiesFinal", "CheapSkiesFinal\CheapSkiesFinal.csproj", "{9DE82303-B0B4-46FB-B8AB-F21B6C5E1618}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F1C9AA8-9216-4F3C-B76E-D4E81055C973}"
-	ProjectSection(SolutionItems) = preProject
-		Questions for Melo.txt = Questions for Melo.txt
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ControllerTests", "ControllerTests", "{13FAC799-52DF-4A0D-8A16-1A3B5B4CC2FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllerTests", "ControllerTests\ControllerTests.csproj", "{CE2CDE2C-FDAE-4BBE-B95A-AA6FAB9D4D5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{0784DDD6-F3D2-4375-AD42-5C3CACE2C0DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Tests", "TestProject4\Unit Tests.csproj", "{45113FB9-D803-4837-941E-1AC96F8ADD47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +93,10 @@ Global
 		{CE2CDE2C-FDAE-4BBE-B95A-AA6FAB9D4D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE2CDE2C-FDAE-4BBE-B95A-AA6FAB9D4D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE2CDE2C-FDAE-4BBE-B95A-AA6FAB9D4D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45113FB9-D803-4837-941E-1AC96F8ADD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45113FB9-D803-4837-941E-1AC96F8ADD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45113FB9-D803-4837-941E-1AC96F8ADD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45113FB9-D803-4837-941E-1AC96F8ADD47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +112,7 @@ Global
 		{C2B5EF13-4240-4B8D-9246-2D47C9C06C74} = {ABDB7886-4A5C-4892-8568-E67B356342DC}
 		{B655DC74-877C-451B-9E19-FFD5548C309E} = {AB9C4306-19DB-4025-9925-4775A1464BE6}
 		{CE2CDE2C-FDAE-4BBE-B95A-AA6FAB9D4D5A} = {13FAC799-52DF-4A0D-8A16-1A3B5B4CC2FA}
+		{45113FB9-D803-4837-941E-1AC96F8ADD47} = {0784DDD6-F3D2-4375-AD42-5C3CACE2C0DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36D174F1-F193-4BBB-9D5A-27703C9FFB7F}

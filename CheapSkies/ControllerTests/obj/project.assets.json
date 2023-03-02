@@ -6344,9 +6344,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ControllerTests\\ControllerTests.csproj",
-      "projectName": "ControllerTests",
-      "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ControllerTests\\ControllerTests.csproj",
+      "projectUniqueName": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ControllerTests\\UnitTests.csproj",
+      "projectName": "UnitTests",
+      "projectPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ControllerTests\\UnitTests.csproj",
       "packagesPath": "C:\\Users\\fgoleta\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\ControllerTests\\obj\\",
       "projectStyle": "PackageReference",

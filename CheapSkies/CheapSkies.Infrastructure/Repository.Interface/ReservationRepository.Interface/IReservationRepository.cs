@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheapSkies.Infrastructure.RepositoryInterface.ReservationRepository.Interface
+namespace CheapSkies.Infrastructure.Repository.Interface.ReservationRepository.Interface
 {
     public interface IReservationRepository
     {
