@@ -30,7 +30,7 @@ namespace CheapSkies.Controller.Controller
             "\nInvalid Input. The input must only be of the given format",
             "\nInput Schedule Time of Departure (Format hh:mm)",
             "\nInvalid Input. The input must only be of the given format",
-            "\nFlight added Successfully!",
+            "\nFlight cannot be duplicate",
             "\nFlight added Successfully!"
         };
 
@@ -71,7 +71,7 @@ namespace CheapSkies.Controller.Controller
             }
 
             _flightRepository.SaveFlight(flight);
-            _userInterface.Display(menu[13]);
+            _userInterface.Display(menu[14]);
             _userInterface.ExitScreen();
         }
 
