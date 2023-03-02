@@ -2,6 +2,6 @@
 {
     public interface IValidateDate
     {
-        bool ValidateDate(string date);
+        bool IsBirthDateValid(string date);
     }
 }

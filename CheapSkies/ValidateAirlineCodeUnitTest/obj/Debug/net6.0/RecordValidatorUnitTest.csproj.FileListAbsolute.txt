@@ -87,8 +87,6 @@ C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\D
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Validator.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Validator.pdb
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\obj\Debug\net6.0\RecordValidatorUnitTest.csproj.AssemblyReference.cache
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\obj\Debug\net6.0\RecordValidatorUnitTest.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\obj\Debug\net6.0\RecordValidatorUnitTest.AssemblyInfoInputs.cache
@@ -202,3 +200,18 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTes
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\obj\Debug\net6.0\RecordValidatorUnitTest.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\obj\Debug\net6.0\RecordValidatorUnitTest.genruntimeconfig.cache
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\obj\Debug\net6.0\ref\RecordValidatorUnitTest.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\Moq.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\System.Diagnostics.EventLog.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Controller.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Infrastructure.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Model.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.View.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\Interfaces.dll
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Controller.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Infrastructure.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.Model.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CheapSkies.View.pdb
+C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\Interfaces.pdb

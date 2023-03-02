@@ -1,15 +1,21 @@
 ﻿using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
-using CheapSkies.Controller.Controller.Interface.Validators;
+using CheapSkies.Controller.Validators;
+using CheapSkies.Controller.Validators.Interface;
 using CheapSkies.Infrastructure.Repositories.FlightRepository;
+using CheapSkies.Infrastructure.RepositoryInterface.FlightRepository.Interface;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View.View;
+using CheapSkies.View.View.Interface;
 using Interfaces;
 
 namespace CheapSkies.Controller.Controller
 {
-    public class AddFlightController : IAddFlightController //IGetValidatedInput
+    public class AddFlightController : IAddFlightController //IGetValidInput
     {
-        private UI _ui = new UI();
+        private IFlightValidator _flightValidator;
+        private IFlightRepository _flightRepository;
+        private IUI _ui;
+
         private readonly string[] menu =
         {
             "Adding Flight",
@@ -29,42 +35,56 @@ namespace CheapSkies.Controller.Controller
             "\nFlight added Successfully!"
         };
 
+        public AddFlightController(IFlightValidator flightValidator, IFlightRepository flightRepository, IUI ui)
+        {
+            _flightValidator = flightValidator;
+            _flightRepository = flightRepository;
+            _ui = ui;
+        }
+
+        /// <summary>
+        /// Opens the Add Flight Screen. This will prompt the user to input valid Airline Code, Flight Number, Arrival Station,
+        /// Departure Station, Schedule of Time of Arrival and Departure. Afterward, the valid inputs will be stored to the FlightRepository.txt
+        /// as a string that are separated by strins
+        /// </summary>
         public void AddFlight()
         {
             _ui.Clear();
             _ui.Display(menu[0]);
 
-            //Obtain and Validate Flight Model Properties
-            FlightValidator flightValidator = new FlightValidator();
-            string airlineCode = GetValidatInput(menu[1], menu[2], flightValidator.ValidateAirlineCode);
-            string rawFlightNumber = GetValidatInput(menu[3], menu[4], flightValidator.ValidateFlightNumber);
-            string arrivalStation = GetValidatInput(menu[5], menu[6], flightValidator.ValidateStation);
-            string departureStation = GetValidatInput(menu[7], menu[8], flightValidator.ValidateStation);
-            string scheduleTimeOfArrival = GetValidatInput(menu[9], menu[10], flightValidator.ValidateTimeFormat);
-            string scheduleTimeOfDeparture = GetValidatInput(menu[11], menu[12], flightValidator.ValidateTimeFormat);
+            string airlineCode = GetValidInput(menu[1], menu[2], ((IRecordValidator)_flightValidator).IsAirlineCodeValid);
+            string rawFlightNumber = GetValidInput(menu[3], menu[4], ((IRecordValidator)_flightValidator).IsFlightNumberValid);
+            string arrivalStation = GetValidInput(menu[5], menu[6], ((IRecordValidator)_flightValidator).IsStationValid);
+            string departureStation = GetValidInput(menu[7], menu[8], ((IRecordValidator)_flightValidator).IsStationValid);
+            string scheduleTimeOfArrival = GetValidInput(menu[9], menu[10], _flightValidator.IsTimeFormatValid);
+            string scheduleTimeOfDeparture = GetValidInput(menu[11], menu[12], _flightValidator.IsTimeFormatValid);
 
-            //Obtain Proper Data Type of Flight Model Properties
             int flightNumber = Int32.Parse(rawFlightNumber);
-     
 
-            //Populating the Flight Model Properties
             Flight flight = new Flight(airlineCode, flightNumber, arrivalStation, departureStation, scheduleTimeOfArrival, scheduleTimeOfDeparture);
 
-
-            if (flightValidator.ValidateIfInputIsDuplicate(flight))
+            if (_flightValidator.IsFlightDuplicate(flight))
             {
                 _ui.Display(menu[13]);
                 _ui.ExitScreen();
+
                 return;
             }
 
-            //Saving the Flight to Flight Repository
-            FlightRepository flightRepository = new FlightRepository();
-            flightRepository.SaveFlight(flight);
+            _flightRepository.SaveFlight(flight);
             _ui.Display(menu[13]);
             _ui.ExitScreen();
         }
-        private string GetValidatInput(string message1, string message2, Func<string, bool> validator)
+
+        /// <summary>
+        /// This will prompt the user to input valid data. The validator will check the input. If the user inputted invalid data then, the the program 
+        /// will loop again until the user inputted valid parameters
+        /// </summary>
+        /// <param name="message1">String of Message that requests the user to input a certain value</param>
+        /// <param name="message2">String of Message that warns the user that the inputted string is not valid</param>
+        /// <param name="validator">A Validator method that validates if the user inputted strings is valid or not</param>
+        /// <returns>String of Valid Input</returns>
+        private string GetValidInput(string message1, string message2, Func<string, bool> validator)    //Candidate for IGetValidInput
         {
             bool parse = false;
             string userInput = "";
@@ -74,12 +94,15 @@ namespace CheapSkies.Controller.Controller
                 _ui.Display(message1);
                 userInput = _ui.GetInput();
                 parse = validator(userInput);
+
                 if(!parse)
                 {
                     _ui.Display(message2);
                 }
             }
+
             return userInput;
         }
+
     }
 }

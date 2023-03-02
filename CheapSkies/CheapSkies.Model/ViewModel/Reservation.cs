@@ -8,7 +8,6 @@ namespace CheapSkies.Model.ViewModel
         private List<string> _listOfPNR;
         private readonly string _pnr;
 
-        public Reservation() { }
         public Reservation(string airlineCode, int flightNumber, string arrivalStation, string departureStation, DateOnly flightDate, int numberOfPassenger, List<string> listOfPNR)
         {
             AirlineCode = airlineCode;
@@ -43,6 +42,7 @@ namespace CheapSkies.Model.ViewModel
                     else
                     {
                         probability = random.Next(1, 3);
+
                         if (probability == 1)
                         {
                             pnr += random.Next(0, 9);
@@ -54,6 +54,7 @@ namespace CheapSkies.Model.ViewModel
                     }
                 }
             } while (listOfPNR.Contains(pnr));
+
             return pnr;
         }
     }

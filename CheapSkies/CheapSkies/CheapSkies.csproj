@@ -14,4 +14,8 @@
     <ProjectReference Include="..\CheapSkies.Model\CheapSkies.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.18.4" />
+  </ItemGroup>
+
 </Project>

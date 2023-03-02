@@ -1,23 +1,26 @@
 ﻿using CheapSkies.Infrastructure.RepositoryInterface.PassengerRepository.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
-using Interfaces;
-using System;
-using System.IO;
-using System.Linq;
 
 namespace CheapSkies.Infrastructure.Repositories.PassengerRepository
 {
     public class PassengerRepository : IPassengerRepository
     {
-        private string _filePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\PassengerRepository\\PassengerRepository.txt";
+        private const string FilePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\Repository\\ReservationRepository\\ReservationRepository.txt";
+
+        /// <summary>
+        /// Saves an inputted validated Passenger properties to the PassengerRepository.txt file
+        /// as a series of comma-separated strings. This will throw an Exception if the 
+        /// File Path specified to PassengerRepository.txt is non-existant
+        /// </summary>
+        /// <param name="passenger">Inputted Validated Passenger object by the user</param>
         public void SavePassenger(Passenger passenger)
         {
             string passengerProperties = string.Join(", ", passenger.PNR, passenger.FirstName, passenger.LastName, passenger.BirthDate, passenger.Age);
 
             try
             {
-                using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+                using (StreamWriter streamWriter = new StreamWriter(FilePath, append: true))
                 {
                     streamWriter.WriteLine(passengerProperties);
                 }
@@ -27,6 +30,13 @@ namespace CheapSkies.Infrastructure.Repositories.PassengerRepository
                 Console.WriteLine("Failed to save the passengers because Saving File Path is not found. Change it first.");
             }
         }
+
+        /// <summary>
+        /// Saves a list inputted validated Passenger properties to the PassengerRepository.txt file
+        /// as a series of comma-separated strings. This will throw an Exception if the 
+        /// File Path specified to PassengerRepository.txt is non-existant
+        /// </summary>
+        /// <param name="listOfPassengers">List of Inputted Validated Passenger objects by the user</param>
         public void SavePassenger(List<Passenger> listOfPassengers)
         {
             string passengerProperties = "";
@@ -36,7 +46,7 @@ namespace CheapSkies.Infrastructure.Repositories.PassengerRepository
 
                 try
                 {
-                    using (StreamWriter streamWriter = new StreamWriter(_filePath, append: true))
+                    using (StreamWriter streamWriter = new StreamWriter(FilePath, append: true))
                     {
                         streamWriter.WriteLine(passengerProperties);
                     }
@@ -47,19 +57,36 @@ namespace CheapSkies.Infrastructure.Repositories.PassengerRepository
                 }
             }
         }
-        public List<PassengerBase> GetPassengerData(string PNR) //Get Passenger Data via PNR
+
+        /// <summary>
+        /// Obtains all the the data from the PassengerRepository.txt that matches with the inputted PNR 
+        /// and then refactors the data as properties of PassengerBase Model. 
+        /// This will throw an Exception if the 
+        /// File Path specified to PassengerRepository.txt is non-existant
+        /// </summary>
+        /// <param name="PNR">Inputted Passenger Name Record search key by the user</param>
+        /// <returns>List of All the Passengers in the Passenger Repository that matches with the given PNR</returns>
+        public List<PassengerBase> GetPassengerData(string PNR)
         {
             List<PassengerBase> listOfPassengers = GetPassengerData();
 
             return listOfPassengers.Where(passenger => passenger.PNR == PNR).ToList();
         }
-        private List<PassengerBase> GetPassengerData() //Get All Passenger Data
+
+        /// <summary>
+        /// Obtains all the the data from the PassengerRepository.txt
+        /// and then refactors the data as properties of PassengerBase Model. 
+        /// This will throw an Exception if the 
+        /// File Path specified to PassengerRepository.txt is non-existant
+        /// </summary>
+        /// <returns>List of All the Passengers in the Passenger Repository</returns>
+        private List<PassengerBase> GetPassengerData()
         {
             List<PassengerBase> listOfPassengers = new List<PassengerBase>();
 
             try
             {
-                using (StreamReader streamReader = new StreamReader(_filePath))
+                using (StreamReader streamReader = new StreamReader(FilePath))
                 {
                     string textLines;
                     while ((textLines = streamReader.ReadLine()) != null)
@@ -81,7 +108,9 @@ namespace CheapSkies.Infrastructure.Repositories.PassengerRepository
             {
                 Console.WriteLine("Failed to read the passenger data because Saving File Path is not found. Change it first.");
             }
+
             return listOfPassengers;
         }
+
     }
 }

@@ -1,16 +1,16 @@
 ﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
-using CheapSkies.Infrastructure.Repositories.PassengerRepository;
-using CheapSkies.Infrastructure.Repositories.ReservationRepository;
+using CheapSkies.Infrastructure.RepositoryInterface.PassengerRepository.Interface;
+using CheapSkies.Infrastructure.RepositoryInterface.ReservationRepository.Interface;
 using CheapSkies.Model.DataModel;
-using CheapSkies.View.View;
+using CheapSkies.View.View.Interface;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class SearchReservationController : ISearchReservationController
     {
-        private UI _ui = new UI();
-        private ReservationRepository _reservationRepository = new ReservationRepository();
-        private PassengerRepository _passengerRepository = new PassengerRepository();
+        private IUI _ui;
+        private IReservationRepository _reservationRepository;
+        private IPassengerRepository _passengerRepository;
 
         private readonly string[] menu =
         {
@@ -24,6 +24,19 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "\nNo Reservations found based on Input PNR",
             "\nInput the 6 Character PNR:"
         };
+
+        public SearchReservationController(IUI ui, IReservationRepository reservationRepository, IPassengerRepository passengerRepository)
+        {
+            _ui = ui;
+            _reservationRepository = reservationRepository;
+            _passengerRepository = passengerRepository;
+        }
+
+        /// <summary>
+        /// This will prompt display all the properties of all Reservations 
+        /// in the ReservationRepository with the accompanying Passengers of the same PNR 
+        /// from the PassengerRepository
+        /// </summary>
         public void DisplayAllReservations()   //Refactor this method to work for View all reservations and View by PNR
         {
             List<ReservationBase> listOfReservations = new List<ReservationBase>();
@@ -44,13 +57,12 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             foreach (ReservationBase reservation in listOfReservations)
             {
                 _ui.Display(menu[2]);
-                _ui.Display($"{reservation.PNR} \t {reservation.AirlineCode} \t\t {reservation.FlightNumber} \t\t {reservation.ArrivalStation} \t\t\t " +
-                            $"{reservation.DepartureStation} \t\t\t {reservation.FlightDate} \t {reservation.NumberOfPassenger}");
+                _ui.Display(reservation);
                 listOfPassengers = _passengerRepository.GetPassengerData(reservation.PNR);
                 _ui.Display(menu[3]);
                 foreach (PassengerBase passenger in listOfPassengers)
                 {
-                    _ui.Display($"\t\t{passengerCount + 1} \t\t\t {passenger.FirstName} \t {passenger.LastName} \t {passenger.BirthDate} \t {passenger.Age}\n");
+                    _ui.Display(passenger, passengerCount);
                     passengerCount++;
                 }
                 passengerCount = 0;
@@ -58,6 +70,13 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             _ui.Display(menu[4]);
             _ui.ExitScreen();
         }
+
+        /// <summary>
+        /// This will prompt the user to input the PNR of the desired reservation. Then this
+        /// will display all the properties of the Reservation with the corresponding PNR 
+        /// in the ReservationRepository with the accompanying Passengers of the same PNR 
+        /// from the PassengerRepository.
+        /// </summary>
         public void DisplaReservationsByPNR()
         {
             List<ReservationBase> listOfReservations = new List<ReservationBase>();
@@ -76,18 +95,16 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
                 return;
             }
 
-            
             int passengerCount = 0;
             foreach (ReservationBase reservation in listOfReservations)
             {
                 _ui.Display(menu[2]);
-                _ui.Display($"{reservation.PNR} \t {reservation.AirlineCode} \t\t {reservation.FlightNumber} \t\t {reservation.ArrivalStation} \t\t\t " +
-                            $"{reservation.DepartureStation} \t\t\t {reservation.FlightDate} \t {reservation.NumberOfPassenger}");
+                _ui.Display(reservation);
                 listOfPassengers = _passengerRepository.GetPassengerData(reservation.PNR);
                 foreach (PassengerBase passenger in listOfPassengers)
                 {
                     _ui.Display(menu[3]);
-                    _ui.Display($"\t\t{passengerCount + 1} \t\t\t {passenger.FirstName} \t {passenger.LastName} \t {passenger.BirthDate} \t {passenger.Age}\n");
+                    _ui.Display(passenger, passengerCount);
                     passengerCount++;
                 }
                 passengerCount = 0;
@@ -95,5 +112,6 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             _ui.Display(menu[6], pnr);
             _ui.ExitScreen();
         }
+
     }
 }

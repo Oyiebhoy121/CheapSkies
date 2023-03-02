@@ -1,10 +1,15 @@
 ﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
 using CheapSkies.View.View;
+using CheapSkies.View.View.Interface;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class ReservationController : IReservationController
     {
+        private ICreateReservationController _createReservationController;
+        private ISearchReservationController _searchReservationController;
+        private IUI _ui;
+
         private readonly string[] menu =
         {
             "Reservation Controller",
@@ -13,29 +18,39 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "Press 3 and Enter => List Reservations by PNR",
             "Press 4 and Enter => Go Back\n"
         };
+        
+        public ReservationController(ICreateReservationController createReservationController, ISearchReservationController searchReservationController, IUI ui)
+        {
+            
+            _createReservationController = createReservationController;
+            _searchReservationController = searchReservationController;
+            _ui = ui;
+        }
+
+        /// <summary>
+        /// Opens the Reservation  Screen. This will prompt the user to choose between Creating a Reservation, Displaying All Reservations, 
+        /// Displaying Reservations based on PNR, or back to the Home Screen. This will run until the user inputted a valid option
+        /// </summary>
         public void DisplayReservationScreen()
         {
-            UI ui = new UI();
-            CreateReservationController createReservationController = new CreateReservationController();
-            SearchReservationController searchReservationController = new SearchReservationController();
             string userInput = "";
 
             while (userInput != "1" || userInput != "2" || userInput != "3" || userInput != "4")
             {
-                ui.Clear();
-                ui.Display(menu);
-                userInput = ui.GetInput();
+                _ui.Clear();
+                _ui.Display(menu);
+                userInput = _ui.GetInput();
 
                 switch (userInput)
                 {
                     case "1":
-                        createReservationController.CreateReservation();
+                        _createReservationController.CreateReservation();
                         return;
                     case "2":
-                        searchReservationController.DisplayAllReservations();
+                        _searchReservationController.DisplayAllReservations();
                         return;
                     case "3":
-                        searchReservationController.DisplaReservationsByPNR();
+                        _searchReservationController.DisplaReservationsByPNR();
                         return;
                     case "4":
                         return;
@@ -44,5 +59,6 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
                 }
             }
         }
+
     }
 }

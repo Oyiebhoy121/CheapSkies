@@ -1,15 +1,17 @@
 ﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
-using CheapSkies.Controller.Controller.Interface.Validators;
-using CheapSkies.Infrastructure.Repositories.PassengerRepository;
+using CheapSkies.Controller.Validators.Interface;
+using CheapSkies.Infrastructure.RepositoryInterface.PassengerRepository.Interface;
 using CheapSkies.Model.ViewModel;
-using CheapSkies.View.View;
-using System.Collections.Generic;
-using System.Xml.Linq;
+using CheapSkies.View.View.Interface;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class AddPassengerController : IAddPassengerController
     {
+        private IPassengerValidator _passengerValidator;
+        private IPassengerRepository _passengerRepository;
+        private IUI _ui;
+
         private readonly string[] menu =
         {
             "\nAdding Passengers",
@@ -28,8 +30,22 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "\nReservation is Confirmed. Saving reservation.",
             "\nFlight added Successfully!"
         };
-        private UI _ui = new UI();
+        
+        public AddPassengerController(IPassengerValidator passengerValidator, IPassengerRepository passengerRepository, IUI ui) 
+        {
+            _passengerValidator = passengerValidator;
+            _passengerRepository = passengerRepository;
+            _ui = ui;
+        }
 
+        /// <summary>
+        /// This method prompts the user to add Passengers to the inputted Reservation. This will prompt the user to 
+        /// input validat First Name, Last Name, and Birth Date of the passengers based on the number of passengers listed
+        /// in the Reservation. Afterwards, it will show the reservation and passenger summary. If the user choose to proceed, 
+        /// the input will be saved on PassengerRepository.txt and ReservationRepository.txt. If not, then the screen will go
+        /// back to the Home Screen
+        /// </summary>
+        /// <returns>Integer of 1 if the Reservation is confirmed; otherwise, 0</returns>
         public int AddPassengers(Reservation reservation)
         {
             _ui.Display(menu[0]);
@@ -39,47 +55,45 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             string name;
             string rawBirthDate;
             DateOnly birthDate = new DateOnly();
-            PassengerValidator passengerValidator = new PassengerValidator();
-            
 
             for (int i = 0; i < reservation.NumberOfPassenger; i++)
             {
                 _ui.Display(menu[7], i + 1);
-                // Obtain and Validate Passenger Model Properties
-                firstName = GetPassengerInput(menu[1], menu[2], passengerValidator.ValidateName);
-                lastName = GetPassengerInput(menu[3], menu[4], passengerValidator.ValidateName);
-                rawBirthDate = GetPassengerInput(menu[5], menu[6], passengerValidator.ValidateDate);
 
-                //Obtain Proper Data Type of Passenger Model Properties
+                firstName = GetPassengerInput(menu[1], menu[2], _passengerValidator.IsNameValid);
+                lastName = GetPassengerInput(menu[3], menu[4], _passengerValidator.IsNameValid);
+                rawBirthDate = GetPassengerInput(menu[5], menu[6], _passengerValidator.IsBirthDateValid);
+
                 birthDate = DateOnly.Parse(rawBirthDate);
 
-                //Populating the Passenger Model Properties
                 Passenger passenger = new Passenger(reservation.PNR, firstName, lastName, birthDate);
                 listOfPassengers.Add(passenger);
             }
 
-            //Reservation Summary
             _ui.Display(menu[8]);
             _ui.Display(menu[9]);
-            _ui.Display($"{reservation.AirlineCode} \t\t {reservation.FlightNumber} \t\t {reservation.ArrivalStation} \t\t\t " +
-                            $"{reservation.DepartureStation} \t\t\t {reservation.FlightDate} \t {reservation.NumberOfPassenger}");
+            _ui.Display(reservation);
             _ui.Display(menu[10]);
+
             int passengerCount = 0;
+
             foreach (Passenger passenger in listOfPassengers)
             {
-                _ui.Display($"\t\t{ passengerCount + 1} \t\t\t { passenger.FirstName} \t { passenger.LastName} \t { passenger.BirthDate} \t { passenger.Age}\n");
+                _ui.Display(passenger, passengerCount);
                 passengerCount++;   
             }
 
-            //Confirming Booking 
             _ui.Display(menu[11]);
             string userInput = "";
+
             while (userInput != "Y" || userInput != "N")
             {
                 userInput = _ui.GetInput();
+
                 if (userInput == "N")
                 {
                     _ui.Display(menu[12]);
+
                     return 0;
                 }   
                 else if (userInput == "Y") 
@@ -89,33 +103,40 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             }
             _ui.Display(menu[13]);
 
-            //Saving the Passenger to Flight Repository
-            PassengerRepository passengerRepository = new PassengerRepository();
-            passengerRepository.SavePassenger(listOfPassengers);
+            _passengerRepository.SavePassenger(listOfPassengers);
             _ui.Display(menu[14]);
             _ui.ExitScreen();
+
             return 1;
         }
+
+        /// <summary>
+        /// This will prompt the user to input valid data. The validator will check the input. If the user inputted invalid data then, the the program 
+        /// will loop again until the user inputted valid parameters
+        /// </summary>
+        /// <param name="message1">String of Message that requests the user to input a certain value</param>
+        /// <param name="message2">String of Message that warns the user that the inputted string is not valid</param>
+        /// <param name="validator">A Validator method that validates if the user inputted strings is valid or not</param>
+        /// <returns>String of Valid Input</returns>
         private string GetPassengerInput(string message1, string message2, Func<string, bool> validator) //Candidate for Interface 
         {
             bool parse = false;
             string userInput = "";
 
-            UI ui = new UI();
-
             while (!parse)
             {
-                ui.Display(message1);
-                userInput = ui.GetInput();
+                _ui.Display(message1);
+                userInput = _ui.GetInput();
                 parse = validator(userInput);
+
                 if (!parse)
                 {
-                    ui.Display(message2);
+                    _ui.Display(message2);
                 }
             }
+
             return userInput;
         }
-
 
     }
 }

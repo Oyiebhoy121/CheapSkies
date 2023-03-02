@@ -1,12 +1,14 @@
-﻿using CheapSkies.Controller.Controller.FlightMaintenanceScreen;
-using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
+﻿using CheapSkies.Controller.Controller.Interface.FlightMaintenancScreen.Interface;
 using CheapSkies.View.View;
+using CheapSkies.View.View.Interface;
 
 namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 {
     public class SearchFlightController : ISearchFlightController
     {
-        private UI _ui = new UI();
+        private IUI _ui = new UI();
+        private IDisplayFlightController _displayFlightController;
+
         private readonly string[] menu =
         {
             "Search Flight Screen",
@@ -15,10 +17,20 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
             "Press 3 and enter => Search by Origin and Departure Station",
             "Press 4 and enter => Go Back to Flight Maintenance Screen"
         };
+
+        public SearchFlightController(IDisplayFlightController displayFlightController, IUI ui)
+        {
+            _displayFlightController = displayFlightController;
+            _ui = ui;
+        }
+
+        /// <summary>
+        /// Opens Search Flight Screen. This will prompt the user to choose between Searching Flights 
+        /// via Flight Number, via Airline Code, Via Stations, or just going back to the Flight Maintenance Screen.
+        /// This will run until the user inputted a valid option.
+        /// </summary>
         public void SearchFlight()
         {
-            DisplayFlightController displayFlightController = new DisplayFlightController();
-            
             string userInput = "";
 
             while (userInput != "1" || userInput != "2" || userInput != "3")
@@ -30,13 +42,13 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
                 switch (userInput)
                 { 
                     case "1":
-                        displayFlightController.DisplayFlightbyFlightNumber();
+                        _displayFlightController.DisplayFlightbyFlightNumber();
                         return; 
                     case "2":
-                        displayFlightController.DisplayFlightByAirlineCode();
+                        _displayFlightController.DisplayFlightByAirlineCode();
                         return;
                     case "3":
-                        displayFlightController.DisplayFlightByStations();
+                        _displayFlightController.DisplayFlightByStations();
                         return;
                     case "4":
                         return;
@@ -44,6 +56,7 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
                         break;
                 }
             }
-        } 
+        }
+        
     }
 }

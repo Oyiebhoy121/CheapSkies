@@ -16,14 +16,12 @@ namespace CheapSkies.View.View.Interface
         void Display(string message, int number);
         void Display(string message, string input);
         void Display(string message, string input1, string input2);
-        void Display(Flight flight);
         void Display(FlightBase flightbase);
         void Display(Reservation reservation);
         void Display(ReservationBase reservationBase);
-        void Display(Passenger passenger);
-        void Display(PassengerBase passengerBase);
+        void Display(Passenger passenger, int passengerCount);
+        void Display(PassengerBase passengerBase, int passengerCount);
         void ExitScreen();
         string GetInput();
-        string DisplayReservationScreenAndGetInput();
     }
 }

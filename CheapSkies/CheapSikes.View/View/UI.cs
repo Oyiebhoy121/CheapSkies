@@ -44,31 +44,16 @@ namespace CheapSkies.View.View
             string userInput = Console.ReadLine();
             return userInput;
         }
-        public string DisplayReservationScreenAndGetInput()
+    
+        public void Display(FlightBase flight)
         {
-            Console.Clear();
-            Console.WriteLine("Reservation Screen");
-            Console.WriteLine("Press 1 and enter => Create a Reservation");
-            Console.WriteLine("Press 2 and enter => List all Reservations");
-            Console.WriteLine("Press 3 and enter => Search Reservation by PNR");
-            Console.WriteLine("Press 4 and enter => Go Back to Flight Maintenance Screen");
-            string decision = Console.ReadLine();
-            return decision;
-        }
-
-        public void Display(Flight flight)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Display(FlightBase flightbase)
-        {
-            throw new NotImplementedException();
+            Console.WriteLine($"{flight.AirlineCode} \t\t {flight.FlightNumber}\t\t {flight.ArrivalStation}\t\t\t {flight.DepartureStation}\t\t\t {flight.ScheduleTimeOfArrival}\t\t\t\t {flight.ScheduleTimeOfDeparture}");
         }
 
         public void Display(Reservation reservation)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{reservation.AirlineCode} \t\t {reservation.FlightNumber} \t\t {reservation.ArrivalStation} \t\t\t " +
+                            $"{reservation.DepartureStation} \t\t\t {reservation.FlightDate} \t {reservation.NumberOfPassenger}");
         }
 
         public void Display(ReservationBase reservationBase)
@@ -76,14 +61,14 @@ namespace CheapSkies.View.View
             throw new NotImplementedException();
         }
 
-        public void Display(Passenger passenger)
+        public void Display(Passenger passenger, int passengerCount)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"\t\t{passengerCount + 1} \t\t\t {passenger.FirstName} \t {passenger.LastName} \t {passenger.BirthDate} \t {passenger.Age}\n");
         }
 
-        public void Display(PassengerBase passengerBase)
+        public void Display(PassengerBase passenger, int passengerCount)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"\t\t{passengerCount + 1} \t\t\t {passenger.FirstName} \t {passenger.LastName} \t {passenger.BirthDate} \t {passenger.Age}\n");
         }
     }
 }

@@ -8,6 +8,10 @@ namespace CheapSkies.Controller.Controller.Home_Screen
 {
     public class HomeScreenController : IHomeScreenController
     {
+        private readonly IFlightMaintenanceController _flightMaintenanceController;
+        private readonly IReservationController _reservationController;
+        private readonly IUI _ui;
+
         private readonly string[] menu = 
         {
             "Welcome to CheapSkies! What do you want to do?",
@@ -15,18 +19,18 @@ namespace CheapSkies.Controller.Controller.Home_Screen
             "Press 2 and Enter => Go to Reservation Screen",
             "Press 3 and Enter => Exit CheapSkies\n"
         };
-        private readonly IFlightMaintenanceController _flightMaintenanceController;
-        private readonly IReservationController _reservationController;
-        private readonly IUI _ui;
-
-        public HomeScreenController(IFlightMaintenanceController flightMaintenanceController, IReservationController reservationController, 
-                                        IUI ui)
+        
+        public HomeScreenController(IFlightMaintenanceController flightMaintenanceController, IReservationController reservationController, IUI ui)
         {
             _flightMaintenanceController = flightMaintenanceController;
             _reservationController = reservationController;
             _ui = ui;
         }
 
+        /// <summary>
+        /// Opens the Home Screen. This will prompt the user to choose between opening Flight Maintenance Screen,
+        /// Reservation Screen, or Exiting CheapSkies. This will run until the user inputted a valid option
+        /// </summary>
         public void DisplayHomeScreen()
         {
             string userInput = "";
@@ -52,5 +56,6 @@ namespace CheapSkies.Controller.Controller.Home_Screen
                 }
             }
         }
+
     }
 }

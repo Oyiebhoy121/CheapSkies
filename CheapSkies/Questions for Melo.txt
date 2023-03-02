@@ -1,0 +1,12 @@
+Questions:
+
+1.) If you are passing an Interface in Mock.Of<>, how does the Class Methods being tested use its concrete dependencies? 
+2) Can you mock Abstract Classes? 
+3.) At some of my Unit Test Classes, MOck.Of does not work
+4.) How to run tests simultaneously
+5.) In Unit Testing what parameters to pass on constructors of the methods that are not necessary in a specific unit test 
+6.) What is the naming convention for reference types? Use "var" at the left-hand side? 
+7.) How to unit test PNR?
+8.) How to unit tets Search Flights? 
+9.) Should I also introduce XML comments in Unit Tests? 
+10.) 

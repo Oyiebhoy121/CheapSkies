@@ -1,14 +1,21 @@
 ﻿using CheapSkies.Controller.Controller.Interface.ReservationScreen.Interface;
-using CheapSkies.Controller.Controller.Interface.Validators;
+using CheapSkies.Controller.Validators;
+using CheapSkies.Controller.Validators.Interface;
 using CheapSkies.Infrastructure.Repositories.ReservationRepository;
+using CheapSkies.Infrastructure.RepositoryInterface.ReservationRepository.Interface;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View.View;
+using CheapSkies.View.View.Interface;
 
 namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class CreateReservationController : ICreateReservationController
     {
-        private UI _ui = new UI();
+        private IUI _ui;
+        private IReservationValidator _reservationValidator;
+        private IReservationRepository _reservationRepository;
+        private IAddPassengerController _addPassengerController;
+
         private readonly string[] menu =
         {
             "Creating Reservation",
@@ -28,52 +35,68 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "\nSuccessfully Created a Reservation!",
             "\n***The Reservation you are creating is Invalid. Please reserve only for existing flights.***"
         };
+
+        public CreateReservationController(IReservationValidator reservationValidator, IReservationRepository reservationRepository, IUI ui,
+                                            IAddPassengerController addPassengerController)
+        {
+            _reservationValidator = reservationValidator;
+            _reservationRepository = reservationRepository;
+            _ui = ui;
+            _addPassengerController = addPassengerController;
+        }
+
+        /// <summary>
+        /// Opens the Create Reservation Screen. This will prompt the user to input valid Airline Code, Flight Number, Arrival Station,
+        /// Departure Station, Flight Date, and Number of Passengers. Afterward, the valid inputs will be stored to the ReservationRepository.txt
+        /// as a string that are separated by strings
+        /// </summary>
         public void CreateReservation()
         {
             _ui.Display(menu[0]);
 
-            //Obtaining Validated Reservation Model Properties
-            ReservationValidator reservationValidator = new ReservationValidator();
-            string airlineCode = GetReservationInput(menu[1], menu[2], reservationValidator.ValidateAirlineCode);
-            string rawFlightNumber = GetReservationInput(menu[3], menu[4], reservationValidator.ValidateFlightNumber);
-            string arrivalStation = GetReservationInput(menu[5], menu[6], reservationValidator.ValidateStation);
-            string departureStation = GetReservationInput(menu[7], menu[8], reservationValidator.ValidateStation);
-            string rawFlightDate = GetReservationInput(menu[9], menu[10], reservationValidator.ValidateDate);
-            string rawNumberOfPassengers = GetReservationInput(menu[11], menu[12], reservationValidator.ValidateNumberOfPassengers);
+            string airlineCode = GetReservationInput(menu[1], menu[2], ((IRecordValidator)_reservationValidator).IsAirlineCodeValid);
+            string rawFlightNumber = GetReservationInput(menu[3], menu[4], ((IRecordValidator)_reservationValidator).IsFlightNumberValid);
+            string arrivalStation = GetReservationInput(menu[5], menu[6], ((IRecordValidator)_reservationValidator).IsStationValid);
+            string departureStation = GetReservationInput(menu[7], menu[8], ((IRecordValidator)_reservationValidator).IsStationValid);
+            string rawFlightDate = GetReservationInput(menu[9], menu[10], _reservationValidator.IsFlightDateValid);
+            string rawNumberOfPassengers = GetReservationInput(menu[11], menu[12], _reservationValidator.IsNumberOfPassengersValid);
 
-            //Obtaining Proper Data Type of Flight Model Properties
             int flightNumber = Int32.Parse(rawFlightNumber);
             DateOnly flightDate = DateOnly.Parse(rawFlightDate);
             int numberOfPassengers = Int32.Parse(rawNumberOfPassengers);
 
-            //Getting existing lists of PNR 
-            ReservationRepository reservationRepository = new ReservationRepository();
-            List<string> listOfPNR = reservationRepository.GetPNRData();
+            List<string> listOfPNR = _reservationRepository.GetPNRData();
 
-            //Populating the Flight Model Properties
             Reservation reservation = new Reservation(airlineCode, flightNumber, arrivalStation, departureStation, flightDate, numberOfPassengers, listOfPNR);
             
-            //Checking if the reservation created has a Flight available 
-            if(!reservationValidator.ValidateIfReservationHasFlight(reservation))
+            if(!_reservationValidator.IsFlightValidForReservation(reservation))
             {
                 _ui.Display(menu[15]);
                 _ui.ExitScreen();
                 return;
             }
 
-            //Obtaining Passenger Data
-            AddPassengerController addPassengerController = new AddPassengerController();
-            int decision = addPassengerController.AddPassengers(reservation);
+            int decision = _addPassengerController.AddPassengers(reservation);
+
             if(decision == 0)
             {
                 return;
             }
-            //Saving the Reservation to Reservation Repository
-            reservationRepository.SaveReservation(reservation); 
+
+            _reservationRepository.SaveReservation(reservation); 
             _ui.Display(menu[13]);
             _ui.Display(menu[14]);
             _ui.ExitScreen();
         }
+
+        /// <summary>
+        /// This will prompt the user to input valid Reservation data. The validator will check the input. If the user inputted invalid data then, the the program 
+        /// will loop again until the user inputted valid parameters
+        /// </summary>
+        /// <param name="message1">String of Message that requests the user to input a certain value</param>
+        /// <param name="message2">String of Message that warns the user that the inputted string is not valid</param>
+        /// <param name="validator">A Validator method that validates if the user inputted strings is valid or not</param>
+        /// <returns>String of Valid Input</returns>
         private string GetReservationInput(string message1, string message2, Func<string, bool> validator) //Candidate for Interface 
         {
             bool parse = false;
@@ -89,9 +112,9 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
                     _ui.Display(message2);
                 }
             }
+
             return userInput;
         }
-
 
     }
 }

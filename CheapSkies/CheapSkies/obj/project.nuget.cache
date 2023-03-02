@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "noIwef8Y6C4axnaGm7TyfW/LkcIx2Ldp7oqXikg6sF9q4bXVc8o22FJ/ko6U2wEv0bguflCjVUN635BeTBFz5A==",
+  "dgSpecHash": "w0A9f+n1XtGnqDfI/DWjmkiG8zCDS4oWjJCFCH+QvA/vJc3OM7CN4MOeSj+IIuUYskgqRgxpmjiAXYHbeM1nqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\frgol\\OneDrive\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies\\CheapSkies.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies\\CheapSkies.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fgoleta\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\fgoleta\\.nuget\\packages\\moq\\4.18.4\\moq.4.18.4.nupkg.sha512",
+    "C:\\Users\\fgoleta\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

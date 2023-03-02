@@ -8,6 +8,6 @@ namespace Interfaces
 {
     public interface IGetValidatedInput
     {
-        string GetValidatInput(string message1, string message2, Func<string, bool> validator);
+        string GetValidatedInput(string message1, string message2, Func<string, bool> validator);
     }
 }
