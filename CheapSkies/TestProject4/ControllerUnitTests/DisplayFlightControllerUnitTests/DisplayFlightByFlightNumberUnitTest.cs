@@ -3,7 +3,6 @@ using CheapSkies.Infrastructure.RepositoryInterface.FlightRepository.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.View.View.Interface;
 using Moq;
-using Xunit;
 
 namespace ControllerTests.NewFolder
 {
