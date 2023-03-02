@@ -102,7 +102,6 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ReservationValidatorUnitTest.pdb
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ReservationValidatorUnitTest.genruntimeconfig.cache
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ref\ReservationValidatorUnitTest.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\CoverletSourceRootsMapping
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ReservationValidatorUnitTest.csproj.AssemblyReference.cache
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ReservationValidatorUnitTest.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ReservationValidatorUnitTest.AssemblyInfoInputs.cache
@@ -113,9 +112,6 @@ C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ref
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\obj\Debug\net6.0\ReservationValidatorUnitTest.pdb
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\testhost.exe
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\testhost.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\xunit.runner.reporters.netcoreapp10.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\ReservationValidatorUnitTest.deps.json
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\ReservationValidatorUnitTest.runtimeconfig.json
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\TestProject1\bin\Debug\net6.0\ReservationValidatorUnitTest.dll

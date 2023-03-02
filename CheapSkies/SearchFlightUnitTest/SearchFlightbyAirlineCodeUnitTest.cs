@@ -36,14 +36,14 @@ namespace SearchFlightUnitTest
             };
 
             var mockFlightRepository = new Mock<IFlightRepository>();
-            mockFlightRepository.Setup(x => x.GetFlightData()).Returns(listOfFlights.Where(x => x;
+            mockFlightRepository.Setup(x => x.GetFlightData()).Returns(listOfFlights)) 
 
             //Act
             var softwareUnderTest = new FlightRepository();
             var result = softwareUnderTest.GetFlightData("5J");
 
             //Assert
-            Assert.False(result);
+            Assert.Equals()
         }
 
         [Fact]

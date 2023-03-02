@@ -28,9 +28,7 @@ namespace CheapSkiesFinal
             ConfigureServices(serviceCollection);
 
             var homeScreenController = serviceCollection.BuildServiceProvider().GetService<IHomeScreenController>();
-
             homeScreenController.DisplayHomeScreen();
-
         }
 
         public static void ConfigureServices(IServiceCollection services)
@@ -69,7 +67,7 @@ namespace CheapSkiesFinal
 
         public static void ConfigureViewServices(IServiceCollection services)
         {
-            services.AddSingleton<IUI, UI>();
+            services.AddSingleton<IUserInterface, UserInterface>();
         }
     }
 }

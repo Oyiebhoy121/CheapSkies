@@ -8,7 +8,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
     {
         private ICreateReservationController _createReservationController;
         private ISearchReservationController _searchReservationController;
-        private IUI _ui;
+        private IUserInterface _userInterface;
 
         private readonly string[] menu =
         {
@@ -19,12 +19,12 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "Press 4 and Enter => Go Back\n"
         };
         
-        public ReservationController(ICreateReservationController createReservationController, ISearchReservationController searchReservationController, IUI ui)
+        public ReservationController(ICreateReservationController createReservationController, ISearchReservationController searchReservationController, IUserInterface userInterface)
         {
             
             _createReservationController = createReservationController;
             _searchReservationController = searchReservationController;
-            _ui = ui;
+            _userInterface = userInterface;
         }
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 
             while (userInput != "1" || userInput != "2" || userInput != "3" || userInput != "4")
             {
-                _ui.Clear();
-                _ui.Display(menu);
-                userInput = _ui.GetInput();
+                _userInterface.Clear();
+                _userInterface.Display(menu);
+                userInput = _userInterface.GetInput();
 
                 switch (userInput)
                 {

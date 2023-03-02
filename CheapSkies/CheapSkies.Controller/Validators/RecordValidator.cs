@@ -15,7 +15,7 @@ namespace CheapSkies.Controller.Validators
         /// which should always be a letter
         /// </summary>
         /// <param name="airlineCode">The inputted Airline of the Flight</param>
-        /// <returns>True if airlineCode follows the givevn format; otherwise, false.</returns>
+        /// <returns>True if airlineCode follows the given format; otherwise, false.</returns>
         public bool IsAirlineCodeValid(string airlineCode)
         {
             int capitalLetterCount = 0;

@@ -10,7 +10,7 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
     public class DisplayFlightController : IDisplayFlightController
     {
         private IFlightRepository _flightRepository;
-        private IUI _ui;
+        private IUserInterface _userInterface;
 
         private readonly string[] menu =
         {
@@ -30,10 +30,10 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
             "Airline Code \t Flight Number \t Arrival Station \t Departure Station \t Schedule Time of Arrival \t Schedule Time of Departure"
         };
 
-        public DisplayFlightController(IFlightRepository flightRepository, IUI ui)
+        public DisplayFlightController(IFlightRepository flightRepository, IUserInterface userInterface)
         {
             _flightRepository = flightRepository;
-            _ui = ui;
+            _userInterface = userInterface;
         }
 
         /// <summary>
@@ -42,37 +42,37 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
         /// </summary>
         public void DisplayFlightbyFlightNumber()       
         {
-            _ui.Clear();
-            _ui.Display(menu[0]);
-            _ui.Display(menu[1]);
-            string rawFlightNumber = _ui.GetInput();
+            _userInterface.Clear();
+            _userInterface.Display(menu[0]);
+            _userInterface.Display(menu[1]);
+            string rawFlightNumber = _userInterface.GetInput();
 
             bool condition = Int32.TryParse(rawFlightNumber, out int flightNumber);
 
             if (!condition)
             {
-                _ui.Display(menu[12]);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[12]);
+                _userInterface.ExitScreen();
 
                 return;
             }
 
-            _ui.Display(menu[2]);
+            _userInterface.Display(menu[2]);
             List<FlightBase> listOfFlights = new List<FlightBase>();
             listOfFlights = _flightRepository.GetFlightData(flightNumber);
 
             if (listOfFlights.Count == 0)
             {
 
-                _ui.Display(menu[3], flightNumber);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[3], flightNumber);
+                _userInterface.ExitScreen();
 
                 return;
             }
 
-            _ui.Display(menu[11]);
+            _userInterface.Display(menu[11]);
             ShowFlights(listOfFlights);
-            _ui.ExitScreen();
+            _userInterface.ExitScreen();
         }
 
         /// <summary>
@@ -81,26 +81,26 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
         /// </summary>
         public void DisplayFlightByAirlineCode()
         {
-            _ui.Clear();
-            _ui.Display(menu[0]);
-            _ui.Display(menu[4]);
-            string airlineCode = _ui.GetInput();
-            _ui.Display(menu[5]);
+            _userInterface.Clear();
+            _userInterface.Display(menu[0]);
+            _userInterface.Display(menu[4]);
+            string airlineCode = _userInterface.GetInput();
+            _userInterface.Display(menu[5]);
 
             List<FlightBase> listOfFlights = new List<FlightBase>();
             listOfFlights = _flightRepository.GetFlightData(airlineCode);
 
             if (listOfFlights.Count == 0)
             {
-                _ui.Display(menu[6], airlineCode);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[6], airlineCode);
+                _userInterface.ExitScreen();
 
                 return;
             }
 
-            _ui.Display(menu[11]);
+            _userInterface.Display(menu[11]);
             ShowFlights(listOfFlights);
-            _ui.ExitScreen();
+            _userInterface.ExitScreen();
         }
 
         /// <summary>
@@ -109,28 +109,28 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
         /// </summary>
         public void DisplayFlightByStations()
         {
-            _ui.Clear();
-            _ui.Display(menu[0]);
-            _ui.Display(menu[7]);
-            string arrivalStation = _ui.GetInput();
-            _ui.Display(menu[8]);
-            string departureStation = _ui.GetInput();
-            _ui.Display(menu[9]);
+            _userInterface.Clear();
+            _userInterface.Display(menu[0]);
+            _userInterface.Display(menu[7]);
+            string arrivalStation = _userInterface.GetInput();
+            _userInterface.Display(menu[8]);
+            string departureStation = _userInterface.GetInput();
+            _userInterface.Display(menu[9]);
 
             List<FlightBase> listOfFlights = new List<FlightBase>();
             listOfFlights = _flightRepository.GetFlightData(arrivalStation, departureStation);
 
             if (listOfFlights.Count == 0)
             {
-                _ui.Display(menu[10], arrivalStation, departureStation);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[10], arrivalStation, departureStation);
+                _userInterface.ExitScreen();
 
                 return;
             }
 
-            _ui.Display(menu[11]);
+            _userInterface.Display(menu[11]);
             ShowFlights(listOfFlights);
-            _ui.ExitScreen();
+            _userInterface.ExitScreen();
         }
 
         /// <summary>
@@ -138,10 +138,10 @@ namespace CheapSkies.Controller.Controller.FlightMaintenanceScreen
         /// </summary>
         private void ShowFlights(List<FlightBase> listOfFlights)    //Candidate for Abstraction using Interface IShowList
         {
-            _ui.Display(menu[13]);
+            _userInterface.Display(menu[13]);
             foreach (FlightBase flight in listOfFlights)
             {
-                _ui.Display(flight);
+                _userInterface.Display(flight);
             }
         }
 

@@ -7,7 +7,7 @@ namespace CheapSkies.Controller.Controller
     {
         private readonly IAddFlightController _addFlightController;
         private readonly ISearchFlightController _searchFlightController;
-        private readonly IUI _ui;
+        private readonly IUserInterface _userInterface;
 
         private readonly string[] menu =
         {
@@ -17,11 +17,11 @@ namespace CheapSkies.Controller.Controller
             "Press 3 and Enter => Go Back to Home Screen\n"
         };
 
-        public FlightMaintenanceController(IAddFlightController addFlightController, ISearchFlightController searchFlightController, IUI ui)
+        public FlightMaintenanceController(IAddFlightController addFlightController, ISearchFlightController searchFlightController, IUserInterface userInterface)
         {
             _addFlightController = addFlightController;
             _searchFlightController = searchFlightController;
-            _ui = ui;
+            _userInterface = userInterface;
         }
 
         /// <summary>
@@ -34,9 +34,9 @@ namespace CheapSkies.Controller.Controller
 
             while(userInput != "1" || userInput != "2" || userInput != "3")
             {
-                _ui.Clear();
-                _ui.Display(menu);
-                userInput = _ui.GetInput();
+                _userInterface.Clear();
+                _userInterface.Display(menu);
+                userInput = _userInterface.GetInput();
 
                 switch(userInput)
                 {

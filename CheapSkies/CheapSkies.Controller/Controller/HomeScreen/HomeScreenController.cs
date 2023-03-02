@@ -10,7 +10,7 @@ namespace CheapSkies.Controller.Controller.Home_Screen
     {
         private readonly IFlightMaintenanceController _flightMaintenanceController;
         private readonly IReservationController _reservationController;
-        private readonly IUI _ui;
+        private readonly IUserInterface _userInterface;
 
         private readonly string[] menu = 
         {
@@ -20,11 +20,11 @@ namespace CheapSkies.Controller.Controller.Home_Screen
             "Press 3 and Enter => Exit CheapSkies\n"
         };
         
-        public HomeScreenController(IFlightMaintenanceController flightMaintenanceController, IReservationController reservationController, IUI ui)
+        public HomeScreenController(IFlightMaintenanceController flightMaintenanceController, IReservationController reservationController, IUserInterface userInterface)
         {
             _flightMaintenanceController = flightMaintenanceController;
             _reservationController = reservationController;
-            _ui = ui;
+            _userInterface = userInterface;
         }
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace CheapSkies.Controller.Controller.Home_Screen
 
             while (userInput != "3") 
             {
-                _ui.Clear();
-                _ui.Display(menu);
-                userInput = _ui.GetInput();
+                _userInterface.Clear();
+                _userInterface.Display(menu);
+                userInput = _userInterface.GetInput();
 
                 switch (userInput)
                 {

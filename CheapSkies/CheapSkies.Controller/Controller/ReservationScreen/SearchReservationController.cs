@@ -8,7 +8,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class SearchReservationController : ISearchReservationController
     {
-        private IUI _ui;
+        private IUserInterface _userInterface;
         private IReservationRepository _reservationRepository;
         private IPassengerRepository _passengerRepository;
 
@@ -25,9 +25,9 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "\nInput the 6 Character PNR:"
         };
 
-        public SearchReservationController(IUI ui, IReservationRepository reservationRepository, IPassengerRepository passengerRepository)
+        public SearchReservationController(IUserInterface userInterface, IReservationRepository reservationRepository, IPassengerRepository passengerRepository)
         {
-            _ui = ui;
+            _userInterface = userInterface;
             _reservationRepository = reservationRepository;
             _passengerRepository = passengerRepository;
         }
@@ -43,32 +43,32 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             List<PassengerBase> listOfPassengers = new List<PassengerBase>();
             listOfReservations = _reservationRepository.GetReservationData();
 
-            _ui.Clear();
-            _ui.Display(menu[0]);
-            _ui.Display(menu[1]);
+            _userInterface.Clear();
+            _userInterface.Display(menu[0]);
+            _userInterface.Display(menu[1]);
             if (listOfReservations.Count == 0)
             {
-                _ui.Display(menu[5]);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[5]);
+                _userInterface.ExitScreen();
                 return;
             }
 
             int passengerCount = 0;
             foreach (ReservationBase reservation in listOfReservations)
             {
-                _ui.Display(menu[2]);
-                _ui.Display(reservation);
+                _userInterface.Display(menu[2]);
+                _userInterface.Display(reservation);
                 listOfPassengers = _passengerRepository.GetPassengerData(reservation.PNR);
-                _ui.Display(menu[3]);
+                _userInterface.Display(menu[3]);
                 foreach (PassengerBase passenger in listOfPassengers)
                 {
-                    _ui.Display(passenger, passengerCount);
+                    _userInterface.Display(passenger, passengerCount);
                     passengerCount++;
                 }
                 passengerCount = 0;
             }
-            _ui.Display(menu[4]);
-            _ui.ExitScreen();
+            _userInterface.Display(menu[4]);
+            _userInterface.ExitScreen();
         }
 
         /// <summary>
@@ -82,35 +82,35 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             List<ReservationBase> listOfReservations = new List<ReservationBase>();
             List<PassengerBase> listOfPassengers = new List<PassengerBase>();
            
-            _ui.Clear();
-            _ui.Display(menu[0]);
-            _ui.Display(menu[8]);
-            string pnr = _ui.GetInput();
+            _userInterface.Clear();
+            _userInterface.Display(menu[0]);
+            _userInterface.Display(menu[8]);
+            string pnr = _userInterface.GetInput();
 
             listOfReservations = _reservationRepository.GetReservationData(pnr);
             if (listOfReservations.Count == 0)
             {
-                _ui.Display(menu[6], pnr);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[6], pnr);
+                _userInterface.ExitScreen();
                 return;
             }
 
             int passengerCount = 0;
             foreach (ReservationBase reservation in listOfReservations)
             {
-                _ui.Display(menu[2]);
-                _ui.Display(reservation);
+                _userInterface.Display(menu[2]);
+                _userInterface.Display(reservation);
                 listOfPassengers = _passengerRepository.GetPassengerData(reservation.PNR);
                 foreach (PassengerBase passenger in listOfPassengers)
                 {
-                    _ui.Display(menu[3]);
-                    _ui.Display(passenger, passengerCount);
+                    _userInterface.Display(menu[3]);
+                    _userInterface.Display(passenger, passengerCount);
                     passengerCount++;
                 }
                 passengerCount = 0;
             }
-            _ui.Display(menu[6], pnr);
-            _ui.ExitScreen();
+            _userInterface.Display(menu[6], pnr);
+            _userInterface.ExitScreen();
         }
 
     }

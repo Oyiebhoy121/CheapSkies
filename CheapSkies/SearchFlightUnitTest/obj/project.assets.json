@@ -21,7 +21,7 @@
       "coverlet.collector/3.1.2": {
         "type": "package",
         "build": {
-          "build/netstandard1.0/coverlet.collector.targets": {}
+          "build/netstandard1.0/_._": {}
         }
       },
       "Microsoft.CodeCoverage/17.3.2": {
@@ -1864,7 +1864,7 @@
           "lib/netcoreapp3.1/_._": {}
         },
         "build": {
-          "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
+          "build/netcoreapp3.1/_._": {}
         }
       },
       "CheapSkies.Infrastructure/1.0.0": {
@@ -6338,7 +6338,7 @@
             "version": "[4.18.4, )"
           },
           "coverlet.collector": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "include": "Runtime, Native, ContentFiles, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.2, )"
@@ -6348,7 +6348,7 @@
             "version": "[2.4.2, )"
           },
           "xunit.runner.visualstudio": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "include": "Runtime, Native, ContentFiles, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.4.5, )"

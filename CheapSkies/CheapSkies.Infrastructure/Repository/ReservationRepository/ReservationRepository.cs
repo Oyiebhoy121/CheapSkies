@@ -6,7 +6,7 @@ namespace CheapSkies.Infrastructure.Repositories.ReservationRepository
 {
     public class ReservationRepository : IReservationRepository
     {
-        private const string FilePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\ReservationRepository\\ReservationRepository.txt";
+        private const string FilePath = "C:\\Users\\fgoleta\\Desktop\\CheapSkies\\CheapSkies\\CheapSkies.Infrastructure\\Repository\\ReservationRepository\\ReservationRepository.txt";
 
         /// <summary>
         /// Saves an inputted validated Reservation properties to the ReservationRepository.txt file

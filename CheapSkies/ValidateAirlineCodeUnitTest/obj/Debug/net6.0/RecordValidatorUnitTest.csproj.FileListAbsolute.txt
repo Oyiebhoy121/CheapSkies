@@ -1,9 +1,5 @@
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\CoverletSourceRootsMapping
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\testhost.exe
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\testhost.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\xunit.runner.reporters.netcoreapp10.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\RecordValidatorUnitTest.deps.json
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\RecordValidatorUnitTest.runtimeconfig.json
 C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\ValidateAirlineCodeUnitTest\bin\Debug\net6.0\RecordValidatorUnitTest.dll

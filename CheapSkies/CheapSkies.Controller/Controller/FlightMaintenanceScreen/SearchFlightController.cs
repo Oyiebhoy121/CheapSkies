@@ -6,7 +6,7 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 {
     public class SearchFlightController : ISearchFlightController
     {
-        private IUI _ui = new UI();
+        private IUserInterface _userInterface = new UserInterface();
         private IDisplayFlightController _displayFlightController;
 
         private readonly string[] menu =
@@ -18,10 +18,10 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
             "Press 4 and enter => Go Back to Flight Maintenance Screen"
         };
 
-        public SearchFlightController(IDisplayFlightController displayFlightController, IUI ui)
+        public SearchFlightController(IDisplayFlightController displayFlightController, IUserInterface userInterface)
         {
             _displayFlightController = displayFlightController;
-            _ui = ui;
+            _userInterface = userInterface;
         }
 
         /// <summary>
@@ -35,9 +35,9 @@ namespace CheapSkies.Controller.Controller.Flight_Maintenance_Screen
 
             while (userInput != "1" || userInput != "2" || userInput != "3")
             {
-                _ui.Clear();
-                _ui.Display(menu);
-                userInput = _ui.GetInput();
+                _userInterface.Clear();
+                _userInterface.Display(menu);
+                userInput = _userInterface.GetInput();
 
                 switch (userInput)
                 { 

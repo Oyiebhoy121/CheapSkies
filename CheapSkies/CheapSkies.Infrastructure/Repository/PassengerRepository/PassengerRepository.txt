@@ -1,3 +1,6 @@
 ﻿OC0081, Felipe, Goleta, 7/8/1999, 23
 OC0081, Felice, Goleta, 10/5/2012, 10
 ULWHD7, Fei, Goleta, 9/25/2005, 17
+CM0V5U, Ji Eun, Lee, 5/16/0993, 1029
+CM0V5U, Jun So, Min, 8/8/1999, 23
+CM0V5U, Felice, Golet, 8/5/2012, 10

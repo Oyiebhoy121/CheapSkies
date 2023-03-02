@@ -10,7 +10,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
     {
         private IPassengerValidator _passengerValidator;
         private IPassengerRepository _passengerRepository;
-        private IUI _ui;
+        private IUserInterface _userInterface;
 
         private readonly string[] menu =
         {
@@ -31,11 +31,11 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "\nFlight added Successfully!"
         };
         
-        public AddPassengerController(IPassengerValidator passengerValidator, IPassengerRepository passengerRepository, IUI ui) 
+        public AddPassengerController(IPassengerValidator passengerValidator, IPassengerRepository passengerRepository, IUserInterface userInterface) 
         {
             _passengerValidator = passengerValidator;
             _passengerRepository = passengerRepository;
-            _ui = ui;
+            _userInterface = userInterface;
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
         /// <returns>Integer of 1 if the Reservation is confirmed; otherwise, 0</returns>
         public int AddPassengers(Reservation reservation)
         {
-            _ui.Display(menu[0]);
+            _userInterface.Display(menu[0]);
             List<Passenger> listOfPassengers = new List<Passenger>();
             string firstName;
             string lastName;
@@ -58,7 +58,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 
             for (int i = 0; i < reservation.NumberOfPassenger; i++)
             {
-                _ui.Display(menu[7], i + 1);
+                _userInterface.Display(menu[7], i + 1);
 
                 firstName = GetPassengerInput(menu[1], menu[2], _passengerValidator.IsNameValid);
                 lastName = GetPassengerInput(menu[3], menu[4], _passengerValidator.IsNameValid);
@@ -70,29 +70,29 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
                 listOfPassengers.Add(passenger);
             }
 
-            _ui.Display(menu[8]);
-            _ui.Display(menu[9]);
-            _ui.Display(reservation);
-            _ui.Display(menu[10]);
+            _userInterface.Display(menu[8]);
+            _userInterface.Display(menu[9]);
+            _userInterface.Display(reservation);
+            _userInterface.Display(menu[10]);
 
             int passengerCount = 0;
 
             foreach (Passenger passenger in listOfPassengers)
             {
-                _ui.Display(passenger, passengerCount);
+                _userInterface.Display(passenger, passengerCount);
                 passengerCount++;   
             }
 
-            _ui.Display(menu[11]);
+            _userInterface.Display(menu[11]);
             string userInput = "";
 
             while (userInput != "Y" || userInput != "N")
             {
-                userInput = _ui.GetInput();
+                userInput = _userInterface.GetInput();
 
                 if (userInput == "N")
                 {
-                    _ui.Display(menu[12]);
+                    _userInterface.Display(menu[12]);
 
                     return 0;
                 }   
@@ -101,11 +101,11 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
                     break;
                 }
             }
-            _ui.Display(menu[13]);
+            _userInterface.Display(menu[13]);
 
             _passengerRepository.SavePassenger(listOfPassengers);
-            _ui.Display(menu[14]);
-            _ui.ExitScreen();
+            _userInterface.Display(menu[14]);
+            _userInterface.ExitScreen();
 
             return 1;
         }
@@ -125,13 +125,13 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 
             while (!parse)
             {
-                _ui.Display(message1);
-                userInput = _ui.GetInput();
+                _userInterface.Display(message1);
+                userInput = _userInterface.GetInput();
                 parse = validator(userInput);
 
                 if (!parse)
                 {
-                    _ui.Display(message2);
+                    _userInterface.Display(message2);
                 }
             }
 

@@ -14,7 +14,7 @@ namespace CheapSkies.Controller.Controller
     {
         private IFlightValidator _flightValidator;
         private IFlightRepository _flightRepository;
-        private IUI _ui;
+        private IUserInterface _userInterface;
 
         private readonly string[] menu =
         {
@@ -35,11 +35,11 @@ namespace CheapSkies.Controller.Controller
             "\nFlight added Successfully!"
         };
 
-        public AddFlightController(IFlightValidator flightValidator, IFlightRepository flightRepository, IUI ui)
+        public AddFlightController(IFlightValidator flightValidator, IFlightRepository flightRepository, IUserInterface userInterface)
         {
             _flightValidator = flightValidator;
             _flightRepository = flightRepository;
-            _ui = ui;
+            _userInterface = userInterface;
         }
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace CheapSkies.Controller.Controller
         /// </summary>
         public void AddFlight()
         {
-            _ui.Clear();
-            _ui.Display(menu[0]);
+            _userInterface.Clear();
+            _userInterface.Display(menu[0]);
 
             string airlineCode = GetValidInput(menu[1], menu[2], ((IRecordValidator)_flightValidator).IsAirlineCodeValid);
             string rawFlightNumber = GetValidInput(menu[3], menu[4], ((IRecordValidator)_flightValidator).IsFlightNumberValid);
@@ -65,15 +65,15 @@ namespace CheapSkies.Controller.Controller
 
             if (_flightValidator.IsFlightDuplicate(flight))
             {
-                _ui.Display(menu[13]);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[13]);
+                _userInterface.ExitScreen();
 
                 return;
             }
 
             _flightRepository.SaveFlight(flight);
-            _ui.Display(menu[13]);
-            _ui.ExitScreen();
+            _userInterface.Display(menu[13]);
+            _userInterface.ExitScreen();
         }
 
         /// <summary>
@@ -91,13 +91,13 @@ namespace CheapSkies.Controller.Controller
 
             while(!parse)
             {
-                _ui.Display(message1);
-                userInput = _ui.GetInput();
+                _userInterface.Display(message1);
+                userInput = _userInterface.GetInput();
                 parse = validator(userInput);
 
                 if(!parse)
                 {
-                    _ui.Display(message2);
+                    _userInterface.Display(message2);
                 }
             }
 

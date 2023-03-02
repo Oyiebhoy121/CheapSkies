@@ -11,7 +11,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 {
     public class CreateReservationController : ICreateReservationController
     {
-        private IUI _ui;
+        private IUserInterface _userInterface;
         private IReservationValidator _reservationValidator;
         private IReservationRepository _reservationRepository;
         private IAddPassengerController _addPassengerController;
@@ -36,12 +36,12 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "\n***The Reservation you are creating is Invalid. Please reserve only for existing flights.***"
         };
 
-        public CreateReservationController(IReservationValidator reservationValidator, IReservationRepository reservationRepository, IUI ui,
+        public CreateReservationController(IReservationValidator reservationValidator, IReservationRepository reservationRepository, IUserInterface userInterface,
                                             IAddPassengerController addPassengerController)
         {
             _reservationValidator = reservationValidator;
             _reservationRepository = reservationRepository;
-            _ui = ui;
+            _userInterface = userInterface;
             _addPassengerController = addPassengerController;
         }
 
@@ -52,7 +52,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
         /// </summary>
         public void CreateReservation()
         {
-            _ui.Display(menu[0]);
+            _userInterface.Display(menu[0]);
 
             string airlineCode = GetReservationInput(menu[1], menu[2], ((IRecordValidator)_reservationValidator).IsAirlineCodeValid);
             string rawFlightNumber = GetReservationInput(menu[3], menu[4], ((IRecordValidator)_reservationValidator).IsFlightNumberValid);
@@ -71,8 +71,8 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             
             if(!_reservationValidator.IsFlightValidForReservation(reservation))
             {
-                _ui.Display(menu[15]);
-                _ui.ExitScreen();
+                _userInterface.Display(menu[15]);
+                _userInterface.ExitScreen();
                 return;
             }
 
@@ -84,9 +84,9 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             }
 
             _reservationRepository.SaveReservation(reservation); 
-            _ui.Display(menu[13]);
-            _ui.Display(menu[14]);
-            _ui.ExitScreen();
+            _userInterface.Display(menu[13]);
+            _userInterface.Display(menu[14]);
+            _userInterface.ExitScreen();
         }
 
         /// <summary>
@@ -104,12 +104,12 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 
             while (!parse)
             {
-                _ui.Display(message1);
-                userInput = _ui.GetInput();
+                _userInterface.Display(message1);
+                userInput = _userInterface.GetInput();
                 parse = validator(userInput);
                 if (!parse)
                 {
-                    _ui.Display(message2);
+                    _userInterface.Display(message2);
                 }
             }
 

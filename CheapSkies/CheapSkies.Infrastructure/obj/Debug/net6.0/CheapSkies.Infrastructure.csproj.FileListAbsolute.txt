@@ -30,5 +30,3 @@ C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\obj\Debug\net6.0\ref\CheapSkies.Infrastructure.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\Interfaces.dll
 C:\Users\frgol\OneDrive\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\Interfaces.pdb
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\Interfaces.dll
-C:\Users\fgoleta\Desktop\CheapSkies\CheapSkies\CheapSkies.Infrastructure\bin\Debug\net6.0\Interfaces.pdb
