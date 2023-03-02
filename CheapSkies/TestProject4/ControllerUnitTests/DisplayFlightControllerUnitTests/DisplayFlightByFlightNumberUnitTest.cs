@@ -29,6 +29,9 @@ namespace ControllerTests.NewFolder
                 }
             };
 
+            mockUserInterface.Setup(x => x.GetInput())
+                .Returns("124");
+
             mockFlightRepository.Setup(x => x.GetFlightData(It.IsAny<int>()))
                 .Returns(listOfFlightsFromRepository);
 
@@ -53,14 +56,17 @@ namespace ControllerTests.NewFolder
         {
             //Arrange
             var mockFlightRepository = new Mock<IFlightRepository>();
-            var mockUi = new Mock<IUserInterface>();
+            var mockUserInterface = new Mock<IUserInterface>();
+
+            mockUserInterface.Setup(x => x.GetInput())
+                .Returns("124");
 
             mockFlightRepository.Setup(x => x.GetFlightData(It.IsAny<int>()))
                 .Returns(new List<FlightBase>());
 
             var passedMenu = "";
             var passedFlightNumber = 0;
-            mockUi.Setup(x => x.Display(It.IsAny<string>(), It.IsAny<int>()))
+            mockUserInterface.Setup(x => x.Display(It.IsAny<string>(), It.IsAny<int>()))
                 .Callback<string, int>((menu, flightNumber) =>
                 {
                     passedMenu = menu;
@@ -70,7 +76,7 @@ namespace ControllerTests.NewFolder
 
             //Act
             var displayFlightController = new DisplayFlightController(mockFlightRepository.Object,
-                mockUi.Object);
+                mockUserInterface.Object);
             displayFlightController.DisplayFlightbyFlightNumber();
 
             //Assert

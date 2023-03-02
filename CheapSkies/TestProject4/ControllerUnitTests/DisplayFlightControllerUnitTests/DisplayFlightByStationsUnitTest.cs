@@ -4,6 +4,7 @@ using CheapSkies.View.View.Interface;
 using CheapSkies.Model.DataModel;
 using CheapSkies.Infrastructure.RepositoryInterface.FlightRepository.Interface;
 using CheapSkies.Controller.Controller.FlightMaintenanceScreen;
+using CheapSkies.Model.ViewModel;
 
 namespace ControllerTests.DisplayFlightControllerUnitTests
 {
@@ -59,24 +60,21 @@ namespace ControllerTests.DisplayFlightControllerUnitTests
             mockFlightRepository.Setup(x => x.GetFlightData(It.IsAny<string>(), It.IsAny<string>()))
                 .Returns(new List<FlightBase>());
 
-            var menuStorage1 = "";
-            var menuStorage2 = "";
-            var menuStorage3 = "";
+            var menuStorage = "";
             mockUi.Setup(x => x.Display(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()))
                 .Callback<string, string, string>((menu1, menu2, menu3) =>
                 {
-                    menuStorage1 = menu1;
-                    menuStorage2 = menu2;
-                    menuStorage3 = menu3;
+                    menuStorage = menu1;
+  
                 });
 
             //Act
             var displayFlightController = new DisplayFlightController(mockFlightRepository.Object,
                 mockUi.Object);
-            displayFlightController.DisplayFlightbyFlightNumber();
+            displayFlightController.DisplayFlightByStations();
 
             //Assert
-            Assert.Equal("\nShowing Flight Results: ", menuStorage1);
+            Assert.Equal("\nNo available flights with the Market Pair of ", menuStorage);
         }
     }
 }

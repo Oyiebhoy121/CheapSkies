@@ -52,10 +52,10 @@ namespace ControllerTests.SearchReservationControllerUnitTests
             var menuStorage = new List<string>();
 
             var list = new List<string>();
-            mockUserInterface.Setup(x => x.Display(It.IsAny<string>()))
-                .Callback<string>((menu) =>
+            mockUserInterface.Setup(x => x.Display(It.IsAny<string>(), It.IsAny<string>()))
+                .Callback<string, string>((menu1, menu2) =>
                 {
-                    menuStorage.Add(menu);
+                    menuStorage.Add(menu1);
                 });
 
             //Act
@@ -74,26 +74,24 @@ namespace ControllerTests.SearchReservationControllerUnitTests
             var mockReservationRepository = new Mock<IReservationRepository>();
             var mockPassengerRepository = new Mock<IPassengerRepository>();
 
-            var listOfReservations = new List<ReservationBase>();
-
-            mockReservationRepository.Setup(x => x.GetReservationData())
-                .Returns(listOfReservations);
+            mockReservationRepository.Setup(x => x.GetReservationData(It.IsAny<string>()))
+                .Returns(new List<ReservationBase>());
 
             var menuStorage = new List<string>();
 
             var list = new List<string>();
-            mockUserInterface.Setup(x => x.Display(It.IsAny<string>()))
-                .Callback<string>((menu) =>
+            mockUserInterface.Setup(x => x.Display(It.IsAny<string>(), It.IsAny<string>()))
+                .Callback<string, string>((menu1, menu2) =>
                 {
-                    menuStorage.Add(menu);
+                    menuStorage.Add(menu1);
                 });
 
             //Act
             var searchReservationController = new SearchReservationController(mockUserInterface.Object, mockReservationRepository.Object, mockPassengerRepository.Object);
-            searchReservationController.DisplayAllReservations();
+            searchReservationController.DisplaReservationsByPNR();
 
             //Assert
-            Assert.Equal("\nNo Reservations", menuStorage[menuStorage.Count - 1]);
+            Assert.Equal("\nNo Reservations found based on Input PNR", menuStorage[menuStorage.Count - 1]);
         }
     }
 }

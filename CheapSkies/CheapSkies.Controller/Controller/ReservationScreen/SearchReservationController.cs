@@ -91,7 +91,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
 
             if (listOfReservations.Count == 0)
             {
-                _userInterface.Display(menu[6], pnr);
+                _userInterface.Display(menu[7], pnr);
                 _userInterface.ExitScreen();
                 return;
             }
