@@ -1,7 +1,6 @@
 ﻿using CheapSkies.Model.DataModel;
 using CheapSkies.Model.ViewModel;
 using CheapSkies.View.View.Interface;
-using System.Security.Cryptography;
 
 namespace CheapSkies.View.View
 {
