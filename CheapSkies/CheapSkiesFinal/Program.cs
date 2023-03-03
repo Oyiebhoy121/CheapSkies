@@ -69,5 +69,6 @@ namespace CheapSkiesFinal
         {
             services.AddSingleton<IUserInterface, UserInterface>();
         }
+
     }
 }

@@ -11,5 +11,6 @@ namespace CheapSkies.Controller.Validators.Interface
     {
         bool IsTimeFormatValid(string timeInput);
         bool IsFlightDuplicate(Flight flight);
+        bool IsStationDuplicate(string arrivalStation, string departureStation);
     }
 }

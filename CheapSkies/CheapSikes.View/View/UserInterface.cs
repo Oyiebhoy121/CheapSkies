@@ -37,7 +37,7 @@ namespace CheapSkies.View.View
         public void ExitScreen()
         {
             Console.WriteLine("\n\nPress anything to go back Home");
-            Console.Read();
+            Console.ReadLine();
         }
         public string GetInput()
         {
@@ -69,7 +69,7 @@ namespace CheapSkies.View.View
 
         public void Display(PassengerBase passenger, int passengerCount)
         {
-            Console.WriteLine($"\t\t{passengerCount + 1} \t\t\t {passenger.FirstName} \t {passenger.LastName} \t {passenger.BirthDate} \t {passenger.Age}\n");
+            Console.WriteLine($"\t\t{passengerCount + 1} \t\t\t {passenger.FirstName} \t\t  {passenger.LastName} \t {passenger.BirthDate} \t {passenger.Age}\n");
         }
     }
 }

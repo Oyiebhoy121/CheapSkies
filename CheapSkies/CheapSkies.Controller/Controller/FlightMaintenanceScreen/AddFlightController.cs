@@ -31,7 +31,8 @@ namespace CheapSkies.Controller.Controller
             "\nInput Schedule Time of Departure (Format hh:mm)",
             "\nInvalid Input. The input must only be of the given format",
             "\nFlight cannot be duplicate",
-            "\nFlight added Successfully!"
+            "\nFlight added Successfully!",
+            "\nInvalid Stations. Arrival and Departure Stations cannot be the same."
         };
 
         public AddFlightController(IFlightValidator flightValidator, IFlightRepository flightRepository, IUserInterface userInterface)
@@ -65,6 +66,14 @@ namespace CheapSkies.Controller.Controller
             if (_flightValidator.IsFlightDuplicate(flight))
             {
                 _userInterface.Display(menu[13]);
+                _userInterface.ExitScreen();
+
+                return;
+            }
+
+            if(_flightValidator.IsStationDuplicate(arrivalStation, departureStation))
+            {
+                _userInterface.Display(menu[15]);
                 _userInterface.ExitScreen();
 
                 return;

@@ -57,5 +57,15 @@ namespace CheapSkies.Controller.Validators
             return true;
         }
 
+        public bool IsStationDuplicate(string arrivalStation, string departureStation)
+        {
+            if(arrivalStation == departureStation)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }

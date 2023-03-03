@@ -17,7 +17,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "Displaying Reservations",
             "\nShowing Reservation Results:",
             "\nPNR \t Airline Code \t Flight Number \t Arrival Station \t Departure Station \t Flight Date \t Number Of Passenger",
-            "\n\t\tPassenger Count \t First Name \t Last Name \t Birth Date \t Age",
+            "\n\t\tPassenger Count \t First Name \t\t Last Name \t Birth Date \t Age",
             "\nSuccessfully Displayed All Reservations",
             "\nNo Reservations",
             "\n\nSuccessfully Displayed All Reservations based on PNR ",

@@ -27,8 +27,8 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
             "\n\t\tPassenger Count \t First Name \t Last Name \t Birth Date \t Age",
             "\nPlease Confirm the reservation. Enter Y for Yes and N for No.",
             "\nReservation is Cancelled. Exiting Reservation Controller.",
-            "\nReservation is Confirmed. Saving reservation.",
-            "\nFlight added Successfully!"
+            "\nReservation is Confirmed. Saving reservation.  Here is your PNR:",
+            "\nPassengers added Successfully!"
         };
         
         public AddPassengerController(IPassengerValidator passengerValidator, IPassengerRepository passengerRepository, IUserInterface userInterface) 
@@ -100,7 +100,7 @@ namespace CheapSkies.Controller.Controller.Reservation_Screen
                     break;
                 }
             }
-            _userInterface.Display(menu[13]);
+            _userInterface.Display(menu[13], reservation.PNR);
 
             _passengerRepository.SavePassenger(listOfPassengers);
             _userInterface.Display(menu[14]);
